@@ -1,0 +1,1115 @@
+<svg lang="zh-CN" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 300">
+	<title>元素周期表</title>
+	<desc>元素周期表</desc>
+	<metadata	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				xmlns:dcterms="http://purl.org/dc/terms/"
+				xmlns:dc="http://purl.org/dc/elements/1.1/"
+				xmlns:cc="http://creativecommons.org/ns#">
+		<rdf:RDF>
+			<cc:Work rdf:about="">
+				<dc:title>元素周期表</dc:title>
+				<dc:language>zh-hans</dc:language>
+				<dc:format>image/svg+xml</dc:format>
+				<dc:source>https://ptable.com/image/元素周期表.svg</dc:source>
+				<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+				<cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+				<cc:attributionName>Ptable.com, Michael Dayah</cc:attributionName>
+				<cc:attributionURL rdf:resource="https://ptable.com" />
+			</cc:Work>
+			<cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0">
+				<cc:permits rdf:resource="https://creativecommons.org/ns#Reproduction" />
+				<cc:permits rdf:resource="https://creativecommons.org/ns#Distribution" />
+				<cc:permits rdf:resource="https://creativecommons.org/ns#DerivativeWorks" />
+				<cc:permits rdf:resource="https://creativecommons.org/ns#Sharing" />
+				<cc:requires rdf:resource="https://creativecommons.org/ns#Notice" />
+				<cc:requires rdf:resource="https://creativecommons.org/ns#Attribution" />
+				<cc:requires rdf:resource="https://creativecommons.org/ns#ShareAlike" />
+				<cc:requires rdf:resource="https://creativecommons.org/ns#Copyleft" />
+				<cc:prohibits rdf:resource="https://creativecommons.org/ns#CommercialUse" />
+			</cc:License>
+		</rdf:RDF>
+	</metadata>
+	<style>
+.Title text			{ text-transform: uppercase; }
+
+.Group text			{ dominant-baseline: hanging; }
+.Period text		{ dominant-baseline: middle; }
+.Boxes rect,
+.SeriesBoxes rect	{ stroke-width: 0.5; fill: currentColor; }
+.Boxes .Unclassified rect	{ stroke-width: 0.25; }
+.SeriesBoxes path	{ stroke-width: 0.5; fill: none; stroke: black; }
+.StateLegend rect	{ stroke: black; stroke-width: 0.5; fill: none; }
+.StateLegend text	{ dominant-baseline: central; }
+.StateLegend .Symbol{ text-anchor: middle; }
+
+.Alkali				{ color: hsl(48deg, 77%, 64%); stroke: rgb(206,181,82); }
+.Alkaline			{ color: hsl(60deg, 83%, 67%); stroke: rgb(212,212,89); }
+.Lanthanoid			{ color: hsl(42deg, 62%, 76%); stroke: rgb(204,184,137); }
+.Actinoid			{ color: hsl(340deg, 67%, 88%); stroke: rgb(216,180,192); }
+.Transition			{ color: hsl(12deg, 87%, 85%); stroke: rgb(220,173,161); }
+.Poor				{ color: hsl(192deg, 62%, 80%); stroke: rgb(151,196,208); }
+.Metalloid			{ color: hsl(165deg, 58%, 76%); stroke: rgb(139,202,187); }
+.Nonmetal			{ color: hsl(120deg, 73%, 74%); stroke: rgb(123,209,123); }
+.Noble				{ color: hsl(300deg, 44%, 82%); stroke: rgb(202,166,202); }
+.Unclassified		{ color: #eee; stroke: rgb(209,209,209); }
+
+.VerticalInner rect	{ fill: #cef; stroke: #aaf; }
+
+.Gas				{ fill: #900; }
+.Liquid				{ fill: #00d; }
+.UnknownState		{ fill: #676; }
+.GroupPeriod, .GroupText, .VerticalInner			{ fill: #003660; }
+.GroupPeriod line	{ stroke: #003660; stroke-width: 0.27; }
+.Source				{ fill: #666; }
+
+.Title												{ font-size: 30px; }
+.StateLegend, .Symbol, .GroupPeriod					{ font-size: 7.8px; }
+.SeriesText, .SeriesHeader, .VerticalInner, .Parentheses, .Atomic	{ font-size: 6.18px; }
+.Name, .Weight										{ font-size: 5.1px; }
+.Weight												{ letter-spacing: 0.05em; }
+.GroupText											{ font-size: 4.1px; }
+.Trademark											{ font-size: 3.1px; }
+.Levels												{ font-size: 1.9px; }
+.Source												{ font-size: 2.2px; }
+
+.Symbol												{ font-family: Arial-BoldMT, Arial, Helvetica, sans-serif; font-weight: 600; }
+.Name, .VerticalInner, .Weight, .Atomic, .Levels	{ font-family: ArialMT, Arial, Helvetica, sans-serif; }
+
+.Trademark, .Source									{ font-family: ProximaNova-Regular, Proxima Nova, Helvetica, sans-serif; }
+.SeriesText, .StateText, .GroupPeriod, .Title, .Parentheses { font-family: ProximaNova-Medium, Proxima Nova, Helvetica, sans-serif; font-weight: 500; }
+.SeriesHeader, .GroupText							{ font-family: ProximaNova-Semibold, Proxima Nova, Helvetica, sans-serif; font-weight: 600; }
+	</style>
+	<g class="Title" transform="translate(11.5 28)">
+		<text x="215.5" lengthAdjust="spacingAndGlyphs" text-anchor="middle">元素周期表</text>
+	</g>
+	<g class="VerticalInner" dominant-baseline="middle" text-anchor="middle" transform="translate(11.5 50)">
+		<rect x="48" y="120" height="119" width="23" rx="0.5" stroke-width="1" />
+		<text x="59.5" y="131.5">57–71</text>
+		<text x="59.5" y="155.5">89–103</text>
+	</g>
+	<g class="GroupPeriod Group" text-anchor="middle" transform="translate(11.5 39.36)">
+		<text x="11.5" y="0">1</text>
+		<line x1="23.5" y1="0" x2="23.5" y2="6.36"/>
+		<text x="35.5" y="0">2</text>
+		<line x1="47.5" y1="0" x2="47.5" y2="6.36"/>
+		<text x="59.5" y="0">3</text>
+		<line x1="71.5" y1="0" x2="71.5" y2="6.36"/>
+		<text x="83.5" y="0">4</text>
+		<line x1="95.5" y1="0" x2="95.5" y2="6.36"/>
+		<text x="107.5" y="0">5</text>
+		<line x1="119.5" y1="0" x2="119.5" y2="6.36"/>
+		<text x="131.5" y="0">6</text>
+		<line x1="143.5" y1="0" x2="143.5" y2="6.36"/>
+		<text x="155.5" y="0">7</text>
+		<line x1="167.5" y1="0" x2="167.5" y2="6.36"/>
+		<text x="179.5" y="0">8</text>
+		<line x1="191.5" y1="0" x2="191.5" y2="6.36"/>
+		<text x="203.5" y="0">9</text>
+		<line x1="215.5" y1="0" x2="215.5" y2="6.36"/>
+		<text x="227.5" y="0">10</text>
+		<line x1="239.5" y1="0" x2="239.5" y2="6.36"/>
+		<text x="251.5" y="0">11</text>
+		<line x1="263.5" y1="0" x2="263.5" y2="6.36"/>
+		<text x="275.5" y="0">12</text>
+		<line x1="287.5" y1="0" x2="287.5" y2="6.36"/>
+		<text x="299.5" y="0">13</text>
+		<line x1="311.5" y1="0" x2="311.5" y2="6.36"/>
+		<text x="323.5" y="0">14</text>
+		<line x1="335.5" y1="0" x2="335.5" y2="6.36"/>
+		<text x="347.5" y="0">15</text>
+		<text class="GroupText" x="347.5" y="29.5">氮族元素</text>
+		<line x1="359.5" y1="0" x2="359.5" y2="6.36"/>
+		<text x="371.5" y="0">16</text>
+		<text class="GroupText" x="371.5" y="29.5">氧族元素</text>
+		<line x1="383.5" y1="0" x2="383.5" y2="6.36"/>
+		<text x="395.5" y="0">17</text>
+		<text class="GroupText" x="395.5" y="29.5">卤素</text>
+		<line x1="407.5" y1="0" x2="407.5" y2="6.36"/>
+		<text x="419.5" y="0">18</text>
+	</g>
+	<g class="GroupPeriod Period" text-anchor="end" transform="translate(11.5 50)">
+		<text x="-3.18" y="11.5">1</text>
+		<text x="-3.18" y="35.5">2</text>
+		<text x="-3.18" y="59.5">3</text>
+		<text x="-3.18" y="83.5">4</text>
+		<text x="-3.18" y="107.5">5</text>
+		<text x="-3.18" y="131.5">6</text>
+		<text x="-3.18" y="155.5">7</text>
+		<text x="68.82" y="203.5">6</text>
+		<text x="68.82" y="227.5">7</text>
+	</g>
+	<g class="Boxes" transform="translate(11.5 50)">
+		<g class="Alkali">
+			<rect id="E3" x="0.25" y="24.25" height="22.5" width="22.5"/>
+			<rect id="E11" x="0.25" y="48.25" height="22.5" width="22.5"/>
+			<rect id="E19" x="0.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E37" x="0.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E55" x="0.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E87" x="0.25" y="144.25" height="22.5" width="22.5"/>
+		</g>
+		<g class="Alkaline">
+			<rect id="E4" x="24.25" y="24.25" height="22.5" width="22.5"/>
+			<rect id="E12" x="24.25" y="48.25" height="22.5" width="22.5"/>
+			<rect id="E20" x="24.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E38" x="24.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E56" x="24.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E88" x="24.25" y="144.25" height="22.5" width="22.5"/>
+		</g>
+		<g class="Lanthanoid">
+			<rect id="E57" x="72.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E58" x="96.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E59" x="120.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E60" x="144.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E61" x="168.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E62" x="192.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E63" x="216.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E64" x="240.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E65" x="264.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E66" x="288.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E67" x="312.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E68" x="336.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E69" x="360.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E70" x="384.25" y="192.25" height="22.5" width="22.5"/>
+			<rect id="E71" x="408.25" y="192.25" height="22.5" width="22.5"/>
+		</g>
+		<g class="Actinoid">
+			<rect id="E89" x="72.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E90" x="96.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E91" x="120.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E92" x="144.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E93" x="168.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E94" x="192.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E95" x="216.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E96" x="240.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E97" x="264.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E98" x="288.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E99" x="312.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E100" x="336.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E101" x="360.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E102" x="384.25" y="216.25" height="22.5" width="22.5"/>
+			<rect id="E103" x="408.25" y="216.25" height="22.5" width="22.5"/>
+		</g>
+		<g class="Transition">
+			<rect id="E21" x="48.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E22" x="72.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E23" x="96.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E24" x="120.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E25" x="144.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E26" x="168.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E27" x="192.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E28" x="216.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E29" x="240.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E30" x="264.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E39" x="48.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E40" x="72.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E41" x="96.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E42" x="120.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E43" x="144.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E44" x="168.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E45" x="192.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E46" x="216.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E47" x="240.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E48" x="264.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E72" x="72.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E73" x="96.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E74" x="120.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E75" x="144.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E76" x="168.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E77" x="192.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E78" x="216.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E79" x="240.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E80" x="264.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E104" x="72.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E105" x="96.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E106" x="120.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E107" x="144.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E108" x="168.25" y="144.25" height="22.5" width="22.5"/>
+		</g>
+		<g class="Poor">
+			<rect id="E13" x="288.25" y="48.25" height="22.5" width="22.5"/>
+			<rect id="E31" x="288.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E49" x="288.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E50" x="312.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E81" x="288.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E82" x="312.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E83" x="336.25" y="120.25" height="22.5" width="22.5"/>
+			<rect id="E84" x="360.25" y="120.25" height="22.5" width="22.5"/>
+		</g>
+		<g class="Metalloid">
+			<rect id="E5" x="288.25" y="24.25" height="22.5" width="22.5"/>
+			<rect id="E14" x="312.25" y="48.25" height="22.5" width="22.5"/>
+			<rect id="E32" x="312.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E33" x="336.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E51" x="336.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E52" x="360.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E85" x="384.25" y="120.25" height="22.5" width="22.5"/>
+		</g>
+		<g class="Nonmetal">
+			<rect id="E1" x="0.25" y="0.25" height="22.5" width="22.5"/>
+			<rect id="E6" x="312.25" y="24.25" height="22.5" width="22.5"/>
+			<rect id="E7" x="336.25" y="24.25" height="22.5" width="22.5"/>
+			<rect id="E8" x="360.25" y="24.25" height="22.5" width="22.5"/>
+			<rect id="E9" x="384.25" y="24.25" height="22.5" width="22.5"/>
+			<rect id="E15" x="336.25" y="48.25" height="22.5" width="22.5"/>
+			<rect id="E16" x="360.25" y="48.25" height="22.5" width="22.5"/>
+			<rect id="E17" x="384.25" y="48.25" height="22.5" width="22.5"/>
+			<rect id="E34" x="360.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E35" x="384.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E53" x="384.25" y="96.25" height="22.5" width="22.5"/>
+		</g>
+		<g class="Noble">
+			<rect id="E2" x="408.25" y="0.25" height="22.5" width="22.5"/>
+			<rect id="E10" x="408.25" y="24.25" height="22.5" width="22.5"/>
+			<rect id="E18" x="408.25" y="48.25" height="22.5" width="22.5"/>
+			<rect id="E36" x="408.25" y="72.25" height="22.5" width="22.5"/>
+			<rect id="E54" x="408.25" y="96.25" height="22.5" width="22.5"/>
+			<rect id="E86" x="408.25" y="120.25" height="22.5" width="22.5"/>
+		</g>
+		<g class="Unclassified">
+			<rect id="E109" x="192.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E110" x="216.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E111" x="240.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E112" x="264.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E113" x="288.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E114" x="312.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E115" x="336.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E116" x="360.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E117" x="384.25" y="144.25" height="22.5" width="22.5"/>
+			<rect id="E118" x="408.25" y="144.25" height="22.5" width="22.5"/>
+		</g>
+	</g>
+	<g class="StateLegend" transform="translate(70 56.5)">
+		<g class="Solid" transform="translate(0 0)">
+			<rect x="0" y="0" width="12" height="12"/>
+			<text class="Symbol" x="6" y="6">C</text>
+			<text class="StateText" x="14" y="6">固体</text>
+		</g>
+		<g class="Liquid" transform="translate(0 14)">
+			<rect x="0" y="0" width="12" height="12"/>
+			<text class="Symbol" x="6" y="6">Hg</text>
+			<text class="StateText" x="14" y="6">液体</text>
+		</g>
+		<g class="Gas" transform="translate(0 28)">
+			<rect x="0" y="0" width="12" height="12"/>
+			<text class="Symbol" x="6" y="6">H</text>
+			<text class="StateText" x="14" y="6">气体</text>
+		</g>
+		<g class="UnknownState" transform="translate(0 42)">
+			<rect x="0" y="0" width="12" height="12"/>
+			<text class="Symbol" x="6" y="6">Rf</text>
+			<text class="StateText" x="14" y="6">未知</text>
+		</g>
+	</g>
+	<g class="SeriesBoxes" transform="translate(123.5 56)">
+		<path d="M 112.73 10.73
+			v -10.5
+			h -108.5
+			a 4 4 90 0 0 -4 4
+			v 6.5" id="SeriesMetals"/>
+		<g class="Alkali">
+			<rect id="SeriesAlkali" x="0.25" y="12.25" height="42.5" width="16.5"/>
+		</g>
+		<g class="Alkaline">
+			<rect id="SeriesAlkaline" x="18.25" y="12.25" height="42.5" width="16.5"/>
+		</g>
+		<g class="Lanthanoid">
+			<rect id="SeriesLanthanoid" x="36.25" y="12.25" height="20.5" width="40.5"/>
+		</g>
+		<g class="Actinoid">
+			<rect id="SeriesActinoid" x="36.25" y="34.25" height="20.5" width="40.5"/>
+		</g>
+		<g class="Transition">
+			<rect id="SeriesTransition" x="78.25" y="12.25" height="42.5" width="16.5"/>
+		</g>
+		<g class="Poor">
+			<rect id="SeriesPoor" x="96.25" y="12.25" height="42.5" width="16.5"/>
+		</g>
+		<g class="Metalloid">
+			<rect id="SeriesMetalloid" x="114.25" y="0.25" height="54.5" width="14.5"/>
+		</g>
+		<path d="M 130.27 10.73
+			v -10.5
+			h 30.5
+			a 4 4 90 0 1 4 4
+			v 6.5" id="SeriesNonmetals"/>
+		<g class="Nonmetal">
+			<rect id="SeriesNonmetal" x="130.25" y="12.25" height="42.5" width="16.5"/>
+		</g>
+		<g class="Noble">
+			<rect id="SeriesNoble" x="148.25" y="12.25" height="42.5" width="16.5"/>
+		</g>
+	</g>
+	<g transform="translate(123.5 56)">
+		<text class="SeriesHeader" x="56.5" y="8" text-anchor="middle" data-box="Metals">金属</text>
+		<text class="SeriesText" x="14" y="-11" transform="rotate(90)" data-box="Alkali">
+			<tspan>碱金属</tspan>
+			<tspan x="14" dy="7.4"></tspan>
+		</text>
+		<text class="SeriesText" x="14" y="-29" transform="rotate(90)" data-box="Alkaline">
+			<tspan>碱土金属</tspan>
+			<tspan x="14" dy="7.4"></tspan>
+		</text>
+		<text class="SeriesText" x="38" y="19" data-box="Lanthanoid">
+			<tspan>镧系元素</tspan>
+			<tspan x="38" dy="8"></tspan>
+		</text>
+		<text class="SeriesText" x="38" y="41" data-box="Actinoid">
+			<tspan>锕系元素</tspan>
+			<tspan x="38" dy="8"></tspan>
+		</text>
+		<text class="SeriesText" x="14" y="-89" transform="rotate(90)" data-box="Transition">
+			<tspan>过渡金属</tspan>
+			<tspan x="14" dy="7.4"></tspan>
+		</text>
+		<text class="SeriesText" x="14" y="-107" transform="rotate(90)" data-box="Poor">
+			<tspan>贫金属</tspan>
+			<tspan x="14" dy="7.4"></tspan>
+		</text>
+		<text class="SeriesText SeriesHeader" x="2" y="-123" transform="rotate(90)" data-box="Metalloid">
+			<tspan>类金属</tspan>
+			<tspan x="2" dy="6"></tspan>
+		</text>
+		<text class="SeriesHeader" x="147.5" y="8" text-anchor="middle" data-box="Nonmetals">非金属</text>
+		<text class="SeriesText" x="14" y="-141" transform="rotate(90)" data-box="Nonmetal">
+			<tspan>活泼非金属</tspan>
+			<tspan x="14" dy="7.4"></tspan>
+		</text>
+		<text class="SeriesText" x="14" y="-159" transform="rotate(90)" data-box="Noble">
+			<tspan>稀有气体</tspan>
+			<tspan x="14" dy="7.4"></tspan>
+		</text>
+	</g>
+	<g class="Atomic" transform="translate(11.5 50)">
+		<text x="25" y="5.875">序号</text>
+
+		<text x="1" y="5.875">1</text>
+		<text x="409" y="5.875">2</text>
+		<text x="1" y="29.875">3</text>
+		<text x="25" y="29.875">4</text>
+		<text x="289" y="29.875">5</text>
+		<text x="313" y="29.875">6</text>
+		<text x="337" y="29.875">7</text>
+		<text x="361" y="29.875">8</text>
+		<text x="385" y="29.875">9</text>
+		<text x="409" y="29.875">10</text>
+		<text x="1" y="53.875">11</text>
+		<text x="25" y="53.875">12</text>
+		<text x="289" y="53.875">13</text>
+		<text x="313" y="53.875">14</text>
+		<text x="337" y="53.875">15</text>
+		<text x="361" y="53.875">16</text>
+		<text x="385" y="53.875">17</text>
+		<text x="409" y="53.875">18</text>
+		<text x="1" y="77.875">19</text>
+		<text x="25" y="77.875">20</text>
+		<text x="49" y="77.875">21</text>
+		<text x="73" y="77.875">22</text>
+		<text x="97" y="77.875">23</text>
+		<text x="121" y="77.875">24</text>
+		<text x="145" y="77.875">25</text>
+		<text x="169" y="77.875">26</text>
+		<text x="193" y="77.875">27</text>
+		<text x="217" y="77.875">28</text>
+		<text x="241" y="77.875">29</text>
+		<text x="265" y="77.875">30</text>
+		<text x="289" y="77.875">31</text>
+		<text x="313" y="77.875">32</text>
+		<text x="337" y="77.875">33</text>
+		<text x="361" y="77.875">34</text>
+		<text x="385" y="77.875">35</text>
+		<text x="409" y="77.875">36</text>
+		<text x="1" y="101.875">37</text>
+		<text x="25" y="101.875">38</text>
+		<text x="49" y="101.875">39</text>
+		<text x="73" y="101.875">40</text>
+		<text x="97" y="101.875">41</text>
+		<text x="121" y="101.875">42</text>
+		<text x="145" y="101.875">43</text>
+		<text x="169" y="101.875">44</text>
+		<text x="193" y="101.875">45</text>
+		<text x="217" y="101.875">46</text>
+		<text x="241" y="101.875">47</text>
+		<text x="265" y="101.875">48</text>
+		<text x="289" y="101.875">49</text>
+		<text x="313" y="101.875">50</text>
+		<text x="337" y="101.875">51</text>
+		<text x="361" y="101.875">52</text>
+		<text x="385" y="101.875">53</text>
+		<text x="409" y="101.875">54</text>
+		<text x="1" y="125.875">55</text>
+		<text x="25" y="125.875">56</text>
+		<text x="73" y="197.875">57</text>
+		<text x="97" y="197.875">58</text>
+		<text x="121" y="197.875">59</text>
+		<text x="145" y="197.875">60</text>
+		<text x="169" y="197.875">61</text>
+		<text x="193" y="197.875">62</text>
+		<text x="217" y="197.875">63</text>
+		<text x="241" y="197.875">64</text>
+		<text x="265" y="197.875">65</text>
+		<text x="289" y="197.875">66</text>
+		<text x="313" y="197.875">67</text>
+		<text x="337" y="197.875">68</text>
+		<text x="361" y="197.875">69</text>
+		<text x="385" y="197.875">70</text>
+		<text x="409" y="197.875">71</text>
+		<text x="73" y="125.875">72</text>
+		<text x="97" y="125.875">73</text>
+		<text x="121" y="125.875">74</text>
+		<text x="145" y="125.875">75</text>
+		<text x="169" y="125.875">76</text>
+		<text x="193" y="125.875">77</text>
+		<text x="217" y="125.875">78</text>
+		<text x="241" y="125.875">79</text>
+		<text x="265" y="125.875">80</text>
+		<text x="289" y="125.875">81</text>
+		<text x="313" y="125.875">82</text>
+		<text x="337" y="125.875">83</text>
+		<text x="361" y="125.875">84</text>
+		<text x="385" y="125.875">85</text>
+		<text x="409" y="125.875">86</text>
+		<text x="1" y="149.875">87</text>
+		<text x="25" y="149.875">88</text>
+		<text x="73" y="221.875">89</text>
+		<text x="97" y="221.875">90</text>
+		<text x="121" y="221.875">91</text>
+		<text x="145" y="221.875">92</text>
+		<text x="169" y="221.875">93</text>
+		<text x="193" y="221.875">94</text>
+		<text x="217" y="221.875">95</text>
+		<text x="241" y="221.875">96</text>
+		<text x="265" y="221.875">97</text>
+		<text x="289" y="221.875">98</text>
+		<text x="313" y="221.875">99</text>
+		<text x="337" y="221.875">100</text>
+		<text x="361" y="221.875">101</text>
+		<text x="385" y="221.875">102</text>
+		<text x="409" y="221.875">103</text>
+		<text x="73" y="149.875">104</text>
+		<text x="97" y="149.875">105</text>
+		<text x="121" y="149.875">106</text>
+		<text x="145" y="149.875">107</text>
+		<text x="169" y="149.875">108</text>
+		<text x="193" y="149.875">109</text>
+		<text x="217" y="149.875">110</text>
+		<text x="241" y="149.875">111</text>
+		<text x="265" y="149.875">112</text>
+		<text x="289" y="149.875">113</text>
+		<text x="313" y="149.875">114</text>
+		<text x="337" y="149.875">115</text>
+		<text x="361" y="149.875">116</text>
+		<text x="385" y="149.875">117</text>
+		<text x="409" y="149.875">118</text>
+	</g>
+	<g class="Symbol" transform="translate(11.5 50)">
+		<text style="font-weight: normal; letter-spacing: -0.04em;" x="25" y="12.481">符號</text>
+
+		<text class="Gas" x="1" y="12.481">H</text>
+		<text class="Gas" x="409" y="12.481">He</text>
+		<text class="Solid" x="1" y="36.481">Li</text>
+		<text class="Solid" x="25" y="36.481">Be</text>
+		<text class="Solid" x="289" y="36.481">B</text>
+		<text class="Solid" x="313" y="36.481">C</text>
+		<text class="Gas" x="337" y="36.481">N</text>
+		<text class="Gas" x="361" y="36.481">O</text>
+		<text class="Gas" x="385" y="36.481">F</text>
+		<text class="Gas" x="409" y="36.481">Ne</text>
+		<text class="Solid" x="1" y="60.481">Na</text>
+		<text class="Solid" x="25" y="60.481">Mg</text>
+		<text class="Solid" x="289" y="60.481">Al</text>
+		<text class="Solid" x="313" y="60.481">Si</text>
+		<text class="Solid" x="337" y="60.481">P</text>
+		<text class="Solid" x="361" y="60.481">S</text>
+		<text class="Gas" x="385" y="60.481">Cl</text>
+		<text class="Gas" x="409" y="60.481">Ar</text>
+		<text class="Solid" x="1" y="84.481">K</text>
+		<text class="Solid" x="25" y="84.481">Ca</text>
+		<text class="Solid" x="49" y="84.481">Sc</text>
+		<text class="Solid" x="73" y="84.481">Ti</text>
+		<text class="Solid" x="97" y="84.481">V</text>
+		<text class="Solid" x="121" y="84.481">Cr</text>
+		<text class="Solid" x="145" y="84.481">Mn</text>
+		<text class="Solid" x="169" y="84.481">Fe</text>
+		<text class="Solid" x="193" y="84.481">Co</text>
+		<text class="Solid" x="217" y="84.481">Ni</text>
+		<text class="Solid" x="241" y="84.481">Cu</text>
+		<text class="Solid" x="265" y="84.481">Zn</text>
+		<text class="Solid" x="289" y="84.481">Ga</text>
+		<text class="Solid" x="313" y="84.481">Ge</text>
+		<text class="Solid" x="337" y="84.481">As</text>
+		<text class="Solid" x="361" y="84.481">Se</text>
+		<text class="Liquid" x="385" y="84.481">Br</text>
+		<text class="Gas" x="409" y="84.481">Kr</text>
+		<text class="Solid" x="1" y="108.481">Rb</text>
+		<text class="Solid" x="25" y="108.481">Sr</text>
+		<text class="Solid" x="49" y="108.481">Y</text>
+		<text class="Solid" x="73" y="108.481">Zr</text>
+		<text class="Solid" x="97" y="108.481">Nb</text>
+		<text class="Solid" x="121" y="108.481">Mo</text>
+		<text class="Solid" x="145" y="108.481">Tc</text>
+		<text class="Solid" x="169" y="108.481">Ru</text>
+		<text class="Solid" x="193" y="108.481">Rh</text>
+		<text class="Solid" x="217" y="108.481">Pd</text>
+		<text class="Solid" x="241" y="108.481">Ag</text>
+		<text class="Solid" x="265" y="108.481">Cd</text>
+		<text class="Solid" x="289" y="108.481">In</text>
+		<text class="Solid" x="313" y="108.481">Sn</text>
+		<text class="Solid" x="337" y="108.481">Sb</text>
+		<text class="Solid" x="361" y="108.481">Te</text>
+		<text class="Solid" x="385" y="108.481">I</text>
+		<text class="Gas" x="409" y="108.481">Xe</text>
+		<text class="Solid" x="1" y="132.481">Cs</text>
+		<text class="Solid" x="25" y="132.481">Ba</text>
+		<text class="Solid" x="73" y="204.481">La</text>
+		<text class="Solid" x="97" y="204.481">Ce</text>
+		<text class="Solid" x="121" y="204.481">Pr</text>
+		<text class="Solid" x="145" y="204.481">Nd</text>
+		<text class="Solid" x="169" y="204.481">Pm</text>
+		<text class="Solid" x="193" y="204.481">Sm</text>
+		<text class="Solid" x="217" y="204.481">Eu</text>
+		<text class="Solid" x="241" y="204.481">Gd</text>
+		<text class="Solid" x="265" y="204.481">Tb</text>
+		<text class="Solid" x="289" y="204.481">Dy</text>
+		<text class="Solid" x="313" y="204.481">Ho</text>
+		<text class="Solid" x="337" y="204.481">Er</text>
+		<text class="Solid" x="361" y="204.481">Tm</text>
+		<text class="Solid" x="385" y="204.481">Yb</text>
+		<text class="Solid" x="409" y="204.481">Lu</text>
+		<text class="Solid" x="73" y="132.481">Hf</text>
+		<text class="Solid" x="97" y="132.481">Ta</text>
+		<text class="Solid" x="121" y="132.481">W</text>
+		<text class="Solid" x="145" y="132.481">Re</text>
+		<text class="Solid" x="169" y="132.481">Os</text>
+		<text class="Solid" x="193" y="132.481">Ir</text>
+		<text class="Solid" x="217" y="132.481">Pt</text>
+		<text class="Solid" x="241" y="132.481">Au</text>
+		<text class="Liquid" x="265" y="132.481">Hg</text>
+		<text class="Solid" x="289" y="132.481">Tl</text>
+		<text class="Solid" x="313" y="132.481">Pb</text>
+		<text class="Solid" x="337" y="132.481">Bi</text>
+		<text class="Solid" x="361" y="132.481">Po</text>
+		<text class="Solid" x="385" y="132.481">At</text>
+		<text class="Gas" x="409" y="132.481">Rn</text>
+		<text class="Solid" x="1" y="156.481">Fr</text>
+		<text class="Solid" x="25" y="156.481">Ra</text>
+		<text class="Solid" x="73" y="228.481">Ac</text>
+		<text class="Solid" x="97" y="228.481">Th</text>
+		<text class="Solid" x="121" y="228.481">Pa</text>
+		<text class="Solid" x="145" y="228.481">U</text>
+		<text class="Solid" x="169" y="228.481">Np</text>
+		<text class="Solid" x="193" y="228.481">Pu</text>
+		<text class="Solid" x="217" y="228.481">Am</text>
+		<text class="Solid" x="241" y="228.481">Cm</text>
+		<text class="Solid" x="265" y="228.481">Bk</text>
+		<text class="Solid" x="289" y="228.481">Cf</text>
+		<text class="Solid" x="313" y="228.481">Es</text>
+		<text class="Solid" x="337" y="228.481">Fm</text>
+		<text class="Solid" x="361" y="228.481">Md</text>
+		<text class="Solid" x="385" y="228.481">No</text>
+		<text class="Solid" x="409" y="228.481">Lr</text>
+		<text class="UnknownState" x="73" y="156.481">Rf</text>
+		<text class="UnknownState" x="97" y="156.481">Db</text>
+		<text class="UnknownState" x="121" y="156.481">Sg</text>
+		<text class="UnknownState" x="145" y="156.481">Bh</text>
+		<text class="UnknownState" x="169" y="156.481">Hs</text>
+		<text class="UnknownState" x="193" y="156.481">Mt</text>
+		<text class="UnknownState" x="217" y="156.481">Ds</text>
+		<text class="UnknownState" x="241" y="156.481">Rg</text>
+		<text class="UnknownState" x="265" y="156.481">Cn</text>
+		<text class="UnknownState" x="289" y="156.481">Nh</text>
+		<text class="UnknownState" x="313" y="156.481">Fl</text>
+		<text class="UnknownState" x="337" y="156.481">Mc</text>
+		<text class="UnknownState" x="361" y="156.481">Lv</text>
+		<text class="UnknownState" x="385" y="156.481">Ts</text>
+		<text class="UnknownState" x="409" y="156.481">Og</text>
+	</g>
+	<g class="Name" transform="translate(11.5 50)">
+		<text x="25" y="17.05">名称</text>
+
+		<text x="1" y="17.05">氢</text>
+		<text x="409" y="17.05">氦</text>
+		<text x="1" y="41.05">锂</text>
+		<text x="25" y="41.05">铍</text>
+		<text x="289" y="41.05">硼</text>
+		<text x="313" y="41.05">碳</text>
+		<text x="337" y="41.05">氮</text>
+		<text x="361" y="41.05">氧</text>
+		<text x="385" y="41.05">氟</text>
+		<text x="409" y="41.05">氖</text>
+		<text x="1" y="65.05">钠</text>
+		<text x="25" y="65.05">镁</text>
+		<text x="289" y="65.05">铝</text>
+		<text x="313" y="65.05">硅</text>
+		<text x="337" y="65.05">磷</text>
+		<text x="361" y="65.05">硫</text>
+		<text x="385" y="65.05">氯</text>
+		<text x="409" y="65.05">氩</text>
+		<text x="1" y="89.05">钾</text>
+		<text x="25" y="89.05">钙</text>
+		<text x="49" y="89.05">钪</text>
+		<text x="73" y="89.05">钛</text>
+		<text x="97" y="89.05">钒</text>
+		<text x="121" y="89.05">铬</text>
+		<text x="145" y="89.05">锰</text>
+		<text x="169" y="89.05">铁</text>
+		<text x="193" y="89.05">钴</text>
+		<text x="217" y="89.05">镍</text>
+		<text x="241" y="89.05">铜</text>
+		<text x="265" y="89.05">锌</text>
+		<text x="289" y="89.05">镓</text>
+		<text x="313" y="89.05">锗</text>
+		<text x="337" y="89.05">砷</text>
+		<text x="361" y="89.05">硒</text>
+		<text x="385" y="89.05">溴</text>
+		<text x="409" y="89.05">氪</text>
+		<text x="1" y="113.05">铷</text>
+		<text x="25" y="113.05">锶</text>
+		<text x="49" y="113.05">钇</text>
+		<text x="73" y="113.05">锆</text>
+		<text x="97" y="113.05">铌</text>
+		<text x="121" y="113.05">钼</text>
+		<text x="145" y="113.05">锝</text>
+		<text x="169" y="113.05">钌</text>
+		<text x="193" y="113.05">铑</text>
+		<text x="217" y="113.05">钯</text>
+		<text x="241" y="113.05">银</text>
+		<text x="265" y="113.05">镉</text>
+		<text x="289" y="113.05">铟</text>
+		<text x="313" y="113.05">锡</text>
+		<text x="337" y="113.05">锑</text>
+		<text x="361" y="113.05">碲</text>
+		<text x="385" y="113.05">碘</text>
+		<text x="409" y="113.05">氙</text>
+		<text x="1" y="137.05">铯</text>
+		<text x="25" y="137.05">钡</text>
+		<text x="73" y="209.05">镧</text>
+		<text x="97" y="209.05">铈</text>
+		<text x="121" y="209.05">镨</text>
+		<text x="145" y="209.05">钕</text>
+		<text x="169" y="209.05">钷</text>
+		<text x="193" y="209.05">钐</text>
+		<text x="217" y="209.05">铕</text>
+		<text x="241" y="209.05">钆</text>
+		<text x="265" y="209.05">铽</text>
+		<text x="289" y="209.05">镝</text>
+		<text x="313" y="209.05">钬</text>
+		<text x="337" y="209.05">铒</text>
+		<text x="361" y="209.05">铥</text>
+		<text x="385" y="209.05">镱</text>
+		<text x="409" y="209.05">镥</text>
+		<text x="73" y="137.05">铪</text>
+		<text x="97" y="137.05">钽</text>
+		<text x="121" y="137.05">钨</text>
+		<text x="145" y="137.05">铼</text>
+		<text x="169" y="137.05">锇</text>
+		<text x="193" y="137.05">铱</text>
+		<text x="217" y="137.05">铂</text>
+		<text x="241" y="137.05">金</text>
+		<text x="265" y="137.05">汞</text>
+		<text x="289" y="137.05">铊</text>
+		<text x="313" y="137.05">铅</text>
+		<text x="337" y="137.05">铋</text>
+		<text x="361" y="137.05">钋</text>
+		<text x="385" y="137.05">砹</text>
+		<text x="409" y="137.05">氡</text>
+		<text x="1" y="161.05">钫</text>
+		<text x="25" y="161.05">镭</text>
+		<text x="73" y="233.05">锕</text>
+		<text x="97" y="233.05">钍</text>
+		<text x="121" y="233.05">镤</text>
+		<text x="145" y="233.05">铀</text>
+		<text x="169" y="233.05">镎</text>
+		<text x="193" y="233.05">钚</text>
+		<text x="217" y="233.05">镅</text>
+		<text x="241" y="233.05">锔</text>
+		<text x="265" y="233.05">锫</text>
+		<text x="289" y="233.05">锎</text>
+		<text x="313" y="233.05">锿</text>
+		<text x="337" y="233.05">镄</text>
+		<text x="361" y="233.05">钔</text>
+		<text x="385" y="233.05">锘</text>
+		<text x="409" y="233.05">铹</text>
+		<text x="73" y="161.05">𬬻</text>
+		<text x="97" y="161.05">𬭊</text>
+		<text x="121" y="161.05">𬭳</text>
+		<text x="145" y="161.05">𬭛</text>
+		<text x="169" y="161.05">𬭶</text>
+		<text x="193" y="161.05">鿏</text>
+		<text x="217" y="161.05">𫟼</text>
+		<text x="241" y="161.05">𬬭</text>
+		<text x="265" y="161.05">鿔</text>
+		<text x="289" y="161.05">鿭</text>
+		<text x="313" y="161.05">𫓧</text>
+		<text x="337" y="161.05">镆</text>
+		<text x="361" y="161.05">𫟷</text>
+		<text x="385" y="161.05">鿬</text>
+		<text x="409" y="161.05">鿫</text>
+	</g>
+	<g class="Weight" transform="translate(11.5 50)">
+		<text x="25" y="21.68">重量</text>
+
+		<text x="1" y="21.68">1.008</text>
+		<text x="409" y="21.68">4.0026</text>
+		<text x="1" y="45.68">6.94</text>
+		<text x="25" y="45.68">9.0122</text>
+		<text x="289" y="45.68">10.81</text>
+		<text x="313" y="45.68">12.011</text>
+		<text x="337" y="45.68">14.007</text>
+		<text x="361" y="45.68">15.999</text>
+		<text x="385" y="45.68">18.998</text>
+		<text x="409" y="45.68">20.180</text>
+		<text x="1" y="69.68">22.990</text>
+		<text x="25" y="69.68">24.305</text>
+		<text x="289" y="69.68">26.982</text>
+		<text x="313" y="69.68">28.085</text>
+		<text x="337" y="69.68">30.974</text>
+		<text x="361" y="69.68">32.06</text>
+		<text x="385" y="69.68">35.45</text>
+		<text x="409" y="69.68">39.948</text>
+		<text x="1" y="93.68">39.098</text>
+		<text x="25" y="93.68">40.078</text>
+		<text x="49" y="93.68">44.956</text>
+		<text x="73" y="93.68">47.867</text>
+		<text x="97" y="93.68">50.942</text>
+		<text x="121" y="93.68">51.996</text>
+		<text x="145" y="93.68">54.938</text>
+		<text x="169" y="93.68">55.845</text>
+		<text x="193" y="93.68">58.933</text>
+		<text x="217" y="93.68">58.693</text>
+		<text x="241" y="93.68">63.546</text>
+		<text x="265" y="93.68">65.38</text>
+		<text x="289" y="93.68">69.723</text>
+		<text x="313" y="93.68">72.630</text>
+		<text x="337" y="93.68">74.922</text>
+		<text x="361" y="93.68">78.971</text>
+		<text x="385" y="93.68">79.904</text>
+		<text x="409" y="93.68">83.798</text>
+		<text x="1" y="117.68">85.468</text>
+		<text x="25" y="117.68">87.62</text>
+		<text x="49" y="117.68">88.906</text>
+		<text x="73" y="117.68">91.224</text>
+		<text x="97" y="117.68">92.906</text>
+		<text x="121" y="117.68">95.95</text>
+		<text x="145" y="117.68">(98)</text>
+		<text x="169" y="117.68">101.07</text>
+		<text x="193" y="117.68">102.91</text>
+		<text x="217" y="117.68">106.42</text>
+		<text x="241" y="117.68">107.87</text>
+		<text x="265" y="117.68">112.41</text>
+		<text x="289" y="117.68">114.82</text>
+		<text x="313" y="117.68">118.71</text>
+		<text x="337" y="117.68">121.76</text>
+		<text x="361" y="117.68">127.60</text>
+		<text x="385" y="117.68">126.90</text>
+		<text x="409" y="117.68">131.29</text>
+		<text x="1" y="141.68">132.91</text>
+		<text x="25" y="141.68">137.33</text>
+		<text x="73" y="213.68">138.91</text>
+		<text x="97" y="213.68">140.12</text>
+		<text x="121" y="213.68">140.91</text>
+		<text x="145" y="213.68">144.24</text>
+		<text x="169" y="213.68">(145)</text>
+		<text x="193" y="213.68">150.36</text>
+		<text x="217" y="213.68">151.96</text>
+		<text x="241" y="213.68">157.25</text>
+		<text x="265" y="213.68">158.93</text>
+		<text x="289" y="213.68">162.50</text>
+		<text x="313" y="213.68">164.93</text>
+		<text x="337" y="213.68">167.26</text>
+		<text x="361" y="213.68">168.93</text>
+		<text x="385" y="213.68">173.05</text>
+		<text x="409" y="213.68">174.97</text>
+		<text x="73" y="141.68">178.49</text>
+		<text x="97" y="141.68">180.95</text>
+		<text x="121" y="141.68">183.84</text>
+		<text x="145" y="141.68">186.21</text>
+		<text x="169" y="141.68">190.23</text>
+		<text x="193" y="141.68">192.22</text>
+		<text x="217" y="141.68">195.08</text>
+		<text x="241" y="141.68">196.97</text>
+		<text x="265" y="141.68">200.59</text>
+		<text x="289" y="141.68">204.38</text>
+		<text x="313" y="141.68">207.2</text>
+		<text x="337" y="141.68">208.98</text>
+		<text x="361" y="141.68">(209)</text>
+		<text x="385" y="141.68">(210)</text>
+		<text x="409" y="141.68">(222)</text>
+		<text x="1" y="165.68">(223)</text>
+		<text x="25" y="165.68">(226)</text>
+		<text x="73" y="237.68">(227)</text>
+		<text x="97" y="237.68">232.04</text>
+		<text x="121" y="237.68">231.04</text>
+		<text x="145" y="237.68">238.03</text>
+		<text x="169" y="237.68">(237)</text>
+		<text x="193" y="237.68">(244)</text>
+		<text x="217" y="237.68">(243)</text>
+		<text x="241" y="237.68">(247)</text>
+		<text x="265" y="237.68">(247)</text>
+		<text x="289" y="237.68">(251)</text>
+		<text x="313" y="237.68">(252)</text>
+		<text x="337" y="237.68">(257)</text>
+		<text x="361" y="237.68">(258)</text>
+		<text x="385" y="237.68">(259)</text>
+		<text x="409" y="237.68">(266)</text>
+		<text x="73" y="165.68">(267)</text>
+		<text x="97" y="165.68">(268)</text>
+		<text x="121" y="165.68">(269)</text>
+		<text x="145" y="165.68">(270)</text>
+		<text x="169" y="165.68">(277)</text>
+		<text x="193" y="165.68">(278)</text>
+		<text x="217" y="165.68">(281)</text>
+		<text x="241" y="165.68">(282)</text>
+		<text x="265" y="165.68">(285)</text>
+		<text x="289" y="165.68">(286)</text>
+		<text x="313" y="165.68">(289)</text>
+		<text x="337" y="165.68">(290)</text>
+		<text x="361" y="165.68">(293)</text>
+		<text x="385" y="165.68">(294)</text>
+		<text x="409" y="165.68">(294)</text>
+	</g>
+
+	<g class="Levels" text-anchor="end" transform="translate(11.5 50)">
+		<g text-anchor="start">
+			<text transform="translate(432.09 0.682)"><tspan x="0" dy="1.8">K</tspan></text>
+			<text transform="translate(432.09 24.682)"><tspan x="0" dy="1.8">K</tspan><tspan x="0" dy="1.8">L</tspan></text>
+			<text transform="translate(432.09 48.682)"><tspan x="0" dy="1.8">K</tspan><tspan x="0" dy="1.8">L</tspan><tspan x="0" dy="1.8">M</tspan></text>
+			<text transform="translate(432.09 72.682)"><tspan x="0" dy="1.8">K</tspan><tspan x="0" dy="1.8">L</tspan><tspan x="0" dy="1.8">M</tspan><tspan x="0" dy="1.8">N</tspan></text>
+			<text transform="translate(432.09 96.682)"><tspan x="0" dy="1.8">K</tspan><tspan x="0" dy="1.8">L</tspan><tspan x="0" dy="1.8">M</tspan><tspan x="0" dy="1.8">N</tspan><tspan x="0" dy="1.8">O</tspan></text>
+			<text transform="translate(432.09 120.682)"><tspan x="0" dy="1.8">K</tspan><tspan x="0" dy="1.8">L</tspan><tspan x="0" dy="1.8">M</tspan><tspan x="0" dy="1.8">N</tspan><tspan x="0" dy="1.8">O</tspan><tspan x="0" dy="1.8">P</tspan></text>
+			<text transform="translate(432.09 144.682)"><tspan x="0" dy="1.8">K</tspan><tspan x="0" dy="1.8">L</tspan><tspan x="0" dy="1.8">M</tspan><tspan x="0" dy="1.8">N</tspan><tspan x="0" dy="1.8">O</tspan><tspan x="0" dy="1.8">P</tspan><tspan x="0" dy="1.8">Q</tspan></text>
+			<text transform="translate(432.09 192.682)"><tspan x="0" dy="1.8">K</tspan><tspan x="0" dy="1.8">L</tspan><tspan x="0" dy="1.8">M</tspan><tspan x="0" dy="1.8">N</tspan><tspan x="0" dy="1.8">O</tspan><tspan x="0" dy="1.8">P</tspan></text>
+			<text transform="translate(432.09 216.682)"><tspan x="0" dy="1.8">K</tspan><tspan x="0" dy="1.8">L</tspan><tspan x="0" dy="1.8">M</tspan><tspan x="0" dy="1.8">N</tspan><tspan x="0" dy="1.8">O</tspan><tspan x="0" dy="1.8">P</tspan><tspan x="0" dy="1.8">Q</tspan></text>
+		</g>
+
+		<text transform="translate(21.86 0.682)"><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(429.86 0.682)"><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(21.86 24.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(45.86 24.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(309.86 24.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">3</tspan></text>
+		<text transform="translate(333.86 24.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">4</tspan></text>
+		<text transform="translate(357.86 24.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">5</tspan></text>
+		<text transform="translate(381.86 24.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">6</tspan></text>
+		<text transform="translate(405.86 24.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">7</tspan></text>
+		<text transform="translate(429.86 24.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan></text>
+		<text transform="translate(21.86 48.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(45.86 48.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(309.86 48.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">3</tspan></text>
+		<text transform="translate(333.86 48.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">4</tspan></text>
+		<text transform="translate(357.86 48.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">5</tspan></text>
+		<text transform="translate(381.86 48.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">6</tspan></text>
+		<text transform="translate(405.86 48.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">7</tspan></text>
+		<text transform="translate(429.86 48.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">8</tspan></text>
+		<text transform="translate(21.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(45.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(69.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">9</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(93.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">10</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(117.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">11</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(141.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">13</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(165.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">13</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(189.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">14</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(213.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">15</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(237.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">16</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(261.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(285.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(309.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">3</tspan></text>
+		<text transform="translate(333.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">4</tspan></text>
+		<text transform="translate(357.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">5</tspan></text>
+		<text transform="translate(381.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">6</tspan></text>
+		<text transform="translate(405.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">7</tspan></text>
+		<text transform="translate(429.86 72.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">8</tspan></text>
+		<text transform="translate(21.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(45.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(69.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">9</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(93.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">10</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(117.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">12</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(141.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">13</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(165.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">13</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(189.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">15</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(213.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">16</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(237.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">18</tspan></text>
+		<text transform="translate(261.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(285.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(309.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">3</tspan></text>
+		<text transform="translate(333.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">4</tspan></text>
+		<text transform="translate(357.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">5</tspan></text>
+		<text transform="translate(381.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">6</tspan></text>
+		<text transform="translate(405.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">7</tspan></text>
+		<text transform="translate(429.86 96.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">8</tspan></text>
+		<text transform="translate(21.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(45.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(93.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">9</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(117.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">19</tspan><tspan x="0" dy="1.8">9</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(141.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">21</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(165.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">22</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(189.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">23</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(213.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">24</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(237.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">25</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(261.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">25</tspan><tspan x="0" dy="1.8">9</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(285.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">27</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(309.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">28</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(333.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">29</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(357.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">30</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(381.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">31</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(405.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(429.86 192.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">9</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(93.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">10</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(117.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">11</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(141.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">12</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(165.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">13</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(189.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">14</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(213.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">15</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(237.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">17</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(261.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(285.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(309.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">3</tspan></text>
+		<text transform="translate(333.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">4</tspan></text>
+		<text transform="translate(357.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">5</tspan></text>
+		<text transform="translate(381.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">6</tspan></text>
+		<text transform="translate(405.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">7</tspan></text>
+		<text transform="translate(429.86 120.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">8</tspan></text>
+		<text transform="translate(21.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(45.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(93.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">9</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(117.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">10</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(141.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">20</tspan><tspan x="0" dy="1.8">9</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(165.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">21</tspan><tspan x="0" dy="1.8">9</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(189.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">22</tspan><tspan x="0" dy="1.8">9</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(213.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">24</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(237.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">25</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(261.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">25</tspan><tspan x="0" dy="1.8">9</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(285.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">27</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(309.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">28</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(333.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">29</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(357.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">30</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(381.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">31</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(405.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(429.86 216.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">3</tspan></text>
+		<text transform="translate(93.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">10</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(117.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">11</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(141.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">12</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(165.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">13</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(189.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">14</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(213.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">15</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(237.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">17</tspan><tspan x="0" dy="1.8">1</tspan></text>
+		<text transform="translate(261.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">17</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(285.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">2</tspan></text>
+		<text transform="translate(309.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">3</tspan></text>
+		<text transform="translate(333.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">4</tspan></text>
+		<text transform="translate(357.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">5</tspan></text>
+		<text transform="translate(381.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">6</tspan></text>
+		<text transform="translate(405.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">7</tspan></text>
+		<text transform="translate(429.86 144.682)"><tspan x="0" dy="1.8">2</tspan><tspan x="0" dy="1.8">8</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">32</tspan><tspan x="0" dy="1.8">18</tspan><tspan x="0" dy="1.8">8</tspan></text>
+	</g>
+
+	<text class="Parentheses" x="83.5" y="179.5" transform="translate(11.5 50)" dominant-baseline="middle">对没有稳定同位素的元素，其同位素中半衰期最长的重量以括号标示。</text>
+	<a href="https://ptable.com/?lang=zh-hans">
+		<svg x="11.5" y="270" width="41.82" height="18.09" viewBox="0 0 280 121.1">
+			<defs>
+				<style>
+					.Square	{ fill: url(#lgrad); }
+					.Pt		{ fill: white; paint-order: stroke; stroke: rgb(255, 255, 255, 0.4); stroke-width: 6; }
+					.able	{ fill: #003660; paint-order: stroke; stroke: white; stroke-width: 6; /*vector-effect: non-scaling-stroke;*/ }
+				</style>
+				<linearGradient id="lgrad" y2="100%">
+					<stop offset="0" stop-color="rgb(45,190,252)" />
+					<stop offset="1" stop-color="rgb(2,118,253)" />
+				</linearGradient>
+			</defs>
+			<rect class="Square" width="121.1" height="121.1"/>
+			<g class="Pt">
+				<path d="M25,93.38V27.71H46.3q12.09,0,15.77,1a17.2,17.2,0,0,1,9.45,6.43q3.81,4.95,3.81,12.79a21.29,21.29,0,0,1-2.2,10.16,18,18,0,0,1-5.57,6.48,19.26,19.26,0,0,1-6.88,3.11,75.46,75.46,0,0,1-13.75.94H38.28V93.38ZM38.28,38.82V57.46h7.26c5.22,0,8.72-.35,10.48-1a8.69,8.69,0,0,0,4.14-3.23,8.8,8.8,0,0,0,1.5-5.1,8.52,8.52,0,0,0-2.1-5.92,9.18,9.18,0,0,0-5.33-2.91,63.38,63.38,0,0,0-9.54-.45Z"/>
+				<path d="M104.27,45.81v10h-8.6V75a48.82,48.82,0,0,0,.24,6.78A2.75,2.75,0,0,0,97,83.39a3.58,3.58,0,0,0,2.13.63,16.14,16.14,0,0,0,5.06-1.21l1.08,9.77a25.11,25.11,0,0,1-10,1.88,15.76,15.76,0,0,1-6.13-1.14,9,9,0,0,1-4-3,11.73,11.73,0,0,1-1.77-4.91,61,61,0,0,1-.4-8.87V55.84H77.26v-10H83V36.36L95.67,29v16.8Z"/>
+			</g>
+			<g class="able">
+				<path d="M123,60.32,111.6,58.26q1.92-6.88,6.63-10.21t14-3.31q8.43,0,12.55,2a12.58,12.58,0,0,1,5.8,5.06q1.68,3.08,1.68,11.27l-.14,14.69A51.23,51.23,0,0,0,152.7,87,27,27,0,0,0,155,93.38H142.51c-.33-.83-.73-2.07-1.21-3.71-.21-.75-.36-1.24-.45-1.48a22.58,22.58,0,0,1-6.9,4.7,19.68,19.68,0,0,1-7.84,1.57c-4.9,0-8.75-1.33-11.58-4a13.26,13.26,0,0,1-4.23-10.08,13.49,13.49,0,0,1,1.93-7.19,12.61,12.61,0,0,1,5.39-4.84,43,43,0,0,1,10-2.93q8.82-1.65,12.22-3.09V61.09c0-2.42-.59-4.15-1.79-5.18s-3.45-1.54-6.76-1.54a9,9,0,0,0-5.24,1.32A9.15,9.15,0,0,0,123,60.32Zm16.84,10.22a78.71,78.71,0,0,1-7.66,1.92q-5.23,1.13-6.85,2.2a5.24,5.24,0,0,0-2.46,4.43,6.13,6.13,0,0,0,2,4.57,6.85,6.85,0,0,0,5,1.93,10.93,10.93,0,0,0,6.49-2.24,7.91,7.91,0,0,0,3-4.17,24.76,24.76,0,0,0,.49-6.13Z"/>
+				<path d="M160.43,93.38V27.71H173V51.37q5.82-6.63,13.79-6.63A18.52,18.52,0,0,1,201.19,51q5.7,6.3,5.69,18.07,0,12.2-5.8,18.77A18.11,18.11,0,0,1,187,94.46a17.44,17.44,0,0,1-8-2,19.31,19.31,0,0,1-6.83-6v7Zm12.5-24.81q0,7.38,2.33,10.93,3.27,5,8.69,5a8.9,8.9,0,0,0,7.1-3.56Q194,77.4,194,69.73q0-8.15-3-11.76a9.35,9.35,0,0,0-7.57-3.6,9.49,9.49,0,0,0-7.52,3.51Q172.93,61.4,172.93,68.57Z"/>
+				<path d="M213.34,93.38V27.71h12.58V93.38Z"/>
+				<path d="M262.7,78.24l12.55,2.11a20.58,20.58,0,0,1-7.64,10.5q-5.22,3.62-13.06,3.61-12.41,0-18.37-8.11-4.69-6.5-4.7-16.39,0-11.83,6.18-18.53a20.37,20.37,0,0,1,15.64-6.69q10.6,0,16.75,7t5.87,21.48H244.38q.13,5.59,3.05,8.71a9.54,9.54,0,0,0,7.25,3.11,7.75,7.75,0,0,0,5-1.61A10,10,0,0,0,262.7,78.24Zm.72-12.72q-.14-5.46-2.82-8.31a8.64,8.64,0,0,0-6.54-2.84,8.74,8.74,0,0,0-6.81,3q-2.69,3-2.64,8.15Z"/>
+			</g>
+		</svg>
+	</a>
+	<text class="Trademark" x="11.5" y="295.5">Ptable® is a registered trademark of <a href="https://dayah.com/">Michael Dayah</a> (support@ptable.com). For a fully-interactive edition in 50 languages with property trend visualization, 3-D orbitals, isotopes, compound mixing, lesson plans, posters, wallet cards, and installable apps, visit <a href="https://ptable.com/?lang=zh-hans">Ptable.com</a>.</text> <!-- Removal of this notice will be met with legal action. -->
+	<text class="Source" transform="translate(382 292.5)">
+		<tspan>Meija, J., Coplen, T., Berglund, M., et al. (2016). Atomic</tspan>
+		<tspan x="3" dy="2.6"> weights of the elements 2013 (IUPAC Technical Report).</tspan>
+		<tspan x="3" dy="2.6"> Pure and Applied Chemistry, 88(3), pp. 265-291.</tspan>
+	</text>
+
+	<script><![CDATA[
+		function shrink_text(node, width) {
+			node.setAttribute("lengthAdjust", "spacingAndGlyphs");
+			node.setAttribute("textLength", width);
+		}
+
+		function split_on_middle_space(text) {
+			const middle = Math.round(text.length / 2);
+			const first_tospace = text.lastIndexOf(" ", middle);
+			const last_tospace = text.indexOf(" ", middle);
+
+			let split_at;
+			if (!text.includes(" "))
+				split_at = text.length;
+			else if (Math.abs(first_tospace - middle) < Math.abs(last_tospace - middle))
+				split_at = first_tospace;
+			else
+				split_at = last_tospace;
+
+			return [text.substr(0, split_at), text.substring(split_at)];
+		}
+
+		const TITLE_WIDTH = 431;
+		const title = document.querySelector(".Title > text");
+		if (title.getComputedTextLength() > TITLE_WIDTH)
+			shrink_text(title, TITLE_WIDTH);
+
+		const PAREN_WIDTH = 335;
+		const paren = document.querySelector(".Parentheses");
+		if (paren.getComputedTextLength() > PAREN_WIDTH)
+			shrink_text(paren, PAREN_WIDTH);
+
+		const BOX_WIDTH = 21;
+		const names = document.querySelectorAll(".Name > text, .GroupText, .VerticalInner > text");
+		const long_names = [...names].filter(name => name.getComputedTextLength() > BOX_WIDTH);
+		long_names.forEach(name => shrink_text(name, BOX_WIDTH));
+
+		const STATE_WIDTH = 31.05;
+		const states = document.querySelectorAll(".StateText");
+		const long_states = [...states].filter(name => name.getComputedTextLength() > STATE_WIDTH);
+		long_states.forEach(name => shrink_text(name, STATE_WIDTH));
+
+		document.querySelectorAll(".SeriesHeader:not(.SeriesText)").forEach(name => {
+			const PAD = 4;
+			const box = document.getElementById("Series" + name.dataset.box);
+			const max_size = box.getBBox().width - PAD;
+			if (name.getComputedTextLength() > max_size)
+				shrink_text(name, max_size);
+		});
+
+		function height_or_width(node) {
+			return node.getAttribute("transform") ? "height" : "width";
+		}
+		document.querySelectorAll(".SeriesText").forEach(name => {
+			const PAD = 4;
+			const box = document.getElementById("Series" + name.dataset.box);
+			const direction = height_or_width(name);
+			const max_size = box.getAttribute(direction) - PAD;
+			if (name.getComputedTextLength() > max_size) {
+				const tspans = name.querySelectorAll("tspan");
+				const parts = split_on_middle_space(tspans[0].textContent);
+				tspans.forEach((tspan, idx) => {
+					tspan.textContent = parts[idx];
+					if (tspan.getComputedTextLength() > max_size)
+						shrink_text(tspan, max_size);
+				});
+			}
+		});
+
+		const serializer = new XMLSerializer();
+		let svg_static = serializer.serializeToString(document);
+		svg_static = svg_static.replace(/<script>.*<\/script>/ims, "");
+
+		const parser = new DOMParser();
+		const new_dom = parser.parseFromString(svg_static, "image/svg+xml");
+		document.replaceChild(new_dom.documentElement, document.documentElement);
+	]]></script>
+</svg>
