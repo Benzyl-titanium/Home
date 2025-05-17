@@ -29,7 +29,7 @@ a{ color: #c40b00; }
     left: 0;
     bottom: 0;
     color: #fff;
-    width: 250px;
+    width: 240px;
     position: fixed;
     overflow: hidden;
     overflow-y: auto;
@@ -75,7 +75,7 @@ a{ color: #c40b00; }
 }
 
 main{
-    margin-left: 250px;
+    margin-left: 240px;
     overflow-x: auto;
     box-sizing: border-box;
 }
