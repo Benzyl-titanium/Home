@@ -47,6 +47,45 @@ marvinIframe.onload = function() {
     }
 };
 
+async function callSmilesProcessService(smilesString) {
+    const serviceUrl = "https://smiles.benzyl-titanium.top/smiles/process"; // Service URL
+    console.log(`父窗口: 准备调用 SMILES 处理服务: ${serviceUrl}，SMILES: ${smilesString}`);
+    document.getElementById('serviceStatus').textContent = '正在调用服务...';
+
+
+    try {
+        const response = await fetch(serviceUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ smiles: smilesString }),
+        });
+
+        if (!response.ok) {
+            // Try to get error message from response body if available
+            let errorMessage = `HTTP error! status: ${response.status}`;
+            try {
+                const errorData = await response.json();
+                errorMessage += `, message: ${errorData.message || JSON.stringify(errorData)}`;
+            } catch (e) {
+                // Ignore if response is not JSON or body is empty
+            }
+            throw new Error(errorMessage);
+        }
+
+        const data = await response.json();
+        console.log("父窗口: 服务调用成功，响应数据:", data);
+        document.getElementById('serviceStatus').textContent = `服务响应: Canonical: ${data.canonical_smiles}, MW: ${data.molecular_weight}`;
+        // alert(`服务响应:\nCanonical SMILES: ${data.canonical_smiles}\nMolecular Weight: ${data.molecular_weight}`);
+
+    } catch (error) {
+        console.error("父窗口: 调用 SMILES 处理服务时发生错误:", error);
+        document.getElementById('serviceStatus').textContent = `服务调用失败: ${error.message}. 详情请查看控制台.`;
+        // alert(`调用服务失败: ${error.message}\n请检查浏览器控制台 (F12) 获取更多信息，特别是关于 CORS 的错误。`);
+    }
+}
+
 function autoImportSmiles() {
     const smilesValue = document.getElementById('smilesInput').value;
     console.log("父窗口 (autoImportSmiles): 函数被调用. SMILES 输入值:", smilesValue);
@@ -97,9 +136,17 @@ window.addEventListener('message', function(event) {
     // 例如，如果 iframe 通知 SMILES 已被加载或发生其他事件
     if (event.data && event.data.type === 'smilesImported') {
         if (event.data.status === 'success') {
-            console.log("父窗口: iframe 确认 SMILES 已导入。");
+            console.log("父窗口: iframe 确认 SMILES 已导入。准备调用外部服务...");
+            const currentSmiles = document.getElementById('smilesInput').value;
+            if (currentSmiles) {
+                callSmilesProcessService(currentSmiles); // Call the new function
+            } else {
+                console.warn("父窗口: SMILES 输入框为空，不调用外部服务。");
+                document.getElementById('serviceStatus').textContent = 'SMILES 输入框为空。';
+            }
         } else {
-            console.error("父窗口: iframe 报告 SMILES 导入失败。");
+            console.error("父窗口: iframe 报告 SMILES 导入失败。不调用外部服务。");
+            document.getElementById('serviceStatus').textContent = 'iframe SMILES 导入失败。';
         }
     } else if (event.data && event.data.type === 'sketchCleared') {
          if (event.data.status === 'success') {
