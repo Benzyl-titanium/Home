@@ -96,5 +96,14 @@
 <script src="static/paul.js"></script>
 <script src="js/smiles.js"></script>
 
+<script>
+    window.addEventListener('load', function() {
+        const clearButton = document.querySelector('button[onclick="clearAll()"]');
+        if (clearButton) {
+            clearButton.click();
+        }
+    });
+</script>
+
 </body>
 </html>
