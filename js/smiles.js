@@ -165,3 +165,9 @@ window.addEventListener('message', function(event) {
     }
     // 你可以根据需要添加更多 else if 来处理不同类型的消息
 });
+window.addEventListener('load', function() {
+    const clearButton = document.querySelector('button[onclick="clearAll()"]');
+    if (clearButton) {
+        clearButton.click();
+    }
+});
