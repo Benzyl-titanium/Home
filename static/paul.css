@@ -182,8 +182,32 @@ main section{
     text-align: center;
 }
 
-@media screen and (max-width: 900px) {
-
+@media screen and (max-width: 400px) {
+  .skills-icon {
+    width: 60px !important;
+    height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .skills-icon i {
+    font-size: 30px !important;
+    line-height: 60px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    text-align: center !important;
+  }
+  .skills-title {
+    margin-top: 1.5em !important;
+    text-align: center !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
 }
 
 
