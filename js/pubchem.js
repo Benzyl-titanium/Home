@@ -5,6 +5,7 @@
 // @description  自动监听剪贴板并在 PubChem 中搜索
 // @author       Your name
 // @match        https://pubchem.ncbi.nlm.nih.gov
+// @match        https://pubchem.ncbi.nlm.nih.gov/#query=*
 // @grant        GM_setClipboard
 // @grant        GM_getClipboard
 // ==/UserScript==
