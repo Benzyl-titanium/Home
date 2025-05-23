@@ -106,17 +106,6 @@ function autoImportSmiles() {
     }
 }
 
-function clearAll() {
-    document.getElementById('smilesInput').value = ''; // 清空输入框
-    if (marvinIframe && marvinIframe.contentWindow && iframeOrigin) {
-        // 向 iframe 发送清除命令
-        marvinIframe.contentWindow.postMessage({ type: 'clearSketch' }, iframeOrigin);
-        console.log("父窗口: 发送清空指令到 iframe");
-    } else {
-        console.warn("父窗口: iframe 未准备好或源未确定，无法发送清空指令");
-    }
-}
-
 // 监听来自 iframe 的消息
 window.addEventListener('message', function(event) {
     // 安全性检查：确保消息来自预期的 iframe 源
@@ -171,3 +160,21 @@ window.addEventListener('load', function() {
         clearButton.click();
     }
 });
+
+function clearAll() {
+    document.getElementById('smilesInput').value = ''; // 清空输入框
+    if (marvinIframe && marvinIframe.contentWindow && iframeOrigin) {
+        // 向 iframe 发送清除命令
+        marvinIframe.contentWindow.postMessage({ type: 'clearSketch' }, iframeOrigin);
+        console.log("父窗口: 发送清空指令到 iframe");
+    } else {
+        console.warn("父窗口: iframe 未准备好或源未确定，无法发送清空指令");
+    }
+}
+
+function copySmiles() {
+    const smilesInput = document.getElementById('smilesInput');
+    if (smilesInput && smilesInput.value) {
+        navigator.clipboard.writeText(smilesInput.value);
+    }
+}
