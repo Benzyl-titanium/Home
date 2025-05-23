@@ -51,16 +51,15 @@
 <main>
     <div style="margin-bottom: 4px; padding: 4px; border: 1px solid #ccc; display: flex; flex-direction: column; align-items: center;">
         <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 8px;">
-            <label for="smilesInput">SMILES:</label>
-            <input type="text" id="smilesInput" style="width: 400px; margin-right: 5px;" oninput="autoImportSmiles()">
-            <button onclick="clearAll()">Clear</button>
+            <input type="text" placeholder="输入SMILES" id="smilesInput" style="width: 400px; margin-right: 5px;" oninput="autoImportSmiles()">
         </div>
         <div style="display: flex; justify-content: center; gap: 10px;">
-            <button onclick="copySmiles()" style="margin-right: 5px;">Copy</button>
+            <button class="btn red small" onclick="clearAll()">Clear</button>
+            <button class="btn blue small" onclick="copySmiles()">Copy</button>
             <a href="https://pubchem.ncbi.nlm.nih.gov" aria-label="PubChem" target="_blank">
                 <img src="public/imgs/pubchem.png" style="width: 72px; height: 24px;"/> 
             </a>
-            <a href="public/js/pubchem.js" target="_blank">自动粘贴搜索脚本</a>
+            <a href="public/js/pubchem.js" target="_blank">粘贴搜索脚本</a>
         </div>
     </div>
     <iframe id="marvinFrame" src="Marvin/editorws.html" style="width: 100%; height: 73vh;"></iframe>

@@ -88,21 +88,10 @@ async function callSmilesProcessService(smilesString) {
 
 function autoImportSmiles() {
     const smilesValue = document.getElementById('smilesInput').value;
-    console.log("父窗口 (autoImportSmiles): 函数被调用. SMILES 输入值:", smilesValue);
-    console.log("父窗口 (autoImportSmiles): 检查条件 - marvinIframe 存在:", !!marvinIframe, "; marvinIframe.contentWindow 存在:", !!(marvinIframe && marvinIframe.contentWindow), "; iframeOrigin:", iframeOrigin);
-
-    if (marvinIframe && marvinIframe.contentWindow && iframeOrigin) {
-        console.log("父窗口 (autoImportSmiles): 条件满足. 准备发送 SMILES 到 iframe. 值:", smilesValue, "目标源:", iframeOrigin);
-        try {
-            marvinIframe.contentWindow.postMessage({ type: 'smilesUpdate', value: smilesValue }, iframeOrigin);
-            console.log("父窗口 (autoImportSmiles): SMILES 发送成功.");
-        } catch (e) {
-            console.error("父窗口 (autoImportSmiles): 发送 SMILES 时发生错误:", e);
-        }
+    if (marvinIframe?.contentWindow && iframeOrigin) {
+        marvinIframe.contentWindow.postMessage({ type: 'smilesUpdate', value: smilesValue }, iframeOrigin);
     } else {
-        console.warn("父窗口 (autoImportSmiles): 条件不满足. 暂存 SMILES 值. 当前 iframeOrigin:", iframeOrigin, "; marvinIframe.contentWindow 存在:", !!(marvinIframe && marvinIframe.contentWindow));
-        pendingSmilesValue = smilesValue; // 暂存 SMILES 值
-        console.log("父窗口 (autoImportSmiles): SMILES 值已暂存到 pendingSmilesValue:", pendingSmilesValue);
+        pendingSmilesValue = smilesValue;
     }
 }
 
