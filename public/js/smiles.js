@@ -27,6 +27,21 @@ marvinIframe.onload = function() {
         pendingSmilesValue = null; // 清除待处理的值，无论是否发送成功
         console.log("父窗口 (onload): pendingSmilesValue 已被清除。");
 
+        // 添加iframe内的事件监听
+        try {
+            marvinIframe.contentWindow.document.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    const smilesInput = document.getElementById('smilesInput');
+                    if (smilesInput?.value) {
+                        event.preventDefault();
+                        searchsmiles();
+                    }
+                }
+            });
+        } catch (e) {
+            console.error('无法在iframe中添加事件监听:', e);
+        }
+
     } catch (e) {
         console.error("父窗口 (onload): 解析 iframe src 或设置 iframeOrigin 时发生错误:", e);
         iframeOrigin = "*"; // 作为备选，但不推荐用于生产
@@ -176,8 +191,13 @@ function searchsmiles() {
     }
 }
 
-document.getElementById('smilesInput').addEventListener('keypress', function(event) {
+// 添加全局回车键监听
+document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-        searchsmiles();
+        const smilesInput = document.getElementById('smilesInput');
+        if (smilesInput?.value) {
+            event.preventDefault();
+            searchsmiles();
+        }
     }
 });
