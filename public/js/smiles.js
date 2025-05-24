@@ -167,3 +167,17 @@ function copySmiles() {
         navigator.clipboard.writeText(smilesInput.value);
     }
 }
+
+function searchsmiles() {
+    const smilesInput = document.getElementById('smilesInput');
+    if (smilesInput?.value) {
+        const searchUrl = `https://pubchem.ncbi.nlm.nih.gov/#query=${encodeURIComponent(smilesInput.value)}`;
+        window.open(searchUrl, '_blank');
+    }
+}
+
+document.getElementById('smilesInput').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        searchsmiles();
+    }
+});
