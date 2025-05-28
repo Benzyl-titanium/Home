@@ -201,3 +201,11 @@ document.addEventListener('keydown', function(event) {
         }
     }
 });
+
+function searchHNMR() {
+    const smiles = document.getElementById('smilesInput');
+    if (smilesInput?.value) {
+        const searchUrl = `https://www.nmrdb.org/new_predictor/index.shtml?v=v2.157.0&smiles=${encodeURIComponent(smilesInput.value)}`;
+        window.open(searchUrl, '_blank');
+    }
+}
