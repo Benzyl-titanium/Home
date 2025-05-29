@@ -1,6 +1,22 @@
 async function handleHomeLinkClick(e) {
     e.preventDefault();
     const href = e.currentTarget.getAttribute('href');
+    
+    if (href.startsWith('http') || href.startsWith('https')) {
+        window.open(href, '_blank');
+        return;
+    }
+    
+    if (href.includes('designdrugs.html') || 
+        href.includes('Structural-formula.html') || 
+        href.includes('solubility.html') ||
+        href.includes('chemgame.html') ||
+        href.includes('chemhandbook.html') ||
+        href.includes('marvin.html')) {
+        window.location.href = href;
+        return;
+    }
+    
     const hash = href.split('#')[1];
     
     if (window.location.pathname !== '/index.html' && window.location.pathname !== '/') {
@@ -85,18 +101,58 @@ document.addEventListener('DOMContentLoaded', () => {
                     sidebar.classList.toggle('active');
                 });
                 
-                const navLinks = document.querySelectorAll('.nav a');
-                for (const link of navLinks) {
-                    link.addEventListener('click', () => {
-                        sidebar.classList.remove('active');
-                    });
-                }
-                
                 document.addEventListener('click', (e) => {
                     if (sidebar.classList.contains('active') && 
-                        !sidebar.contains(e.target) && 
                         !menuToggle.contains(e.target)) {
                         sidebar.classList.remove('active');
+                    }
+                });
+            }
+
+            const menuButtons = document.querySelectorAll('.project-menu-btn');
+            for (const button of menuButtons) {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    for (const otherButton of menuButtons) {
+                        if (otherButton !== button) {
+                            const otherSubmenu = otherButton.nextElementSibling;
+                            if (otherSubmenu) {
+                                otherSubmenu.style.display = 'none';
+                            }
+                        }
+                    }
+                    
+                    const submenu = button.nextElementSibling;
+                    if (submenu) {
+                        if (submenu.style.display === 'none') {
+                            submenu.style.display = 'block';
+                        } else {
+                            submenu.style.display = 'none';
+                        }
+                    }
+                });
+            }
+            
+            document.addEventListener('click', (e) => {
+                const submenus = document.querySelectorAll('.submenu');
+                for (const submenu of submenus) {
+                    if (!submenu.contains(e.target) && !submenu.previousElementSibling.contains(e.target)) {
+                        submenu.style.display = 'none';
+                    }
+                }
+            });
+            
+            const navLinks = document.querySelectorAll('.nav a');
+            for (const link of navLinks) {
+                link.addEventListener('click', (e) => {
+                    if (!link.classList.contains('project-menu-btn')) {
+                        const href = link.getAttribute('href');
+                        if (href && !href.startsWith('http')) {
+                            e.preventDefault();
+                            handleHomeLinkClick(e);
+                        }
                     }
                 });
             }

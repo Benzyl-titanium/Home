@@ -1,5 +1,5 @@
 <button class="menu-toggle" aria-label="Toggle Menu">
-    <i class="fa fa-bars"></i>
+    <i class="fa fa-list"></i>
 </button>
 <aside class="sidebar">
     <div class="avatar">
@@ -45,12 +45,50 @@
             <i class="fa fa-heart"></i> 
             <span style="color: black;">喜欢研究</span>
         </a>
-        <a href="index.html#works" class="nav-item home-link" style="color: black;">
-            <i class="fa fa-file-text-o"></i> 项目
-        </a>
-        <a href="index.html#game" class="nav-item home-link" style="color: black;">
-            <i class="fa fa-flask"></i> BianTaiLAB
-        </a>
+        <div class="nav-item">
+            <button class="project-menu-btn">
+                <i class="fa fa-file-text-o"></i> 项目
+            </button>
+            <div class="submenu" style="display: none; position: absolute; left: 0; top: 100%; width: 100%; background: #fff2e2; border-radius: 5px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                <a href="https://benzyl-titanium.top/" class="nav-item home-link" style="color: black;" target="_blank">
+                    <i class="fa fa-book"></i> Blog
+                </a>
+                <a href="https://github.com/Benzyl-titanium/Structural-formula" class="nav-item home-link" style="color: black;" target="_blank">
+                    <i class="fa fa-bars"></i> 管制药品目录
+                </a>
+                <a href="https://benzyl-titanium.top/posts/ymsf" class="nav-item home-link" style="color: black;" target="_blank">
+                    <i class="fa fa-cog"></i> 右美沙芬结构改造
+                </a>
+                <a href="https://benzyl-titanium.top/posts/babychem/" class="nav-item home-link" style="color: black;" target="_blank">
+                    <i class="fa fa-pencil"></i> BabyChem笔记
+                </a>
+                <a href="/designdrugs.html" class="nav-item home-link" style="color: black;">
+                    <i class="fa fa-eyedropper"></i> 设计药物
+                </a>
+                <a href="/Structural-formula.html" class="nav-item home-link" style="color: black;">
+                    <i class="fa fa-table"></i> 管制名录整合
+                </a>
+                <a href="/solubility.html" class="nav-item home-link" style="color: black;">
+                    <i class="fa fa-tint"></i> 溶解度表
+                </a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <button class="project-menu-btn">
+                <i class="fa fa-building"></i> BianTaiLAB
+            </button>
+            <div class="submenu" style="display: none; position: absolute; left: 0; top: 100%; width: 100%; background: #fff2e2; border-radius: 5px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                <a href="/chemgame.html" class="nav-item home-link" style="color: black;">
+                    <i class="fa fa-gamepad"></i> 猜化合物游戏
+                </a>
+                <a href="/chemhandbook.html" class="nav-item home-link" style="color: black;">
+                    <i class="fa fa-flask"></i> 合成实验手册
+                </a>
+                <a href="/marvin.html" class="nav-item home-link" style="color: black;">
+                    <i class="fa fa-paint-brush"></i> Marvin JS
+                </a>
+            </div>
+        </div>
         <a href="index.html#timeline" class="nav-item home-link" style="color: black;">
             <i class="fa fa-github"></i> Repo
         </a>
