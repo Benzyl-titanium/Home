@@ -35,8 +35,70 @@ a{ color: #c40b00; }
     overflow-y: auto;
     background: #fff2e2;
 }
-.sidebar .menu {
+
+/* -- 菜单按钮 */
+.menu-toggle {
     display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: #fff2e2;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle i {
+    font-size: 24px;
+    color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-bottom: 20px;
+    }
+    
+    .sidebar .nav {
+        display: none !important;
+    }
+    
+    .sidebar.active .nav {
+        display: flex !important;
+        flex-direction: column;
+        background: #fff2e2;
+        padding: 20px;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+    
+    .sidebar .nav a {
+        padding: 12px;
+        text-align: left;
+        font-size: 16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .sidebar .nav a:last-child {
+        border-bottom: none;
+    }
+    
+    main {
+        margin-left: 0;
+    }
 }
 
 /* -- 头像 */

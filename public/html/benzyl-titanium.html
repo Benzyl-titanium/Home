@@ -24,6 +24,9 @@
 </style>
 
 <script>
+  let ligandName = "LIG";
+  let toggleSur = 1;
+
   function zoomNGL(myZoom, chainOfSelectedAtom, pdb) {
     if (pdb.length > 50) {
       var pdb = new Blob([pdb], { type: "text/plain" });

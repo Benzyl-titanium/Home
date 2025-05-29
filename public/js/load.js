@@ -1,5 +1,7 @@
 async function handleHomeLinkClick(e) {
     e.preventDefault();
+    const href = e.currentTarget.getAttribute('href');
+    const hash = href.split('#')[1];
     
     if (window.location.pathname !== '/index.html' && window.location.pathname !== '/') {
         try {
@@ -19,7 +21,7 @@ async function handleHomeLinkClick(e) {
             setTimeout(async () => {
                 currentMain.innerHTML = mainContent.innerHTML;
                 
-                history.pushState({}, '', 'index.html');
+                history.pushState({}, '', href);
                 
                 try {
                     const footerResponse = await fetch('public/components/footer.html');
@@ -37,20 +39,34 @@ async function handleHomeLinkClick(e) {
                 currentMain.style.transition = 'opacity 0.5s ease';
                 currentMain.style.opacity = '1';
                 
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+                if (hash) {
+                    const element = document.getElementById(hash);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                } else {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
             }, 300);
         } catch (error) {
             console.error('Error loading index page:', error);
-            window.location.href = 'index.html';
+            window.location.href = href;
         }
     } else {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        if (hash) {
+            const element = document.getElementById(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     }
 }
 
@@ -59,6 +75,31 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.text())
         .then(data => {
             document.body.insertAdjacentHTML('afterbegin', data);
+            
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            
+            if (menuToggle && sidebar) {
+                menuToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    sidebar.classList.toggle('active');
+                });
+                
+                const navLinks = document.querySelectorAll('.nav a');
+                for (const link of navLinks) {
+                    link.addEventListener('click', () => {
+                        sidebar.classList.remove('active');
+                    });
+                }
+                
+                document.addEventListener('click', (e) => {
+                    if (sidebar.classList.contains('active') && 
+                        !sidebar.contains(e.target) && 
+                        !menuToggle.contains(e.target)) {
+                        sidebar.classList.remove('active');
+                    }
+                });
+            }
             
             for (const link of document.querySelectorAll('.home-link')) {
                 link.addEventListener('click', handleHomeLinkClick);
