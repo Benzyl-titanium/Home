@@ -87,11 +87,70 @@ function bindAllEvents() {
     const sidebar = document.querySelector('.sidebar');
     
     if (sidebar) {
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+
+        sidebar.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+            e.stopPropagation();
+        }, { passive: true });
+
+        sidebar.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            
+            currentX = e.touches[0].clientX;
+            const diff = currentX - startX;
+
+            if (diff > 0 && !sidebar.classList.contains('-translate-x-full')) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }, { passive: false });
+
+        sidebar.addEventListener('touchend', () => {
+            isDragging = false;
+        }, { passive: true });
+
+        const toggleBodyScroll = (isOpen) => {
+            if (isOpen) {
+                document.body.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+                document.body.style.width = '100%';
+                document.body.style.touchAction = 'none';
+            } else {
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
+                document.body.style.touchAction = '';
+            }
+        };
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        sidebar.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+
+        sidebar.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].clientX;
+            const swipeDistance = touchEndX - touchStartX;
+
+            if (swipeDistance < -50 && !sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.add('-translate-x-full');
+                toggleBodyScroll(false);
+            }
+        }, { passive: true });
+
         document.body.addEventListener('click', (e) => {
             const menuToggle = e.target.closest('.menu-toggle');
             if (menuToggle) {
                 e.stopPropagation();
+                const isOpen = sidebar.classList.contains('-translate-x-full');
                 sidebar.classList.toggle('-translate-x-full');
+                toggleBodyScroll(!isOpen);
             }
         });
         
@@ -100,11 +159,13 @@ function bindAllEvents() {
             if (sidebar.classList.contains('-translate-x-full')) return;
             
             if (menuToggle && !sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
-                 sidebar.classList.add('-translate-x-full');
-             }
-             if (!menuToggle && !sidebar.contains(e.target)){
-                 sidebar.classList.add('-translate-x-full');
-             }
+                sidebar.classList.add('-translate-x-full');
+                toggleBodyScroll(false);
+            }
+            if (!menuToggle && !sidebar.contains(e.target)){
+                sidebar.classList.add('-translate-x-full');
+                toggleBodyScroll(false);
+            }
         });
     }
 
