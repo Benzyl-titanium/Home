@@ -1,97 +1,209 @@
-<button class="menu-toggle" aria-label="Toggle Menu">
-    <i class="fa fa-list"></i>
-</button>
-<aside class="sidebar">
-    <div class="avatar">
-        <a href="index.html" class="home-link">
-            <img src="public/imgs/a.jpg"/>
-            <i class="fa fa-home home-icon"></i>
+<div class="md:hidden fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <div class="flex items-center justify-between p-4">
+        <a href="index.html" class="flex items-center space-x-2">
+            <div class="relative w-10 h-10">
+                <img src="public/imgs/a.jpg" alt="Avatar" class="w-full h-full rounded-full object-cover"/>
+            </div>
+            <h2 class="text-xl font-bold text-gray-800">Benzyl titanium</h2>
         </a>
+        <button class="menu-toggle bg-white p-2 rounded-lg shadow-lg">
+            <i class="fa fa-bars text-gray-800"></i>
+        </button>
     </div>
-    <div style="text-align:center;">
-        <a href="index.html" class="home-link">
-            <b>Benzyl titanium's home</b>
-        </a>
-        <div>
-            <a href="https://x.com/Benzyl_titanium" aria-label="X" target="_blank" class="social-icon">
-                <span style="color: rgb(176, 170, 234); font-size: 25px;">
-                    <i class="fa fa-twitter"></i>
-                </span>
+</div>
+
+<div class="sidebar fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-40 md:mt-0 mt-16 h-screen overflow-y-auto flex-shrink-0">
+    <div class="hidden md:flex flex-col h-full">
+        <div class="p-6 text-center">
+            <a href="#" class="block relative group" id="avatar-link" data-href="index.html">
+                <div class="relative w-32 h-32 mx-auto">
+                    <img src="public/imgs/a.jpg" alt="Avatar" class="w-full h-full rounded-full object-cover shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:brightness-75"/>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <i class="fa fa-home text-3xl text-white"></i>
+                </div>
             </a>
-            <a href="https://github.com/Benzyl-titanium" aria-label="github" target="_blank" class="social-icon">
-                <span style="color: rgb(0, 0, 0); font-size: 25px;">
-                    <i class="fa fa-github"></i>
-                </span>
-            </a>
-            <a href="https://t.me/Benzyl_titanium" aria-label="telegram" target="_blank" class="social-icon">
-                <span style="color: rgb(176, 170, 234); font-size: 25px;">
-                    <i class="fa fa-telegram"></i>
-                </span>
-            </a>
-            <a href="mailto:benzyl.titanium@gmail.com" aria-label="gmail" class="social-icon">
-                <span style="color: rgb(0, 0, 0); font-size: 25px;">
-                    <i class="fa fa-envelope-o"></i>
-                </span>
-            </a>
-        </div>
-    </div>
-    <nav class="nav">
-        <a href="index.html#info" class="nav-item home-link" style="color: black;">
-            <i class="fa fa-user-o"></i> Bio
-        </a>
-        <a href="index.html#stats" class="nav-item home-link" style="color: black;">
-            <i class="fa fa-pie-chart"></i> Stats
-        </a>
-        <a href="index.html#skills" class="nav-item home-link" style="color: red;">
-            <i class="fa fa-heart"></i> 
-            <span style="color: black;">喜欢研究</span>
-        </a>
-        <div class="nav-item">
-            <button class="project-menu-btn">
-                <i class="fa fa-file-text-o"></i> 项目
-            </button>
-            <div class="submenu" style="display: none; position: absolute; left: 0; top: 100%; width: 100%; background: #fff2e2; border-radius: 5px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-                <a href="https://benzyl-titanium.pages.dev" class="nav-item home-link" style="color: black;" target="_blank">
-                    <i class="fa fa-book"></i> Blog
+
+            <h2 class="mt-4 text-xl font-bold text-gray-800">Benzyl titanium</h2>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://github.com/Benzyl-titanium" target="_blank" class="text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                    <i class="fa fa-github text-2xl"></i>
                 </a>
-                <a href="https://benzyl-titanium.pages.dev/posts/structural-formula" class="nav-item home-link" style="color: black;" target="_blank">
-                    <i class="fa fa-bars"></i> 管制药品项目
+                <a href="https://twitter.com/Benzyl_titanium" target="_blank" class="text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                    <i class="fa fa-twitter text-2xl"></i>
                 </a>
-                <a href="https://benzyl-titanium.pages.dev/posts/ymsf" class="nav-item home-link" style="color: black;" target="_blank">
-                    <i class="fa fa-cog"></i> 右美沙芬结构改造
+                <a href="https://t.me/Benzyl_titanium" target="_blank" class="text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                    <i class="fa fa-telegram text-2xl"></i>
                 </a>
-                <a href="https://benzyl-titanium.top/posts/babychem/" class="nav-item home-link" style="color: black;" target="_blank">
-                    <i class="fa fa-pencil"></i> BabyChem笔记
-                </a>
-                <a href="/designdrugs.html" class="nav-item home-link" style="color: black;">
-                    <i class="fa fa-eyedropper"></i> 设计药物
-                </a>
-                <a href="/Structural-formula.html" class="nav-item home-link" style="color: black;">
-                    <i class="fa fa-table"></i> 管制药品表格
-                </a>
-                <a href="/solubility.html" class="nav-item home-link" style="color: black;">
-                    <i class="fa fa-tint"></i> 化合物溶解度表
+                <a href="mailto:benzyl_titanium@outlook.com" class="text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                    <i class="fa fa-envelope text-2xl"></i>
                 </a>
             </div>
         </div>
-        <div class="nav-item">
-            <button class="project-menu-btn">
-                <i class="fa fa-building"></i> BianTaiLAB
-            </button>
-            <div class="submenu" style="display: none; position: absolute; left: 0; top: 100%; width: 100%; background: #fff2e2; border-radius: 5px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-                <a href="/chemgame.html" class="nav-item home-link" style="color: black;">
-                    <i class="fa fa-gamepad"></i> 猜化合物游戏
-                </a>
-                <a href="/chemhandbook.html" class="nav-item home-link" style="color: black;">
-                    <i class="fa fa-flask"></i> 合成实验手册
-                </a>
-                <a href="/marvin.html" class="nav-item home-link" style="color: black;">
-                    <i class="fa fa-paint-brush"></i> 结构编辑器
-                </a>
+
+        <nav class="flex-1 px-4 py-4 space-y-2 overflow-y-auto">
+            <a href="#info" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                <i class="fa fa-user-o mr-3"></i>Bio
+            </a>
+            <a href="#stats" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                <i class="fa fa-pie-chart mr-3"></i>Stats
+            </a>
+            <a href="#skills" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                <i class="fa fa-heart mr-3 text-red-500"></i>喜欢研究
+            </a>
+            <div class="mt-4">
+                <button class="project-menu-btn w-full px-4 py-3 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                    <i class="fa fa-file-text-o mr-3"></i>项目
+                    <i class="fa fa-chevron-down float-right mt-1"></i>
+                </button>
+                <div class="submenu hidden pl-4 mt-2 space-y-2">
+                    <a href="/designdrugs.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <i class="fa fa-eyedropper mr-2"></i>设计药物
+                    </a>
+                    <a href="/Structural-formula.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <i class="fa fa-table mr-2"></i>中国管制药品名录结构式&表格整合版
+                    </a>
+                    <a href="/solubility.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <i class="fa fa-tint mr-2"></i>化合物溶解度表
+                    </a>
+                </div>
             </div>
+            <div class="mt-4">
+                <button class="project-menu-btn w-full px-4 py-3 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                    <i class="fa fa-book mr-3"></i>Blog
+                    <i class="fa fa-chevron-down float-right mt-1"></i>
+                </button>
+                <div class="submenu hidden pl-4 mt-2 space-y-2">
+                    <a href="https://benzyl-titanium.pages.dev" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                        <i class="fa fa-external-link mr-2"></i>主页
+                    </a>
+                    <a href="https://benzyl-titanium.pages.dev/posts/structural-formula" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                        <i class="fa fa-external-link mr-2"></i>截至2024.07.01,中国全部的管制药品目录
+                    </a>
+                    <a href="https://benzyl-titanium.pages.dev/posts/ymsf" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                        <i class="fa fa-external-link mr-2"></i>右美沙芬的结构改造
+                    </a>
+                    <a href="https://benzyl-titanium.pages.dev/posts/babychem/" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                        <i class="fa fa-external-link mr-2"></i>BabyChem基础有机化学手写笔记
+                    </a>
+                </div>
+            </div>
+            <div class="mt-4">
+                <button class="project-menu-btn w-full px-4 py-3 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                    <i class="fa fa-building mr-3"></i>BianTaiLAB
+                    <i class="fa fa-chevron-down float-right mt-1"></i>
+                </button>
+                <div class="submenu hidden pl-4 mt-2 space-y-2">
+                    <a href="chemgame.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <i class="fa fa-gamepad mr-2"></i>猜无机化合物游戏
+                    </a>
+                    <a href="chemhandbook.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <i class="fa fa-book mr-2"></i>化学合成实验手册
+                    </a>
+                    <a href="marvin.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <i class="fa fa-pencil mr-2"></i>化学结构编辑器
+                    </a>
+                </div>
+            </div>
+            <a href="#timeline" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                <i class="fa fa-github mr-3"></i>Repo
+            </a>
+        </nav>
+
+        <div class="p-4 border-t border-gray-200">
+            <a href="https://github.com/Benzyl-titanium/Home" class="block text-center text-gray-600 hover:text-gray-800 transition-colors duration-200" target="_blank">
+                <i class="fa fa-github mr-2"></i>Home
+            </a>
         </div>
-        <a href="index.html#timeline" class="nav-item home-link" style="color: black;">
-            <i class="fa fa-github"></i> Repo
-        </a>
-    </nav>
-</aside>
+    </div>
+
+    <div class="md:hidden">
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="https://github.com/Benzyl-titanium" target="_blank" class="text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                <i class="fa fa-github text-2xl"></i>
+            </a>
+            <a href="https://twitter.com/Benzyl_titanium" target="_blank" class="text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                <i class="fa fa-twitter text-2xl"></i>
+            </a>
+            <a href="https://t.me/Benzyl_titanium" target="_blank" class="text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                <i class="fa fa-telegram text-2xl"></i>
+            </a>
+            <a href="mailto:benzyl_titanium@outlook.com" class="text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                <i class="fa fa-envelope text-2xl"></i>
+            </a>
+        </div>
+        <nav class="px-4 py-2 space-y-1">
+            <a href="#info" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                <i class="fa fa-user-o mr-3"></i>Bio
+            </a>
+            <a href="#stats" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                <i class="fa fa-pie-chart mr-3"></i>Stats
+            </a>
+            <a href="#skills" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                <i class="fa fa-heart mr-3 text-red-500"></i>喜欢研究
+            </a>
+            <div class="mt-2">
+                <button class="project-menu-btn w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                    <i class="fa fa-file-text-o mr-3"></i>项目
+                    <i class="fa fa-chevron-down float-right mt-1"></i>
+                </button>
+                <div class="submenu hidden pl-4 mt-1 space-y-1">
+                    <a href="/designdrugs.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <i class="fa fa-eyedropper mr-2"></i>设计药物
+                    </a>
+                    <a href="/Structural-formula.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <i class="fa fa-table mr-2"></i>中国管制药品名录结构式&表格整合版
+                    </a>
+                    <a href="/solubility.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <i class="fa fa-tint mr-2"></i>化合物溶解度表
+                    </a>
+                </div>
+            </div>
+            <div class="mt-2">
+                <button class="project-menu-btn w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                    <i class="fa fa-book mr-3"></i>Blog
+                    <i class="fa fa-chevron-down float-right mt-1"></i>
+                </button>
+                <div class="submenu hidden pl-4 mt-1 space-y-1">
+                    <a href="https://benzyl-titanium.pages.dev" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                        <i class="fa fa-external-link mr-2"></i>主页
+                    </a>
+                    <a href="https://benzyl-titanium.pages.dev/posts/structural-formula" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                        <i class="fa fa-external-link mr-2"></i>截至2024.07.01,中国全部的管制药品目录
+                    </a>
+                    <a href="https://benzyl-titanium.pages.dev/posts/ymsf" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                        <i class="fa fa-external-link mr-2"></i>右美沙芬的结构改造
+                    </a>
+                    <a href="https://benzyl-titanium.pages.dev/posts/babychem/" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                        <i class="fa fa-external-link mr-2"></i>BabyChem基础有机化学手写笔记
+                    </a>
+                </div>
+            </div>
+            <div class="mt-2">
+                <button class="project-menu-btn w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                    <i class="fa fa-building mr-3"></i>BianTaiLAB
+                    <i class="fa fa-chevron-down float-right mt-1"></i>
+                </button>
+                <div class="submenu hidden pl-4 mt-1 space-y-1">
+                    <a href="chemgame.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <i class="fa fa-gamepad mr-2"></i>猜无机化合物游戏
+                    </a>
+                    <a href="chemhandbook.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <i class="fa fa-book mr-2"></i>化学合成实验手册
+                    </a>
+                    <a href="marvin.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                        <i class="fa fa-pencil mr-2"></i>化学结构编辑器
+                    </a>
+                </div>
+            </div>
+            <a href="#timeline" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                <i class="fa fa-github mr-3"></i>Repo
+            </a>
+        </nav>
+        <div class="p-4 border-t border-gray-200">
+            <a href="https://github.com/Benzyl-titanium/Home" class="block text-center text-gray-600 hover:text-gray-800 transition-colors duration-200" target="_blank">
+                <i class="fa fa-github mr-2"></i>Home
+            </a>
+        </div>
+    </div>
+</div>

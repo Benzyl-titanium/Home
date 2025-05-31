@@ -27,16 +27,15 @@ async function handleHomeLinkClick(e) {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
             
-            const mainContent = doc.querySelector('main');
+            const newMainContent = doc.querySelector('main').innerHTML; // 获取新页面的main内容
+            const currentMain = document.querySelector('main');
             
             document.title = doc.title;
             
-            const currentMain = document.querySelector('main');
             currentMain.style.opacity = '0';
             
             setTimeout(async () => {
-                currentMain.innerHTML = mainContent.innerHTML;
-                
+                currentMain.innerHTML = newMainContent;
                 history.pushState({}, '', href);
                 
                 try {
@@ -44,17 +43,15 @@ async function handleHomeLinkClick(e) {
                     const footerHtml = await footerResponse.text();
                     currentMain.insertAdjacentHTML('beforeend', footerHtml);
                     
-                    const footerLinks = document.querySelectorAll('footer a.home-link');
-                    for (const link of footerLinks) {
-                        link.addEventListener('click', handleHomeLinkClick);
-                    }
                 } catch (error) {
                     console.error('Error loading footer:', error);
                 }
                 
                 currentMain.style.transition = 'opacity 0.5s ease';
                 currentMain.style.opacity = '1';
-                
+
+                bindAllEvents();
+
                 if (hash) {
                     const element = document.getElementById(hash);
                     if (element) {
@@ -86,94 +83,89 @@ async function handleHomeLinkClick(e) {
     }
 }
 
+function bindAllEvents() {
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (sidebar) {
+        document.body.addEventListener('click', (e) => {
+            const menuToggle = e.target.closest('.menu-toggle');
+            if (menuToggle) {
+                e.stopPropagation();
+                sidebar.classList.toggle('-translate-x-full');
+            }
+        });
+        
+        document.addEventListener('click', (e) => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            if (sidebar.classList.contains('-translate-x-full')) return;
+            
+            if (menuToggle && !sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+                 sidebar.classList.add('-translate-x-full');
+             }
+             if (!menuToggle && !sidebar.contains(e.target)){
+                 sidebar.classList.add('-translate-x-full');
+             }
+        });
+    }
+
+    const menuButtons = document.querySelectorAll('.project-menu-btn');
+    menuButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            menuButtons.forEach(otherButton => {
+                if (otherButton !== button) {
+                    const otherSubmenu = otherButton.nextElementSibling;
+                    if (otherSubmenu && otherSubmenu.classList.contains('submenu')) {
+                        otherSubmenu.style.display = 'none';
+                    }
+                }
+            });
+            
+            const submenu = button.nextElementSibling;
+            if (submenu && submenu.classList.contains('submenu')) {
+                submenu.style.display = submenu.style.display === 'none' ? 'block' : 'none';
+            }
+        });
+    });
+    
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.project-menu-btn') && !e.target.closest('.sidebar')) {
+            const submenus = document.querySelectorAll('.submenu');
+            submenus.forEach(submenu => {
+                submenu.style.display = 'none';
+            });
+        }
+    });
+
+    const navLinks = document.querySelectorAll('a[href^="#"], .home-link');
+    for (const link of navLinks) {
+        if (!link.classList.contains('project-menu-btn')) {
+            link.removeEventListener('click', handleHomeLinkClick);
+            link.addEventListener('click', handleHomeLinkClick);
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     fetch('public/components/sidebar.html')
         .then(response => response.text())
         .then(data => {
             document.body.insertAdjacentHTML('afterbegin', data);
-            
-            const menuToggle = document.querySelector('.menu-toggle');
-            const sidebar = document.querySelector('.sidebar');
-            
-            if (menuToggle && sidebar) {
-                menuToggle.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    sidebar.classList.toggle('active');
-                });
-                
-                document.addEventListener('click', (e) => {
-                    if (sidebar.classList.contains('active') && 
-                        !menuToggle.contains(e.target)) {
-                        sidebar.classList.remove('active');
-                    }
-                });
-            }
-
-            const menuButtons = document.querySelectorAll('.project-menu-btn');
-            for (const button of menuButtons) {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    for (const otherButton of menuButtons) {
-                        if (otherButton !== button) {
-                            const otherSubmenu = otherButton.nextElementSibling;
-                            if (otherSubmenu) {
-                                otherSubmenu.style.display = 'none';
-                            }
-                        }
-                    }
-                    
-                    const submenu = button.nextElementSibling;
-                    if (submenu) {
-                        if (submenu.style.display === 'none') {
-                            submenu.style.display = 'block';
-                        } else {
-                            submenu.style.display = 'none';
-                        }
-                    }
-                });
-            }
-            
-            document.addEventListener('click', (e) => {
-                const submenus = document.querySelectorAll('.submenu');
-                for (const submenu of submenus) {
-                    if (!submenu.contains(e.target) && !submenu.previousElementSibling.contains(e.target)) {
-                        submenu.style.display = 'none';
-                    }
-                }
-            });
-            
-            const navLinks = document.querySelectorAll('.nav a');
-            for (const link of navLinks) {
-                link.addEventListener('click', (e) => {
-                    if (!link.classList.contains('project-menu-btn')) {
-                        const href = link.getAttribute('href');
-                        if (href && !href.startsWith('http')) {
-                            e.preventDefault();
-                            handleHomeLinkClick(e);
-                        }
-                    }
-                });
-            }
-            
-            for (const link of document.querySelectorAll('.home-link')) {
-                link.addEventListener('click', handleHomeLinkClick);
-            }
+            bindAllEvents();
         })
         .catch(error => console.error('Error loading sidebar:', error));
-});
 
-document.addEventListener('DOMContentLoaded', () => {
     fetch('public/components/footer.html')
         .then(response => response.text())
         .then(data => {
-            document.querySelector('main').insertAdjacentHTML('beforeend', data);
-            
-            const footerLinks = document.querySelectorAll('footer a.home-link');
-            for (const link of footerLinks) {
-                link.addEventListener('click', handleHomeLinkClick);
+            const main = document.querySelector('main');
+            if (main) {
+                main.insertAdjacentHTML('beforeend', data);
             }
         })
         .catch(error => console.error('Error loading footer:', error));
+
+    bindAllEvents();
 }); 

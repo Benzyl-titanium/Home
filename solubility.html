@@ -6,17 +6,17 @@
     <meta name="theme-color" content="#ffc91d"/>
     <link rel="icon" href="public/imgs/favicon.png" sizes="32x32"/>
     <link rel="icon" href="public/imgs/a.jpg" sizes="192x192"/>
-    <link href="public/css/kico.css" rel="stylesheet" type="text/css"/>
-    <link href="public/css/paul.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
 </head>
-<body>
-<main>
-    <iframe src="https://solubility.netlify.app" style="width: 100%; height: 100vh;"></iframe>
-</main>
-
+<body class="bg-gray-50 md:pl-64">
+    <main class="w-full">
+        <div class="px-4 sm:px-6 lg:px-8 py-12 md:py-12 pt-20 md:pt-12">
+            <iframe id="marvinFrame" src="https://solubility.netlify.app" style="width: 100%; height: calc(120vh - 12rem);"></iframe>
+        </div>
+    </main>
 <script src="public/js/load.js"></script>
-
+<script src="public/js/smooth-scroll.js"></script>
 </body>
 </html>
