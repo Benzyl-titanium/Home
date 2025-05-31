@@ -12,7 +12,9 @@
     </div>
 </div>
 
-<div class="sidebar fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-40 md:mt-0 mt-16 h-screen overflow-y-auto flex-shrink-0">
+<div class="sidebar-overlay fixed inset-0 bg-black bg-opacity-50 z-30 opacity-0 pointer-events-none transition-all duration-300 ease-in-out hidden"></div>
+
+<div class="sidebar fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full md:translate-x-0 transition-all duration-300 ease-in-out z-40 md:mt-0 mt-16 h-screen overflow-y-auto flex-shrink-0">
     <div class="hidden md:flex flex-col h-full">
         <div class="p-6 text-center">
             <a href="#" class="block relative group" id="avatar-link" data-href="index.html">
@@ -42,68 +44,68 @@
         </div>
 
         <nav class="flex-1 px-4 py-4 space-y-2 overflow-y-auto">
-            <a href="#info" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+            <a href="#bio" class="block px-4 py-3 text-gray-700 hover:text-[#e3769b] rounded-lg transition-colors duration-200">
                 <i class="fa fa-user-o mr-3"></i>Bio
             </a>
-            <a href="https://benzyl-titanium.pages.dev" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+            <a href="https://benzyl-titanium.pages.dev" class="block px-4 py-2 text-gray-600 hover:text-[#e3769b] rounded-lg transition-colors duration-200" target="_blank">
                 <i class="fa fa-external-link mr-2"></i>Blog
             </a>
-            <a href="#stats" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+            <a href="#stats" class="block px-4 py-3 text-gray-700 hover:text-[#e3769b] rounded-lg transition-colors duration-200">
                 <i class="fa fa-pie-chart mr-3"></i>Stats
             </a>
-            <a href="#skills" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+            <a href="#like" class="block px-4 py-3 text-gray-700 hover:text-[#e3769b] rounded-lg transition-colors duration-200">
                 <i class="fa fa-heart mr-3 text-red-500"></i>Like
             </a>
             <div class="mt-4">
-                <button class="project-menu-btn w-full px-4 py-3 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                <button class="project-menu-btn w-full px-4 py-3 text-left text-gray-700 hover:text-[#e3769b] rounded-lg transition-colors duration-200">
                     <i class="fa fa-flask mr-3"></i>Chem
                     <i class="fa fa-chevron-down float-right mt-1"></i>
                 </button>
                 <div class="submenu hidden pl-4 mt-2 space-y-2">
-                    <a href="chemgame.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                    <a href="chemgame.html" class="block px-4 py-2 text-gray-600 hover:text-[#e3769b] rounded-lg transition-colors duration-200">
                         <i class="fa fa-gamepad mr-2"></i>猜无机化合物游戏
                     </a>
-                    <a href="https://chemhandbook.netlify.app" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                    <a href="https://chemhandbook.netlify.app" class="block px-4 py-2 text-gray-600 hover:text-[#e3769b] rounded-lg transition-colors duration-200" target="_blank">
                         <i class="fa fa-external-link mr-2"></i>化学合成实验手册
                     </a>
-                    <a href="marvin.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                    <a href="marvin.html" class="block px-4 py-2 text-gray-600 hover:text-[#e3769b] rounded-lg transition-colors duration-200">
                         <i class="fa fa-pencil mr-2"></i>化学结构编辑器
                     </a>
-                    <a href="/solubility.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                    <a href="/solubility.html" class="block px-4 py-2 text-gray-600 hover:text-[#e3769b] rounded-lg transition-colors duration-200">
                         <i class="fa fa-tint mr-2"></i>化合物溶解度表
                     </a>
-                    <a href="https://zeeman.pages.dev" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                    <a href="https://zeeman.pages.dev" class="block px-4 py-2 text-gray-600 hover:text-[#e3769b] rounded-lg transition-colors duration-200" target="_blank">
                         <i class="fa fa-external-link mr-2"></i>同位素分析
                     </a>
-                    <a href="https://benzyl-titanium.pages.dev/posts/babychem/" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                    <a href="https://benzyl-titanium.pages.dev/posts/babychem/" class="block px-4 py-2 text-gray-600 hover:text-[#e3769b] rounded-lg transition-colors duration-200" target="_blank">
                         <i class="fa fa-external-link mr-2"></i>BabyChem基础有机化学手写笔记
                     </a>
-                    <a href="https://chembyrika.netlify.app" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"  target="_blank">
+                    <a href="https://chembyrika.netlify.app" class="block px-4 py-2 text-gray-600 hover:text-[#e3769b] rounded-lg transition-colors duration-200"  target="_blank">
                         <i class="fa fa-external-link mr-2"></i>有机物合成路线
                     </a>
                 </div>
             </div>
             <div class="mt-4">
-                <button class="project-menu-btn w-full px-4 py-3 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                <button class="project-menu-btn w-full px-4 py-3 text-left text-gray-700 hover:text-[#e3769b] rounded-lg transition-colors duration-200">
                     <i class="fa fa-medkit mr-3"></i>Drug
                     <i class="fa fa-chevron-down float-right mt-1"></i>
                 </button>
                 <div class="submenu hidden pl-4 mt-2 space-y-2">
-                    <a href="https://benzyl-titanium.pages.dev/posts/structural-formula" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                    <a href="https://benzyl-titanium.pages.dev/posts/structural-formula" class="block px-4 py-2 text-gray-600 hover:text-[#e3769b] rounded-lg transition-colors duration-200" target="_blank">
                         <i class="fa fa-external-link mr-2"></i>截至2024.07.01,中国全部的管制药品目录
                     </a>
-                    <a href="/Structural-formula.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                    <a href="/Structural-formula.html" class="block px-4 py-2 text-gray-600 hover:text-[#e3769b] rounded-lg transition-colors duration-200">
                         <i class="fa fa-table mr-2"></i>中国管制药品名录结构式&表格整合版
                     </a>
-                    <a href="/designdrugs.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                    <a href="/designdrugs.html" class="block px-4 py-2 text-gray-600 hover:text-[#e3769b] rounded-lg transition-colors duration-200">
                         <i class="fa fa-eyedropper mr-2"></i>设计药物
                     </a>
-                    <a href="https://benzyl-titanium.pages.dev/posts/ymsf" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200" target="_blank">
+                    <a href="https://benzyl-titanium.pages.dev/posts/ymsf" class="block px-4 py-2 text-gray-600 hover:text-[#e3769b] rounded-lg transition-colors duration-200" target="_blank">
                         <i class="fa fa-external-link mr-2"></i>右美沙芬的结构改造
                     </a>
                 </div>
             </div>
-            <a href="#timeline" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+            <a href="#repo" class="block px-4 py-3 text-gray-700 hover:text-[#e3769b] rounded-lg transition-colors duration-200">
                 <i class="fa fa-github mr-3"></i>Repo
             </a>
         </nav>
@@ -125,7 +127,7 @@
             </a>
         </div>
         <nav class="px-4 py-2 space-y-1 overflow-y-auto" style="height: calc(100vh - 180px);">
-            <a href="#info" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+            <a href="#bio" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
                 <i class="fa fa-user-o mr-3"></i>Bio
             </a>
             <a href="https://benzyl-titanium.pages.dev" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
@@ -134,7 +136,7 @@
             <a href="#stats" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
                 <i class="fa fa-pie-chart mr-3"></i>Stats
             </a>
-            <a href="#skills" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+            <a href="#like" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
                 <i class="fa fa-heart mr-3 text-red-500"></i>Like
             </a>
             <div class="mt-2">
@@ -186,7 +188,7 @@
                     </a>
                 </div>
             </div>
-            <a href="#timeline" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+            <a href="#repo" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">
                 <i class="fa fa-github mr-3"></i>Repo
             </a>
         </nav>
