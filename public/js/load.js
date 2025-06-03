@@ -185,24 +185,23 @@ function bindAllEvents() {
             
             const submenu = button.nextElementSibling;
             if (submenu && submenu.classList.contains('submenu')) {
-                const isHidden = submenu.style.display === 'none';
+                const isHidden = submenu.classList.contains('hidden');
                 
-                submenu.style.display = isHidden ? 'block' : 'none';
-                
-                const icon = button.querySelector('.fa-chevron-down, .fa-chevron-up');
-                if (icon) {
-                    if (isHidden) {
+                if (isHidden) {
+                    submenu.classList.remove('hidden');
+                    const icon = button.querySelector('.fa-chevron-down, .fa-chevron-up');
+                    if (icon) {
                         icon.classList.remove('fa-chevron-down');
                         icon.classList.add('fa-chevron-up');
-                    } else {
+                    }
+                    button.classList.add('bg-gray-100', 'text-gray-900');
+                } else {
+                    submenu.classList.add('hidden');
+                    const icon = button.querySelector('.fa-chevron-down, .fa-chevron-up');
+                    if (icon) {
                         icon.classList.remove('fa-chevron-up');
                         icon.classList.add('fa-chevron-down');
                     }
-                }
-
-                if (isHidden) {
-                    button.classList.add('bg-gray-100', 'text-gray-900');
-                } else {
                     button.classList.remove('bg-gray-100', 'text-gray-900');
                 }
 
