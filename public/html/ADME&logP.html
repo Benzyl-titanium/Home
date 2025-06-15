@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>图片并排显示</title>
+        <style>
+            .container {
+                display: flex;
+                gap: 10px; /* 图片间距 */
+            }
+            .container img {
+                width: 390px; /* 图片宽度，可根据需要调整 */
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="/imgs/ADME.png" alt="ADME">
+            <img src="/imgs/logP.png" alt="logP">
+        </div>
+    </body>
+</html>
