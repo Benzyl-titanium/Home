@@ -14,7 +14,21 @@ const className = Astro.props.class;
 </div>
 
 <script>
+  console.log('Comments.astro script loaded.');
+
   const loadGiscus = () => {
+    console.log('loadGiscus function called.');
+    const container = document.querySelector('.giscus');
+    if (container) {
+      console.log('Giscus container found. Clearing existing children...');
+      while (container.firstChild) {
+        container.removeChild(container.firstChild);
+      }
+    } else {
+      console.log('Giscus container not found.');
+      return;
+    }
+
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
     script.setAttribute('data-repo', 'Benzyl-titanium/Home');
@@ -31,21 +45,22 @@ const className = Astro.props.class;
     script.setAttribute('crossorigin', 'anonymous');
     script.async = true;
 
-    const container = document.querySelector('.giscus');
-    if (container) {
-      container.appendChild(script);
-    }
+    container.appendChild(script);
+    console.log('Giscus script appended.');
   };
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.attributeName === 'data-theme') {
+        console.log('Theme attribute changed. Attempting to update Giscus theme.');
         const giscusFrame = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
         if (giscusFrame) {
           giscusFrame.contentWindow?.postMessage(
             { giscus: { setConfig: { theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light' } } },
             'https://giscus.app'
           );
+        } else {
+          console.log('Giscus iframe not found for theme update.');
         }
       }
     });
@@ -57,4 +72,12 @@ const className = Astro.props.class;
   });
 
   document.addEventListener('DOMContentLoaded', loadGiscus);
+  console.log('DOMContentLoaded listener added.');
+
+  if (window.swup) {
+    console.log('Swup detected. Binding loadGiscus to contentReplaced event.');
+    window.swup.on('contentReplaced', loadGiscus);
+  } else {
+    console.log('Swup not detected.');
+  }
 </script> 
