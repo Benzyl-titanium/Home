@@ -14,53 +14,55 @@ const className = Astro.props.class;
 </div>
 
 <script>
-  console.log('Comments.astro script loaded.');
+  let giscusScript: HTMLScriptElement | null = null;
 
   const loadGiscus = () => {
-    console.log('loadGiscus function called.');
     const container = document.querySelector('.giscus');
-    if (container) {
-      console.log('Giscus container found. Clearing existing children...');
-      while (container.firstChild) {
-        container.removeChild(container.firstChild);
-      }
-    } else {
-      console.log('Giscus container not found.');
-      return;
+    if (!container) return;
+
+    if (giscusScript) {
+      giscusScript.remove();
     }
 
-    const script = document.createElement('script');
-    script.src = 'https://giscus.app/client.js';
-    script.setAttribute('data-repo', 'Benzyl-titanium/Home');
-    script.setAttribute('data-repo-id', 'R_kgDOOrZ0pA');
-    script.setAttribute('data-category', 'General');
-    script.setAttribute('data-category-id', 'DIC_kwDOOrZ0pM4CrkrZ');
-    script.setAttribute('data-mapping', 'pathname');
-    script.setAttribute('data-strict', '0');
-    script.setAttribute('data-reactions-enabled', '1');
-    script.setAttribute('data-emit-metadata', '0');
-    script.setAttribute('data-input-position', 'bottom');
-    script.setAttribute('data-theme', 'preferred_color_scheme');
-    script.setAttribute('data-lang', 'zh-CN');
-    script.setAttribute('crossorigin', 'anonymous');
-    script.async = true;
+    container.innerHTML = '';
 
-    container.appendChild(script);
-    console.log('Giscus script appended.');
+    giscusScript = document.createElement('script');
+    giscusScript.src = 'https://giscus.app/client.js';
+    giscusScript.setAttribute('data-repo', 'Benzyl-titanium/Home');
+    giscusScript.setAttribute('data-repo-id', 'R_kgDOOrZ0pA');
+    giscusScript.setAttribute('data-category', 'General');
+    giscusScript.setAttribute('data-category-id', 'DIC_kwDOOrZ0pM4CrkrZ');
+    giscusScript.setAttribute('data-mapping', 'pathname');
+    giscusScript.setAttribute('data-strict', '0');
+    giscusScript.setAttribute('data-reactions-enabled', '1');
+    giscusScript.setAttribute('data-emit-metadata', '0');
+    giscusScript.setAttribute('data-input-position', 'bottom');
+    giscusScript.setAttribute('data-theme', 'preferred_color_scheme');
+    giscusScript.setAttribute('data-lang', 'zh-CN');
+    giscusScript.setAttribute('crossorigin', 'anonymous');
+    giscusScript.async = true;
+
+    giscusScript.addEventListener('load', () => {
+      console.log('Giscus script loaded successfully');
+    });
+
+    giscusScript.addEventListener('error', (error) => {
+      console.error('Failed to load Giscus script:', error);
+      setTimeout(loadGiscus, 5000);
+    });
+
+    container.appendChild(giscusScript);
   };
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.attributeName === 'data-theme') {
-        console.log('Theme attribute changed. Attempting to update Giscus theme.');
         const giscusFrame = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
         if (giscusFrame) {
           giscusFrame.contentWindow?.postMessage(
             { giscus: { setConfig: { theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light' } } },
             'https://giscus.app'
           );
-        } else {
-          console.log('Giscus iframe not found for theme update.');
         }
       }
     });
@@ -71,25 +73,29 @@ const className = Astro.props.class;
     attributeFilter: ['data-theme']
   });
 
-  document.addEventListener('DOMContentLoaded', loadGiscus);
-  console.log('DOMContentLoaded listener added.');
-
-  if (window.swup) {
-    console.log('Swup detected. Binding loadGiscus to contentReplaced event.');
-    window.swup.on('contentReplaced', () => {
-      setTimeout(loadGiscus, 100);
-    });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadGiscus);
   } else {
-    console.log('Swup not detected.');
+    loadGiscus();
   }
 
-  let lastUrl = location.href;
-  new MutationObserver(() => {
-    const currentUrl = location.href;
-    if (currentUrl !== lastUrl) {
-      lastUrl = currentUrl;
-      console.log('URL changed, reloading Giscus...');
-      setTimeout(loadGiscus, 100);
+  if (window.swup) {
+    window.swup.on('contentReplaced', () => {
+      requestAnimationFrame(() => {
+        loadGiscus();
+      });
+    });
+  }
+
+  window.addEventListener('popstate', () => {
+    requestAnimationFrame(() => {
+      loadGiscus();
+    });
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+      loadGiscus();
     }
-  }).observe(document, { subtree: true, childList: true });
+  });
 </script> 
