@@ -1,0 +1,60 @@
+---
+import I18nKey from "../i18n/i18nKey";
+import { i18n } from "../i18n/translation";
+
+interface Props {
+	class?: string;
+}
+
+const className = Astro.props.class;
+---
+
+<div class:list={["card-base px-8 py-6", className]}>
+  <div class="giscus"></div>
+</div>
+
+<script>
+  const loadGiscus = () => {
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'Benzyl-titanium/Home');
+    script.setAttribute('data-repo-id', 'R_kgDOLQnX5A');
+    script.setAttribute('data-category', 'General');
+    script.setAttribute('data-category-id', 'DIC_kwDOLQnX5M4CbQnX');
+    script.setAttribute('data-mapping', 'pathname');
+    script.setAttribute('data-strict', '0');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
+    script.setAttribute('data-theme', 'preferred_color_scheme');
+    script.setAttribute('data-lang', 'zh-CN');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+
+    const container = document.querySelector('.giscus');
+    if (container) {
+      container.appendChild(script);
+    }
+  };
+
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.attributeName === 'data-theme') {
+        const giscusFrame = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
+        if (giscusFrame) {
+          giscusFrame.contentWindow?.postMessage(
+            { giscus: { setConfig: { theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light' } } },
+            'https://giscus.app'
+          );
+        }
+      }
+    });
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+  });
+
+  document.addEventListener('DOMContentLoaded', loadGiscus);
+</script> 
