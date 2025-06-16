@@ -14,44 +14,29 @@ const className = Astro.props.class;
 </div>
 
 <script>
-  let giscusScript: HTMLScriptElement | null = null;
-
   const loadGiscus = () => {
     const container = document.querySelector('.giscus');
     if (!container) return;
 
-    if (giscusScript) {
-      giscusScript.remove();
-    }
-
     container.innerHTML = '';
 
-    giscusScript = document.createElement('script');
-    giscusScript.src = 'https://giscus.app/client.js';
-    giscusScript.setAttribute('data-repo', 'Benzyl-titanium/Home');
-    giscusScript.setAttribute('data-repo-id', 'R_kgDOOrZ0pA');
-    giscusScript.setAttribute('data-category', 'General');
-    giscusScript.setAttribute('data-category-id', 'DIC_kwDOOrZ0pM4CrkrZ');
-    giscusScript.setAttribute('data-mapping', 'pathname');
-    giscusScript.setAttribute('data-strict', '0');
-    giscusScript.setAttribute('data-reactions-enabled', '1');
-    giscusScript.setAttribute('data-emit-metadata', '0');
-    giscusScript.setAttribute('data-input-position', 'bottom');
-    giscusScript.setAttribute('data-theme', 'preferred_color_scheme');
-    giscusScript.setAttribute('data-lang', 'zh-CN');
-    giscusScript.setAttribute('crossorigin', 'anonymous');
-    giscusScript.async = true;
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'Benzyl-titanium/Home');
+    script.setAttribute('data-repo-id', 'R_kgDOOrZ0pA');
+    script.setAttribute('data-category', 'General');
+    script.setAttribute('data-category-id', 'DIC_kwDOOrZ0pM4CrkrZ');
+    script.setAttribute('data-mapping', 'pathname');
+    script.setAttribute('data-strict', '0');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
+    script.setAttribute('data-theme', 'preferred_color_scheme');
+    script.setAttribute('data-lang', 'zh-CN');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
 
-    giscusScript.addEventListener('load', () => {
-      console.log('Giscus script loaded successfully');
-    });
-
-    giscusScript.addEventListener('error', (error) => {
-      console.error('Failed to load Giscus script:', error);
-      setTimeout(loadGiscus, 5000);
-    });
-
-    container.appendChild(giscusScript);
+    container.appendChild(script);
   };
 
   const observer = new MutationObserver((mutations) => {
@@ -79,23 +64,25 @@ const className = Astro.props.class;
     loadGiscus();
   }
 
-  if (window.swup) {
-    window.swup.on('contentReplaced', () => {
-      requestAnimationFrame(() => {
-        loadGiscus();
-      });
-    });
-  }
-
-  window.addEventListener('popstate', () => {
-    requestAnimationFrame(() => {
-      loadGiscus();
-    });
-  });
-
-  document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') {
-      loadGiscus();
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const link = target.closest('a');
+    if (link && !link.target && !e.ctrlKey && !e.metaKey) {
+      e.preventDefault();
+      const href = link.getAttribute('href');
+      if (href) {
+        window.location.href = href;
+      }
     }
   });
+
+  window.addEventListener('popstate', () => {
+    window.location.reload();
+  });
+
+  if (window.swup) {
+    window.swup.on('contentReplaced', () => {
+      window.location.reload();
+    });
+  }
 </script> 
