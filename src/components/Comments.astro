@@ -76,8 +76,20 @@ const className = Astro.props.class;
 
   if (window.swup) {
     console.log('Swup detected. Binding loadGiscus to contentReplaced event.');
-    window.swup.on('contentReplaced', loadGiscus);
+    window.swup.on('contentReplaced', () => {
+      setTimeout(loadGiscus, 100);
+    });
   } else {
     console.log('Swup not detected.');
   }
+
+  let lastUrl = location.href;
+  new MutationObserver(() => {
+    const currentUrl = location.href;
+    if (currentUrl !== lastUrl) {
+      lastUrl = currentUrl;
+      console.log('URL changed, reloading Giscus...');
+      setTimeout(loadGiscus, 100);
+    }
+  }).observe(document, { subtree: true, childList: true });
 </script> 
