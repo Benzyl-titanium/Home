@@ -12,7 +12,7 @@ draft: false
 
 # 遗嘱
 
-说实话其实也没什么可留下的，只是自己常用的一些[URL](favorite/)和[软件](#软件),内容包括`化学`、`药学`以及`学术论文`，`专利文献检索`，都是我比较感兴趣的东西…  
+说实话其实也没什么可留下的，只是自己常用的一些[URL](/posts/will/favorite/)和软件,内容包括`化学`、`药学`以及`学术论文`，`专利文献检索`，都是我比较感兴趣的东西…  
 希望对你有所帮助…谢谢
 
 > 化学反应不过是一场电子竞赛，而我一生不过是一次奇妙旅行  
@@ -40,7 +40,7 @@ draft: false
 
 ### Drug
 
-- [截至 2024.07.01,中国全部的管制药品目录](https://github.com/Benzyl-titanium/Structural-formula)
+- [截至 2024.07.01,中国全部的管制药品目录](/posts/drug/Structural-formula/)
 - [中国管制药品名录结构式&表格整合版](https://biantai.pages.dev/structural-formula)
 - [设计药物](https://biantai.pages.dev/designdrugs)
 

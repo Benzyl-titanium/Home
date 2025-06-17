@@ -17,14 +17,14 @@ draft: false
 
 ## Chem
 
-- [猜无机化合物游戏](chemgame/)
-- [化学合成实验手册](chemhandbook/)
-- [化学结构编辑器 Marvin JS](marvinjs/)
-- [700 种常见化合物在水中的溶解度](solubility/)
+- [猜无机化合物游戏](/posts/chem/chemgame/)
+- [化学合成实验手册](/posts/chem/chemhandbook/)
+- [化学结构编辑器 Marvin JS](/posts/chem/marvinjs/)
+- [700 种常见化合物在水中的溶解度](/posts/chem/solubility/)
 - [同位素分析](https://zeeman.pages.dev)
 - [babychem 基础有机化学手写笔记](https://github.com/Benzyl-titanium/BabyChem/releases/download/organic-chemistry/BabyChem.pdf)
-- [有机物合成路线 ChemByRika](chembyrika/)
-- [smilesDrawer](smilesdrawer/)
+- [有机物合成路线 ChemByRika](/posts/chem/chembyrika/)
+- [smilesDrawer](/posts/chem/smilesdrawer/)
 
 ## Drug
 
