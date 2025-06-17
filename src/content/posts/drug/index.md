@@ -11,7 +11,7 @@ draft: false
 
 # 项目
 
-**[截至 2024.07.01,中国全部的管制药品目录](/posts/drug/structural-formula/)**
+**[截至 2024.07.01,中国全部的管制药品目录](/posts/drug/structural-formula/index.html)**
 
 ::github{repo="Benzyl-titanium/Structural-formula"}
 
