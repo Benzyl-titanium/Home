@@ -14,6 +14,19 @@ const className = Astro.props.class;
 </div>
 
 <script>
+  const setGiscusTheme = () => {
+    const giscusFrame = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
+    if (giscusFrame) {
+      giscusFrame.contentWindow?.postMessage(
+        { giscus: { setConfig: { theme: document.documentElement.classList.contains('dark') ? 'dark_dimmed' : 'light' } } },
+        'https://giscus.app'
+      );
+    } else {
+      // If iframe not found, retry after a short delay
+      setTimeout(setGiscusTheme, 500);
+    }
+  };
+
   const loadGiscus = () => {
     const container = document.querySelector('.giscus');
     if (!container) return;
@@ -31,31 +44,28 @@ const className = Astro.props.class;
     script.setAttribute('data-reactions-enabled', '1');
     script.setAttribute('data-emit-metadata', '0');
     script.setAttribute('data-input-position', 'top');
-    script.setAttribute('data-theme', 'preferred_color_scheme');
+    script.setAttribute('data-theme', document.documentElement.classList.contains('dark') ? 'dark_dimmed' : 'light');
     script.setAttribute('data-lang', 'zh-CN');
     script.setAttribute('crossorigin', 'anonymous');
     script.async = true;
 
     container.appendChild(script);
+
+    // After loading Giscus script, try to set theme with a delay for iframe to render.
+    setTimeout(setGiscusTheme, 500);
   };
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
-      if (mutation.attributeName === 'data-theme') {
-        const giscusFrame = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
-        if (giscusFrame) {
-          giscusFrame.contentWindow?.postMessage(
-            { giscus: { setConfig: { theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light' } } },
-            'https://giscus.app'
-          );
-        }
+      if (mutation.attributeName === 'class') {
+        setGiscusTheme(); // Call theme setter on class change
       }
     });
   });
 
   observer.observe(document.documentElement, {
     attributes: true,
-    attributeFilter: ['data-theme']
+    attributeFilter: ['class']
   });
 
   if (document.readyState === 'loading') {
