@@ -2,8 +2,8 @@
 
 基于 [Astro](https://astro.build) 开发的静态博客模板。
 
-[**🖥️在线预览（Vercel）**](https://fuwari.vercel.app)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**📦旧 Hexo 版本**](https://github.com/saicaca/hexo-theme-vivia)
+[**🖥️ 在线预览（Vercel）**](https://fuwari.vercel.app)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+[**📦 旧 Hexo 版本**](https://github.com/saicaca/hexo-theme-vivia)
 
 > README 版本：`2025-04-24`
 
@@ -53,7 +53,7 @@ deno run -A npm:create-fuwari@latest
 ## 🚀 使用方法 2
 
 1. 使用此模板[生成新仓库](https://github.com/saicaca/fuwari/generate)或 Fork 此仓库
-2. 进行本地开发，Clone 新的仓库，执行 `pnpm install` 和 `pnpm add sharp` 以安装依赖  
+2. 进行本地开发，Clone 新的仓库，执行 `pnpm install` 和 `pnpm add sharp` 以安装依赖
    - 若未安装 [pnpm](https://pnpm.io)，执行 `npm install -g pnpm`
 3. 通过配置文件 `src/config.ts` 自定义博客
 4. 执行 `pnpm new-post <filename>` 创建新文章，并在 `src/content/posts/` 目录中编辑
@@ -70,20 +70,32 @@ image: ./cover.jpg
 tags: [Foo, Bar]
 category: Front-end
 draft: false
-lang: jp      # 仅当文章语言与 `config.ts` 中的网站语言不同时需要设置
+pinned: false
+lang: zh_CN # 仅当文章语言与 `config.ts` 中的网站语言不同时需要设置
 ---
 ```
+
+| 字段          | 描述                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------ |
+| `title`       | 文章标题                                                                             |
+| `published`   | 发布日期                                                                             |
+| `description` | 文章描述                                                                             |
+| `image`       | 封面图片                                                                             |
+| `tags`        | 标签                                                                                 |
+| `category`    | 分类                                                                                 |
+| `draft`       | 是否为草稿，草稿不会显示                                                             |
+| `pinned`      | 设置为 `true` 可将文章固定在博客顶部。固定文章会显示在其他文章之前，不受发布日期影响 |
 
 ## 🧞 指令
 
 下列指令均需要在项目根目录执行：
 
-| Command                           | Action                            |
-|:----------------------------------|:----------------------------------|
-| `pnpm install` 并 `pnpm add sharp` | 安装依赖                              |
-| `pnpm dev`                        | 在 `localhost:4321` 启动本地开发服务器      |
-| `pnpm build`                      | 构建网站至 `./dist/`                   |
-| `pnpm preview`                    | 本地预览已构建的网站                        |
-| `pnpm new-post <filename>`        | 创建新文章                             |
-| `pnpm astro ...`                  | 执行 `astro add`, `astro check` 等指令 |
-| `pnpm astro --help`               | 显示 Astro CLI 帮助                   |
+| Command                            | Action                                 |
+| :--------------------------------- | :------------------------------------- |
+| `pnpm install` 并 `pnpm add sharp` | 安装依赖                               |
+| `pnpm dev`                         | 在 `localhost:4321` 启动本地开发服务器 |
+| `pnpm build`                       | 构建网站至 `./dist/`                   |
+| `pnpm preview`                     | 本地预览已构建的网站                   |
+| `pnpm new-post <filename>`         | 创建新文章                             |
+| `pnpm astro ...`                   | 执行 `astro add`, `astro check` 等指令 |
+| `pnpm astro --help`                | 显示 Astro CLI 帮助                    |

@@ -1,10 +1,12 @@
 ---
 title: 关于我
-published: 2025-06-13
+published: 2025-06-01
+updated: 2025-06-17
 description: "bio，stats，github repo"
 tags: [bio, stats, about]
 category: README
 draft: false
+pinned: true
 ---
 
 <p align="center">

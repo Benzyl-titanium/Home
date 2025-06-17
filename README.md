@@ -75,16 +75,28 @@ image: ./cover.jpg
 tags: [Foo, Bar]
 category: Front-end
 draft: false
-lang: jp      # Set only if the post's language differs from the site's language in `config.ts`
+pinned: false
+lang: zh_CN # Set only if the post's language differs from the site's language in `config.ts`
 ---
 ```
+
+| Field         | Description                                                                                                                                   |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`       | The title of the post.                                                                                                                        |
+| `published`   | The publication date of the post.                                                                                                             |
+| `description` | A brief description of the post.                                                                                                              |
+| `image`       | The cover image of the post.                                                                                                                  |
+| `tags`        | The tags of the post.                                                                                                                         |
+| `category`    | The category of the post.                                                                                                                     |
+| `draft`       | If this post is still a draft, which won't be displayed.                                                                                      |
+| `pinned`      | Set to `true` to pin the post to the top of the blog. Pinned posts will be displayed before other posts regardless of their publication date. |
 
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
 | Command                             | Action                                           |
-|:------------------------------------|:-------------------------------------------------|
+| :---------------------------------- | :----------------------------------------------- |
 | `pnpm install` AND `pnpm add sharp` | Installs dependencies                            |
 | `pnpm dev`                          | Starts local dev server at `localhost:4321`      |
 | `pnpm build`                        | Build your production site to `./dist/`          |
