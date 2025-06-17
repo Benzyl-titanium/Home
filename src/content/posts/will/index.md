@@ -31,16 +31,17 @@ draft: false
 
 ### Chem
 
-- [猜无机化合物游戏](https://biantai.pages.dev/chemgame)
-- [化学合成实验手册](https://chemhandbook.netlify.app)
-- [化学结构编辑器 Marvin JS](https://marvinjs.pages.dev)
-- [700 种常见化合物在水中的溶解度](https://biantai.pages.dev/solubility)
+- [猜无机化合物游戏](/posts/chem/chemgame/index.html)
+- [化学合成实验手册](/posts/chem/chemhandbook/index.html)
+- [化学结构编辑器 Marvin JS](/posts/chem/marvinjs/index.html)
+- [化学结构编辑器 Marvin JS](/posts/chem/marvinjs/index.html)
+- [700 种常见化合物在水中的溶解度](/posts/chem/solubility/index.html)
 - [同位素分析](https://zeeman.pages.dev)
-- [有机物合成路线 ChemByRika](https://chembyrika.netlify.app)
+- [有机物合成路线 ChemByRika](/posts/chem/chembyrika/index.html)
 
 ### Drug
 
-- [截至 2024.07.01,中国全部的管制药品目录](/posts/drug/Structural-formula/)
+- [截至 2024.07.01,中国全部的管制药品目录](/posts/drug/Structural-formula/index.html)
 - [中国管制药品名录结构式&表格整合版](https://biantai.pages.dev/structural-formula)
 - [设计药物](https://biantai.pages.dev/designdrugs)
 

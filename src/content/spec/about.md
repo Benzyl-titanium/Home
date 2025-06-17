@@ -10,18 +10,18 @@
 
 ## Chem
 
-- [猜无机化合物游戏](/posts/chem/chemgame/)
-- [化学合成实验手册](/posts/chem/chemhandbook/)
-- [化学结构编辑器 Marvin JS](/posts/chem/marvinjs/)
-- [700 种常见化合物在水中的溶解度](/posts/chem/solubility/)
+- [猜无机化合物游戏](/posts/chem/chemgame/index.html)
+- [化学合成实验手册](/posts/chem/chemhandbook/index.html)
+- [化学结构编辑器 Marvin JS](/posts/chem/marvinjs/index.html)
+- [700 种常见化合物在水中的溶解度](/posts/chem/solubility/index.html)
 - [同位素分析](https://zeeman.pages.dev)
 - [babychem 基础有机化学手写笔记](https://github.com/Benzyl-titanium/BabyChem/releases/download/organic-chemistry/BabyChem.pdf)
-- [有机物合成路线 ChemByRika](/posts/chem/chembyrika/)
-- [smilesDrawer](/posts/chem/smilesdrawer/)
+- [有机物合成路线 ChemByRika](/posts/chem/chembyrika/index.html)
+- [smilesDrawer](/posts/chem/smilesdrawer/index.html)
 
 ## Drug
 
-- [截至 2024.07.01,中国全部的管制药品目录](/posts/drug/structural-formula/)
+- [截至 2024.07.01,中国全部的管制药品目录](/posts/drug/structural-formula/index.html)
 - [中国管制药品名录结构式&表格整合版](https://biantai.pages.dev/structural-formula)
 - [设计药物](https://biantai.pages.dev/designdrugs)
 
