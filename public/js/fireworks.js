@@ -3,7 +3,8 @@ function clickEffect() {
 	let longPressed = false;
 	let longPress;
 	let multiplier = 0;
-	let width, height;
+	let width;
+	let height;
 	let origin;
 	let normal;
 	let ctx;
@@ -19,6 +20,10 @@ function clickEffect() {
 	const pointer = document.createElement("span");
 	pointer.classList.add("pointer");
 	document.body.appendChild(pointer);
+
+	function isDarkMode() {
+		return document.documentElement.classList.contains("dark");
+	}
 
 	if (canvas.getContext && window.addEventListener) {
 		ctx = canvas.getContext("2d");
@@ -62,8 +67,8 @@ function clickEffect() {
 			(e) => {
 				const x = e.clientX;
 				const y = e.clientY;
-				pointer.style.top = y + "px";
-				pointer.style.left = x + "px";
+				pointer.style.top = `${y}px`;
+				pointer.style.left = `${x}px`;
 			},
 			false,
 		);
@@ -74,8 +79,8 @@ function clickEffect() {
 	function updateSize() {
 		canvas.width = window.innerWidth * 2;
 		canvas.height = window.innerHeight * 2;
-		canvas.style.width = window.innerWidth + "px";
-		canvas.style.height = window.innerHeight + "px";
+		canvas.style.width = `${window.innerWidth}px`;
+		canvas.style.height = `${window.innerHeight}px`;
 		ctx.scale(2, 2);
 		width = canvas.width = window.innerWidth;
 		height = canvas.height = window.innerHeight;
