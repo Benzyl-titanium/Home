@@ -1,7 +1,6 @@
 ---
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
-import { Icon } from "astro-icon/components";
 
 interface Props {
 	class?: string;
@@ -11,12 +10,6 @@ const className = Astro.props.class;
 ---
 
 <div class:list={["card-base px-6 py-4", className]}>
-  <div class="flex justify-between items-center">
-    <h3 class="text-lg font-semibold text-black/90 dark:text-white/90">{i18n(I18nKey.comments)}</h3>
-    <button id="refresh-comments-btn" class="p-2 text-sm rounded-lg transition-all hover:scale-105 active:scale-95 text-black/60 dark:text-white/60 hover:text-black/80 dark:hover:text-white/80">
-      <Icon name="material-symbols:refresh-rounded" class="text-[1rem]"></Icon>
-    </button>
-  </div>
   <div class="giscus"></div>
 </div>
 
@@ -65,37 +58,6 @@ const className = Astro.props.class;
     setTimeout(setGiscusTheme, 500);
   };
 
-  const refreshComments = () => {
-    const refreshBtn = document.getElementById('refresh-comments-btn');
-    if (refreshBtn) {
-      // Add loading animation
-      refreshBtn.style.transform = 'rotate(360deg)';
-      refreshBtn.style.transition = 'transform 0.5s ease-in-out';
-      
-      // Reload Giscus
-      loadGiscus();
-      
-      // Reset button animation after a delay
-      setTimeout(() => {
-        refreshBtn.style.transform = '';
-        refreshBtn.style.transition = '';
-      }, 500);
-    }
-  };
-
-  // Add click event listener to refresh button
-  const setupRefreshButton = () => {
-    const refreshBtn = document.getElementById('refresh-comments-btn');
-    if (refreshBtn) {
-      // Remove existing event listeners to prevent duplicates
-      const newBtn = refreshBtn.cloneNode(true);
-      refreshBtn.parentNode?.replaceChild(newBtn, refreshBtn);
-      
-      // Add new event listener
-      newBtn.addEventListener('click', refreshComments);
-    }
-  };
-
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.attributeName === 'class') {
@@ -111,7 +73,6 @@ const className = Astro.props.class;
 
   const initComments = () => {
     loadGiscus();
-    setupRefreshButton();
   };
 
   if (document.readyState === 'loading') {
@@ -128,7 +89,7 @@ const className = Astro.props.class;
         setTimeout(() => {
           const giscusContainer = document.querySelector('.giscus');
           if (giscusContainer) {
-            setupRefreshButton();
+            // Comments will be re-initialized automatically
           }
         }, 100);
       });
@@ -138,7 +99,4 @@ const className = Astro.props.class;
   };
 
   setupSwupHooks();
-
-  // Expose refresh function globally for potential external use
-  (window as any).refreshComments = refreshComments;
 </script> 
