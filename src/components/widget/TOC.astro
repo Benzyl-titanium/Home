@@ -5,9 +5,12 @@ import { siteConfig } from "../../config";
 interface Props {
 	class?: string;
 	headings: MarkdownHeading[];
+	showInSidebar?: boolean;
+	style?: string;
+	title?: string;
 }
 
-let { headings = [] } = Astro.props;
+let { headings = [], showInSidebar = false, style = "", title = "目录" } = Astro.props;
 
 let minDepth = 10;
 for (const heading of headings) {
@@ -15,6 +18,7 @@ for (const heading of headings) {
 }
 
 const className = Astro.props.class;
+const styleAttr = Astro.props.style;
 
 const isPostsRoute = Astro.url.pathname.startsWith("/posts/");
 
@@ -32,7 +36,7 @@ let heading1Count = 1;
 const maxLevel = siteConfig.toc.depth;
 ---
 {isPostsRoute &&
-<table-of-contents class:list={[className, "group"]}>
+<table-of-contents class:list={[className, "group", {"sidebar-toc": showInSidebar}]} style={styleAttr}>
     {headings.filter((heading) => heading.depth < minDepth + maxLevel).map((heading) =>
             <a href={`#${heading.slug}`} class="px-2 flex gap-2 relative transition w-full min-h-9 rounded-xl
         hover:bg-[var(--toc-btn-hover)] active:bg-[var(--toc-btn-active)] py-2
@@ -55,9 +59,46 @@ const maxLevel = siteConfig.toc.depth;
                 }]}>{removeTailingHash(heading.text)}</div>
             </a>
     )}
-    <div id="active-indicator" class:list={[{'hidden': headings.length == 0}, "-z-10 absolute bg-[var(--toc-btn-hover)] left-0 right-0 rounded-xl transition-all " +
+    <div id="active-indicator" class:list={[{'hidden': headings.length == 0 || showInSidebar}, "-z-10 absolute bg-[var(--toc-btn-hover)] left-0 right-0 rounded-xl transition-all " +
         "group-hover:bg-transparent border-2 border-[var(--toc-btn-hover)] group-hover:border-[var(--toc-btn-active)] border-dashed"]}></div>
 </table-of-contents>}
+
+<style>
+    .sidebar-toc {
+        height: 100px !important;
+        overflow-y: auto !important;
+    }
+    
+    .sidebar-toc::-webkit-scrollbar {
+        width: 4px;
+    }
+    
+    .sidebar-toc::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    .sidebar-toc::-webkit-scrollbar-thumb {
+        background: var(--card-border);
+        border-radius: 2px;
+    }
+    
+    .sidebar-toc::-webkit-scrollbar-thumb:hover {
+        background: var(--toc-btn-hover);
+    }
+    
+    .sidebar-toc a {
+        border-radius: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .sidebar-toc a:last-child {
+        margin-bottom: 0;
+    }
+    
+    .sidebar-toc #active-indicator {
+        display: none !important;
+    }
+</style>
 
 <script>
 class TableOfContents extends HTMLElement {
@@ -71,12 +112,14 @@ class TableOfContents extends HTMLElement {
     tocEntries: HTMLAnchorElement[] = [];
     active: boolean[] = [];
     activeIndicator: HTMLElement | null = null;
+    isSidebarToc: boolean = false;
 
     constructor() {
         super();
         this.observer = new IntersectionObserver(
             this.markVisibleSection, { threshold: 0 }
         );
+        this.isSidebarToc = this.classList.contains('sidebar-toc');
     };
 
     markVisibleSection = (entries: IntersectionObserverEntry[]) => {
@@ -112,14 +155,19 @@ class TableOfContents extends HTMLElement {
             this.tocEntries[i].classList.remove(this.visibleClass);
             i--;
         }
-        let parentOffset = this.tocEl?.getBoundingClientRect().top || 0;
-        let scrollOffset = this.tocEl?.scrollTop || 0;
-        let top = this.tocEntries[min].getBoundingClientRect().top - parentOffset + scrollOffset;
-        let bottom = this.tocEntries[max].getBoundingClientRect().bottom - parentOffset + scrollOffset;
-        this.activeIndicator?.setAttribute("style", `top: ${top}px; height: ${bottom - top}px`);
+        
+        if (!this.isSidebarToc && this.activeIndicator) {
+            let parentOffset = this.tocEl?.getBoundingClientRect().top || 0;
+            let scrollOffset = this.tocEl?.scrollTop || 0;
+            let top = this.tocEntries[min].getBoundingClientRect().top - parentOffset + scrollOffset;
+            let bottom = this.tocEntries[max].getBoundingClientRect().bottom - parentOffset + scrollOffset;
+            this.activeIndicator.setAttribute("style", `top: ${top}px; height: ${bottom - top}px`);
+        }
     };
 
     scrollToActiveHeading = () => {
+        if (this.isSidebarToc) return;
+        
         // If the TOC widget can accommodate both the topmost
         // and bottommost items, scroll to the topmost item. 
         // Otherwise, scroll to the bottommost one.
@@ -150,9 +198,7 @@ class TableOfContents extends HTMLElement {
     update = () => {
         requestAnimationFrame(() => {
             this.toggleActiveHeading();
-            // requestAnimationFrame(() => {
             this.scrollToActiveHeading();
-            // });
         });
     };
 
@@ -197,6 +243,11 @@ class TableOfContents extends HTMLElement {
     };
 
     connectedCallback() {
+        if (this.isSidebarToc) {
+            this.init();
+            return;
+        }
+        
         // wait for the onload animation to finish, which makes the `getBoundingClientRect` return correct values
         const element = document.querySelector('.prose');
         if (element) {
@@ -209,20 +260,24 @@ class TableOfContents extends HTMLElement {
     };
 
     init() {
-        this.tocEl = document.getElementById(
-            "toc-inner-wrapper"
-        );
+        if (this.isSidebarToc) {
+            this.tocEl = this;
+        } else {
+            this.tocEl = document.getElementById("toc-inner-wrapper");
+        }
 
         if (!this.tocEl) return;
 
         this.tocEl.addEventListener("click", this.handleAnchorClick, {
             capture: true,
         });
+        if (!this.isSidebarToc) {
+            this.activeIndicator = document.getElementById("active-indicator");
+        }
 
-        this.activeIndicator = document.getElementById("active-indicator");
-
+        const tocSelector = this.isSidebarToc ? "a[href^='#']" : "#toc a[href^='#']";
         this.tocEntries = Array.from(
-            document.querySelectorAll<HTMLAnchorElement>("#toc a[href^='#']")
+            document.querySelectorAll<HTMLAnchorElement>(tocSelector)
         );
 
         if (this.tocEntries.length === 0) return;
