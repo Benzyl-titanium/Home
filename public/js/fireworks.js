@@ -7,7 +7,9 @@ function clickEffect() {
 	let origin;
 	let normal;
 	let ctx;
-	const colours = ["#F73859", "#14FFEC", "#00E0FF", "#FF99FE", "#FAF15D"];
+	const svgImage = new Image();
+	svgImage.src = "/js/benzene.png";
+
 	const canvas = document.createElement("canvas");
 	document.body.appendChild(canvas);
 	canvas.setAttribute(
@@ -39,7 +41,7 @@ function clickEffect() {
 			"mouseup",
 			(e) => {
 				clearInterval(longPress);
-				if (longPressed == true) {
+				if (longPressed === true) {
 					document.body.classList.remove("is-longpress");
 					pushBalls(
 						randBetween(
@@ -86,29 +88,57 @@ function clickEffect() {
 			y: height / 2,
 		};
 	}
+
 	class Ball {
 		constructor(x = origin.x, y = origin.y) {
 			this.x = x;
 			this.y = y;
 			this.angle = Math.PI * 2 * Math.random();
-			if (longPressed == true) {
+			if (longPressed === true) {
 				this.multiplier = randBetween(14 + multiplier, 15 + multiplier);
 			} else {
 				this.multiplier = randBetween(6, 12);
 			}
 			this.vx = (this.multiplier + Math.random() * 0.5) * Math.cos(this.angle);
 			this.vy = (this.multiplier + Math.random() * 0.5) * Math.sin(this.angle);
-			this.r = randBetween(8, 12) + 3 * Math.random();
-			this.color = colours[Math.floor(Math.random() * colours.length)];
+			this.size = randBetween(10, 40) + 5 * Math.random();
+			this.rotation = Math.random() * Math.PI * 2;
+			this.rotationSpeed = (Math.random() - 0.5) * 0.2;
+			this.opacity = 1.0;
+			this.fadeSpeed = 0.02 + Math.random() * 0.03;
 		}
+
 		update() {
 			this.x += this.vx - normal.x;
 			this.y += this.vy - normal.y;
 			normal.x = (-2 / window.innerWidth) * Math.sin(this.angle);
 			normal.y = (-2 / window.innerHeight) * Math.cos(this.angle);
-			this.r -= 0.3;
+			this.size -= 0.5;
+			this.rotation += this.rotationSpeed;
+			this.opacity -= this.fadeSpeed;
 			this.vx *= 0.9;
 			this.vy *= 0.9;
+		}
+
+		draw() {
+			if (this.opacity <= 0 || this.size <= 0) return;
+
+			ctx.save();
+			ctx.globalAlpha = this.opacity;
+			ctx.translate(this.x, this.y);
+			ctx.rotate(this.rotation);
+
+			if (svgImage.complete) {
+				ctx.drawImage(
+					svgImage,
+					-this.size / 2,
+					-this.size / 2,
+					this.size,
+					this.size,
+				);
+			}
+
+			ctx.restore();
 		}
 	}
 
@@ -127,14 +157,11 @@ function clickEffect() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		for (let i = 0; i < balls.length; i++) {
 			const b = balls[i];
-			if (b.r < 0) continue;
-			ctx.fillStyle = b.color;
-			ctx.beginPath();
-			ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2, false);
-			ctx.fill();
+			if (b.opacity <= 0 || b.size <= 0) continue;
+			b.draw();
 			b.update();
 		}
-		if (longPressed == true) {
+		if (longPressed === true) {
 			multiplier += 0.2;
 		} else if (!longPressed && multiplier >= 0) {
 			multiplier -= 0.4;
@@ -147,11 +174,12 @@ function clickEffect() {
 		for (let i = 0; i < balls.length; i++) {
 			const b = balls[i];
 			if (
-				b.x + b.r < 0 ||
-				b.x - b.r > width ||
-				b.y + b.r < 0 ||
-				b.y - b.r > height ||
-				b.r < 0
+				b.x + b.size < 0 ||
+				b.x - b.size > width ||
+				b.y + b.size < 0 ||
+				b.y - b.size > height ||
+				b.opacity <= 0 ||
+				b.size <= 0
 			) {
 				balls.splice(i, 1);
 			}
