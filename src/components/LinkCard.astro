@@ -1,0 +1,74 @@
+---
+import { onMount } from "astro/client";
+import { useState } from "preact/hooks";
+
+interface Props {
+	name: string;
+	url: string;
+	icon?: string;
+	desc?: string;
+	tags?: string[];
+}
+const { name, url, icon, desc, tags } = Astro.props;
+const fallbackIcon = "/imgs/benzene.png";
+
+let meta = {
+	title: url,
+	description: "",
+	icon: "",
+	image: "",
+};
+
+// SSR fetch meta info
+if (Astro.fetch) {
+	try {
+		const res = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0" } });
+		const html = await res.text();
+		const titleMatch = html.match(/<title>(.*?)<\/title>/i);
+		const descMatch = html.match(
+			/<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)["'][^>]*>/i,
+		);
+		const iconMatch = html.match(
+			/<link[^>]+rel=["']icon["'][^>]+href=["']([^"']+)["'][^>]*>/i,
+		);
+		const ogImgMatch = html.match(
+			/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["'][^>]*>/i,
+		);
+		meta.title = titleMatch ? titleMatch[1] : url;
+		meta.description = descMatch ? descMatch[1] : "";
+		meta.icon = iconMatch ? iconMatch[1] : "";
+		meta.image = ogImgMatch ? ogImgMatch[1] : "";
+		if (meta.icon && !meta.icon.startsWith("http")) {
+			const u = new URL(meta.icon, url);
+			meta.icon = u.href;
+		}
+		if (meta.image && !meta.image.startsWith("http")) {
+			const u = new URL(meta.image, url);
+			meta.image = u.href;
+		}
+	} catch (e) {
+		// ignore
+	}
+}
+---
+<a href={url} class="linkcard" target="_blank" rel="noopener noreferrer">
+  <div class="fuwari-card flex items-center gap-4 p-4 rounded-xl border bg-[oklch(0.98_0.02_var(--hue))] dark:bg-[oklch(0.22_0.02_var(--hue))] border-[oklch(0.85_0.04_var(--hue))] dark:border-[oklch(0.35_0.04_var(--hue))] hover:shadow-lg transition w-[360px] h-[110px] min-w-[320px] max-w-full box-border overflow-hidden">
+    <img src={icon} alt={name} class="w-14 h-14 rounded-full bg-white border border-[oklch(0.85_0.04_var(--hue))] dark:border-[oklch(0.35_0.04_var(--hue))] flex-shrink-0" loading="lazy" onerror={`this.onerror=null;this.src='${fallbackIcon}'`} />
+    <div class="flex-1 min-w-0 flex flex-col justify-center h-full">
+      <div class="font-bold text-lg text-[oklch(0.55_0.13_var(--hue))] dark:text-[oklch(0.85_0.13_var(--hue))] truncate">{name}</div>
+      <div class="text-[oklch(0.45_0.07_var(--hue))] dark:text-[oklch(0.75_0.07_var(--hue))] text-sm line-clamp-2 break-all truncate">{desc || url}</div>
+      {tags && tags.length > 0 && (
+        <div class="mt-2 flex flex-wrap gap-2">
+          {tags.map(tag => (
+            <span class="px-2 py-0.5 bg-[oklch(0.95_0.04_var(--hue))] dark:bg-[oklch(0.25_0.04_var(--hue))] text-xs rounded text-[oklch(0.55_0.13_var(--hue))] dark:text-[oklch(0.85_0.13_var(--hue))] border border-[oklch(0.85_0.04_var(--hue))] dark:border-[oklch(0.35_0.04_var(--hue))]">{tag}</span>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</a>
+<style>
+.linkcard { display: block; text-decoration: none; }
+.fuwari-card { box-shadow: 0 2px 8px 0 oklch(0.85_0.04_var(--hue)/0.06); }
+.fuwari-card:hover { box-shadow: 0 4px 16px 0 oklch(0.55_0.13_var(--hue)/0.13); }
+</style>

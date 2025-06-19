@@ -1,0 +1,90 @@
+---
+import LinkCard from "@components/LinkCard.astro";
+import Comments from "../components/Comments.astro";
+import friendsData from "../content/spec/friends.json";
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+
+type Friend = {
+	name?: string;
+	url: string;
+	icon?: string;
+	desc?: string;
+	tags?: string[];
+};
+const friends = friendsData as Friend[];
+
+async function getFriendMeta(friend: Friend): Promise<Required<Friend>> {
+	let icon = friend.icon || "";
+	let desc = friend.desc || "";
+	let name = friend.name || "";
+	let tags = friend.tags || [];
+	if (!icon || !desc || !name) {
+		try {
+			const res = await fetch(friend.url);
+			const html = await res.text();
+			if (!icon) {
+				const iconMatch = html.match(
+					/<link[^>]+rel=["'](?:shortcut )?icon["'][^>]*href=["']([^"']+)["'][^>]*>/i,
+				);
+				if (iconMatch?.[1]) {
+					icon = iconMatch[1].startsWith("http")
+						? iconMatch[1]
+						: new URL(iconMatch[1], friend.url).href;
+				} else {
+					icon = `https://www.google.com/s2/favicons?domain=${new URL(friend.url).hostname}&sz=64`;
+				}
+			}
+			if (!desc) {
+				const ogDesc = html.match(
+					/<meta property=\"og:description\" content=\"([^\"]*)\"/,
+				);
+				if (ogDesc?.[1]) desc = ogDesc[1];
+			}
+			if (!name) {
+				const titleMatch = html.match(/<title>(.*?)<\/title>/i);
+				if (titleMatch?.[1]) name = titleMatch[1];
+			}
+		} catch (e) {
+			if (!icon) {
+				icon = `https://www.google.com/s2/favicons?domain=${new URL(friend.url).hostname}&sz=64`;
+			}
+		}
+	}
+	return { name, url: friend.url, icon, desc, tags };
+}
+
+const friendsWithMeta = await Promise.all(
+	friends.map(async (friend) => await getFriendMeta(friend)),
+);
+---
+<MainGridLayout title="友链" description="友情链接">
+	<div class="space-y-8">
+		<div class="card-base z-10 px-8 py-6 relative w-full">
+			<div class="flex flex-wrap justify-center gap-12">
+				{friendsWithMeta.map(friend => (
+					<LinkCard name={friend.name ?? ""} url={friend.url} icon={friend.icon ?? ""} desc={friend.desc ?? ""} tags={friend.tags} />
+				))}
+			</div>
+		</div>
+		<div class="card-base z-10 px-8 py-6 relative w-full">
+			<Comments />
+		</div>
+	</div>
+</MainGridLayout>
+
+<style>
+.friends-bg {
+	background: linear-gradient(135deg, 
+		oklch(0.98 0.015 var(--hue)) 0%,
+		oklch(0.97 0.025 calc(var(--hue) + 30)) 50%,
+		oklch(0.98 0.015 calc(var(--hue) + 60)) 100%
+	);
+}
+:global(.dark) .friends-bg {
+	background: linear-gradient(135deg, 
+		oklch(0.2 0.015 var(--hue)) 0%,
+		oklch(0.22 0.025 calc(var(--hue) + 30)) 50%,
+		oklch(0.2 0.015 calc(var(--hue) + 60)) 100%
+	);
+}
+</style> 

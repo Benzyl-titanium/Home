@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("posts");
+---
+<main class="max-w-3xl mx-auto py-10 px-4">
+  <h1 class="text-3xl font-bold mb-6">所有文章</h1>
+  <ul class="space-y-3">
+    {posts.map(post => (
+      <li>
+        <a href={`/posts/${post.slug}/`} class="text-lg text-[var(--primary)] hover:underline">
+          {post.data.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+</main> 
