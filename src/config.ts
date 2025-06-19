@@ -48,13 +48,8 @@ export const navBarConfig: NavBarConfig = {
 			url: "/friends/",
 		},
 		{
-			name: "结构编辑器",
-			url: "https://marvinjs.pages.dev", // Internal links should not include the base path, as it is automatically added
-			external: true, // Show an external link icon and will open in a new tab
-		},
-		{
-			name: "设计药物",
-			url: "https://biantai.pages.dev/designdrugs", // Internal links should not include the base path, as it is automatically added
+			name: "GitHub repo",
+			url: "https://github.com/Benzyl-titanium/Home/tree/blog", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 	],
