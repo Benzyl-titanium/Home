@@ -8,8 +8,6 @@ function clickEffect() {
 	let origin;
 	let normal;
 	let ctx;
-	const svgImage = new Image();
-	svgImage.src = "/js/benzene.png";
 
 	const canvas = document.createElement("canvas");
 	document.body.appendChild(canvas);
@@ -133,15 +131,18 @@ function clickEffect() {
 			ctx.translate(this.x, this.y);
 			ctx.rotate(this.rotation);
 
-			if (svgImage.complete) {
-				ctx.drawImage(
-					svgImage,
-					-this.size / 2,
-					-this.size / 2,
-					this.size,
-					this.size,
-				);
-			}
+			ctx.font = `${this.size}px sans-serif`;
+			ctx.textAlign = "center";
+			ctx.textBaseline = "middle";
+
+			let hue = getComputedStyle(document.documentElement)
+				.getPropertyValue("--hue")
+				.trim();
+			if (!hue) hue = "250"; // fallback
+			const isDark = isDarkMode();
+			const themeColor = `hsl(${hue}, 80%, ${isDark ? "85%" : "60%"})`;
+			ctx.fillStyle = themeColor;
+			ctx.fillText("⌬", 0, 0);
 
 			ctx.restore();
 		}
