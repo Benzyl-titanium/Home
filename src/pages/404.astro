@@ -1,14 +1,59 @@
 ---
-import MainGridLayout from "../layouts/MainGridLayout.astro";
+import { Icon } from "astro-icon/components";
 ---
 
-<MainGridLayout title="404" description="Page Not Found">
-    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-64">
-        <div class="card-base z-10 px-9 py-12 relative w-full text-center">
-            <div class="flex items-center justify-center space-x-4 mb-8">
-                <span class="text-6xl font-bold text-[var(--btn-content)]">4⌬4</span>
-            </div>
-            <h1 class="text-2xl font-semibold text-[var(--btn-content)] mb-4">Page Not Found</h1>
-        </div>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>404 - Benzyl titanium's blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        const LIGHT_MODE = "light", DARK_MODE = "dark", AUTO_MODE = "auto", DEFAULT_THEME = AUTO_MODE;
+        /**
+         * @param {string} theme
+         */
+        function applyTheme(theme: any) {
+          if (theme === LIGHT_MODE) {
+            document.documentElement.classList.remove('dark');
+          } else if (theme === DARK_MODE) {
+            document.documentElement.classList.add('dark');
+          } else {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              document.documentElement.classList.add('dark');
+            } else {
+              document.documentElement.classList.remove('dark');
+            }
+          }
+        }
+        let theme = localStorage.getItem('theme') || DEFAULT_THEME;
+        applyTheme(theme);
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+          if (theme === AUTO_MODE) applyTheme(AUTO_MODE);
+        });
+      })();
+    </script>
+    <link rel="icon" type="image/png" href="/favicon/favicon.png" />
+    <style>
+      @keyframes fuwari-glow {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(227, 118, 155, 0.5); }
+        50% { box-shadow: 0 0 16px 4px rgba(227, 118, 155, 0.6); }
+      }
+    </style>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[var(--background)] transition-colors">
+    <div class="text-center text-[#e3769b]">
+      <div class="flex items-center justify-center space-x-4 mb-8">
+        <span class="text-6xl font-bold text-[var(--btn-content)]">4⌬4</span>
+      </div>
+      <h1 class="text-2xl font-semibold text-[var(--btn-content)] mb-4">🍥访问的页面被吃掉了🍥</h1>
+      <a
+        href="/"
+        class="btn-regular rounded-lg w-[122px] h-[44px] font-bold mt-6 flex items-center justify-center gap-2 hover:bg-[#fee8ee] transition-colors mx-auto"
+      >
+        <Icon name="material-symbols:home-outline-rounded" class="w-5 h-5 align-middle" />
+        返回主页
+      </a>
     </div>
-</MainGridLayout>
+  </body>
+</html>
