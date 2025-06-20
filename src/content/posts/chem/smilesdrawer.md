@@ -2,7 +2,7 @@
 title: smilesDrawer
 published: 2025-06-13
 description: "smiles to png/jpg/svg"
-tags: [化学, SMILES, smilesDrawer, GitHubRepo]
+tags: [化学, SMILES, smilesDrawer, GitHubRepo, markdown扩展]
 category: "Chem"
 draft: false
 ---
@@ -35,6 +35,21 @@ C(C1=CC=CC=C1)[Ti](CC1=CC=CC=C1)(CC1=CC=CC=C1)CC1=CC=CC=C1
 
 ```js
 // public/js/chemdraw.js
-width: 150,
-height: 150,
+const options = { width: 150, height: 150 };
 ```
+
+## add script
+
+```html
+<script>
+  if (window.renderSmiles) {
+    setTimeout(window.renderSmiles, 100);
+  }
+</script>
+```
+
+<script>
+  if (window.renderSmiles) {
+    setTimeout(window.renderSmiles, 100);
+  }
+</script>

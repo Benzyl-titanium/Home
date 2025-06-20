@@ -1,35 +1,35 @@
-document.addEventListener("DOMContentLoaded", () => {
-	const smilesDrawer = new SmilesDrawer.Drawer({
-		width: 150,
-		height: 150,
-		bondThickness: 0.6,
-		bondLength: 15,
-		shortBondLength: 0.85,
-		bondSpacing: 0.18 * 15,
-		atomVisualization: "default",
-		fontSizeLarge: 6,
-		fontSizeSmall: 4,
-		padding: 15.0,
-	});
+function renderSmiles() {
+	const SmilesDrawer = window.SmilesDrawer;
+	if (!SmilesDrawer) return;
+	const options = { width: 150, height: 150 };
+	const drawer = new SmilesDrawer.Drawer(options);
 
-	document.querySelectorAll(".smiles").forEach((element) => {
-		const smiles = element.textContent.trim();
-		element.textContent = ""; // Clear the text content after reading
-		const canvas = document.createElement("canvas");
-		canvas.width = 200;
-		canvas.height = 200;
-		canvas.style.backgroundColor = "#FFFFFF"; // Add white background
-		canvas.style.borderRadius = "8px"; // Add rounded corners
-		element.insertBefore(canvas, element.firstChild);
-
-		SmilesDrawer.parse(
-			smiles,
-			(tree) => {
-				smilesDrawer.draw(tree, canvas, "light", false);
-			},
-			(err) => {
-				console.error("Failed to parse SMILES:", err);
-			},
-		);
+	document.querySelectorAll('.smiles').forEach(div => {
+		const smiles = div.textContent.trim();
+		if (!smiles) return;
+		div.innerHTML = '';
+		SmilesDrawer.parse(smiles, tree => {
+			const canvas = document.createElement('canvas');
+			canvas.width = options.width;
+			canvas.height = options.height;
+			div.appendChild(canvas);
+			drawer.draw(tree, canvas, 'light', false);
+		}, err => {
+			div.innerHTML = '<span style="color:red">SMILES Error</span>';
+		});
 	});
+}
+
+document.addEventListener("DOMContentLoaded", renderSmiles);
+document.addEventListener("swup:contentReplaced", () => {
+	setTimeout(renderSmiles, 100);
 });
+
+let debounceTimer = null;
+const observer = new MutationObserver(() => {
+	if (debounceTimer) clearTimeout(debounceTimer);
+	debounceTimer = setTimeout(renderSmiles, 50);
+});
+observer.observe(document.body, { childList: true, subtree: true });
+
+window.renderSmiles = renderSmiles;
