@@ -30,7 +30,7 @@ const friendsWithMeta = await Promise.all(
 <MainGridLayout title="友链" description="友情链接">
 	<div class="space-y-8">
 		<div class="card-base z-10 px-8 py-6 relative w-full">
-			<div class="flex flex-wrap justify-start gap-12">
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 				{friendsWithMeta.map(friend => (
 					<LinkCard name={friend.name ?? ""} url={friend.url} icon={friend.icon ?? ""} desc={friend.desc ?? ""} tags={friend.tags} />
 				))}

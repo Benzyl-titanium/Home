@@ -7,7 +7,14 @@ import MainGridLayout from "../layouts/MainGridLayout.astro";
 import { getSortedPosts } from "../utils/content-utils";
 
 export const getStaticPaths = (async ({ paginate }) => {
-	const allBlogPosts = await getSortedPosts();
+	let allBlogPosts = await getSortedPosts();
+
+	const pinnedIndex = allBlogPosts.findIndex((post) => post.data.pinned);
+	if (pinnedIndex !== -1) {
+		const [pinnedPost] = allBlogPosts.splice(pinnedIndex, 1);
+		allBlogPosts = [pinnedPost, ...allBlogPosts];
+	}
+
 	return paginate(allBlogPosts, { pageSize: PAGE_SIZE });
 }) satisfies GetStaticPaths;
 // https://github.com/withastro/astro/issues/6507#issuecomment-1489916992
