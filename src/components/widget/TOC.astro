@@ -10,7 +10,12 @@ interface Props {
 	title?: string;
 }
 
-let { headings = [], showInSidebar = false, style = "", title = "目录" } = Astro.props;
+let {
+	headings = [],
+	showInSidebar = false,
+	style = "",
+	title = "目录",
+} = Astro.props;
 
 let minDepth = 10;
 for (const heading of headings) {
