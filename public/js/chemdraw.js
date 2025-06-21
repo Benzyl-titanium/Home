@@ -1,22 +1,26 @@
 function renderSmiles() {
 	const SmilesDrawer = window.SmilesDrawer;
 	if (!SmilesDrawer) return;
-	const options = { width: 150, height: 150 };
+	const options = { width: 200, height: 200 };
 	const drawer = new SmilesDrawer.Drawer(options);
 
-	document.querySelectorAll('.smiles').forEach(div => {
+	document.querySelectorAll(".smiles").forEach((div) => {
 		const smiles = div.textContent.trim();
 		if (!smiles) return;
-		div.innerHTML = '';
-		SmilesDrawer.parse(smiles, tree => {
-			const canvas = document.createElement('canvas');
-			canvas.width = options.width;
-			canvas.height = options.height;
-			div.appendChild(canvas);
-			drawer.draw(tree, canvas, 'light', false);
-		}, err => {
-			div.innerHTML = '<span style="color:red">SMILES Error</span>';
-		});
+		div.innerHTML = "";
+		SmilesDrawer.parse(
+			smiles,
+			(tree) => {
+				const canvas = document.createElement("canvas");
+				canvas.width = options.width;
+				canvas.height = options.height;
+				div.appendChild(canvas);
+				drawer.draw(tree, canvas, "light", false);
+			},
+			(err) => {
+				div.innerHTML = '<span style="color:red">SMILES Error</span>';
+			},
+		);
 	});
 }
 

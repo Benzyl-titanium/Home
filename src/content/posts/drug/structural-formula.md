@@ -1,8 +1,8 @@
 ---
-title: 截至2024.07.01,中国全部的管制药品目录
+title: 截至2025.07.01,中国全部的管制药品目录
 published: 2024-11-10
-updated: 2025-05-30
-description: "截至2024.07.01中国全部管制药品目录的中英文名称，cas号，结构式图片和表格，chemdraw和kingdraw的结构式文件"
+updated: 2025-06-21
+description: "截至2025.07.01中国全部管制药品目录的中英文名称，cas号，结构式图片和表格，chemdraw和kingdraw的结构式文件"
 tags: [药学, 精神药品, 管制化合物, 化合物, SMILES, CAS, GitHubRepo]
 category: "Drug"
 draft: false
@@ -54,6 +54,19 @@ X 代表 N 或 C。
 Y 代表 N 或 CH。  
 Z 代表 O 或 NH 或无任何原子。
 
+### [尼秦类物质](https://en.wikipedia.org/wiki/List_of_benzimidazole_opioids)
+
+尼秦类物质”是指化学结构与依托尼秦（2-[2-(4-乙氧基苄基)-5-硝基-]H-苯并咪唑-1-基]-N,N-二乙基-1-乙胺）相比,符合以下一个或多个条件的物质：
+
+```smiles
+CCOC1=CC=C(CC2=NC3=C(N2CCN(CC)CC)C=CC(N(=O)=O)=C3)C=C1
+```
+
+（一）使用取代或未取代的 1H-苯并咪唑基替代 5-硝基-1H-苯并咪唑基;  
+（二）使用取代或未取代的 C1-C2 烃基替代 1H-苯并咪唑基与苯基之间的亚甲基;  
+（三）使用取代或未取代的芳香基团替代 4-乙氧基苯基;  
+（四）使用取代或未取代的氨基替代 N,N-二乙基氨基。
+
 # 软件下载
 
 ## KingDraw
@@ -70,13 +83,13 @@ Z 代表 O 或 NH 或无任何原子。
 
 ## 表格
 
-- **[我国管制毒品目录（2024 年 7 月更新，509 种+两大类）](https://benzyl-titanium.pages.dev/data/2024.07.01.xlsx)**
+- **[我国管制毒品目录（2025 年 7 月更新，521 种+三大类）](https://benzyl-titanium.pages.dev/data/2024.07.01.xlsx)**
 
 ## 结构式
 
-- **[截至 2024.07.01 中国管制药品结构式文件](https://benzyl-titanium.pages.dev/data/Structural-formula.zip)**
+- **[截至 2025.07.01 中国管制药品结构式文件](https://benzyl-titanium.pages.dev/data/Structural-formula.zip)**
 
-# 我国管制毒品目录（2024 年 7 月更新，509 种+两大类）
+# 我国管制毒品目录（2025 年 7 月更新，521 种+三大类）
 
 根据刑法、禁毒法的规定，毒品是指鸦片、海洛因、甲基苯丙胺（冰毒）、吗啡、大麻、可卡因，以及国家规定管制的其他能够使人形成瘾癖的麻醉药品和精神药品。
 
@@ -111,6 +124,8 @@ Z 代表 O 或 NH 或无任何原子。
 十四、将右美沙芬、含地芬诺酯复方制剂、纳呋拉啡、氯卡色林列入第二类精神药品目录；将咪达唑仑原料药和注射剂由第二类精神药品调整为第一类精神药品，其它咪达唑仑单方制剂仍为第二类精神药品（2024 年 7 月 1 日起施行）【4 种】
 
 十五、将溴啡等 46 种物质列入《非药用类麻醉药品和精神药品管制品种增补目录》（2024 年 7 月 1 日起施行）【46 种】
+
+十六、将尼秦类物质和三氟乙咪酯等 12 中物质列入《非药用类麻醉药品和精神药品管制品种增补目录》（2025 年 7 月 1 日起实施）【12 种+整类】
 
 ## 一、《麻醉药品品种目录》（2013 年版）【121 种】
 
@@ -5753,9 +5768,113 @@ Z 代表 O 或 NH 或无任何原子。
         </tr>
     </tbody>
 </table>
-</body>
 
-**[表格原作地址](http://www.chnlawyer.net/law/113.html)**
+## 十六、将尼秦类物质和三氟乙咪酯等 12 中物质列入《非药用类麻醉药品和精神药品管制品种增补目录》（2025 年 7 月 1 日起实施）【12 种+整类】
+
+**一、尼秦类物质。**“尼秦类物质”是指化学结构与依托尼秦（2-[2-(4-乙氧基苄基)-5-硝基-1H-苯并咪唑-1-基]-N,N-二乙基-1-乙胺）相比,符合以下一个或多个条件的物质：  
+&nbsp;&nbsp;（一）使用取代或未取代的 1H-苯并咪唑基替代 5-硝基-1H-苯并咪唑基;  
+&nbsp;&nbsp;（二）使用取代或未取代的 C1-C2 烃基替代 1H-苯并咪唑基与苯基之间的亚甲基;  
+&nbsp;&nbsp;（三）使用取代或未取代的芳香基团替代 4-乙氧基苯基;  
+&nbsp;&nbsp;（四）使用取代或未取代的氨基替代 N,N-二乙基氨基。  
+&nbsp;&nbsp;上述所列管物质如果发现医药、工业、科研或者其他合法用途,按照《非药用类麻醉药品和精神药品列管办法》第三条第二款规定予以调整。已列入《麻醉药品和精神药品品种目录》和《非药用类麻醉药品和精神药品管制品种增补目录》的尼素类物质依原有目录予以管制。  
+**二、三氟乙咪酯等 12 种物质。**
+
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+    <tbody>
+        <tr>
+            <td style="width:48px;height:19px;"><strong>序号</strong></td>
+            <td style="width:180px;height:19px;"><strong>中文名</strong></td>
+            <td style="width:216px;height:19px;"><strong>英文名</strong></td>
+            <td style="width:108px;height:19px;"><strong>CAS号</strong></td>
+            <td style="width:168px;height:19px;"><strong>备注</strong></td>
+        </tr>
+        <tr>
+            <td style="width:48px;height:19px;">1</td>
+            <td style="width:180px;height:19px;">三氟乙咪酯</td>
+            <td style="width:216px;height:19px;">2,2,2-trifluoroethyl 3-[(1R)-1-phenylethyl]imidazole-4-carboxylate</td>
+            <td style="width:108px;height:19px;">2169968-54-9</td>
+            <td style="width:168px;height:19px;">TF-Etomidate</td>
+        </tr>
+        <tr>
+            <td style="width:48px;height:19px;">2</td>
+            <td style="width:180px;height:19px;">丁托咪酯</td>
+            <td style="width:216px;height:19px;">butyl 3-[(1R)-1-phenylethyl]imidazole-4-carboxylate</td>
+            <td style="width:108px;height:19px;">112367-53-0</td>
+            <td style="width:168px;height:19px;">Butomidate</td>
+        </tr>
+        <tr>
+            <td style="width:48px;height:19px;">3</td>
+            <td style="width:180px;height:19px;">仲丁咪酯</td>
+            <td style="width:216px;height:19px;">butan-2-yl 3-[(1R)-1-phenylethyl]imidazole-4-carboxylate</td>
+            <td style="width:108px;height:19px;">暂无</td>
+            <td style="width:168px;height:19px;">sec-Butomidate</td>
+        </tr>
+        <tr>
+            <td style="width:48px;height:19px;">4</td>
+            <td style="width:180px;height:19px;">异丁咪酯</td>
+            <td style="width:216px;height:19px;">2-methylpropyl 3-[(1R)-1-phenylethyl]imidazole-4-carboxylate</td>
+            <td style="width:108px;height:19px;">暂无</td>
+            <td style="width:168px;height:19px;">Isobutomidate</td>
+        </tr>
+        <tr>
+            <td style="width:48px;height:19px;">5</td>
+            <td style="width:180px;height:19px;">4-氟依托咪酯</td>
+            <td style="width:216px;height:19px;">ethyl 3-[1-(4-fluorophenyl)ethyl]imidazole-4-carboxylate</td>
+            <td style="width:108px;height:19px;">84962-75-4</td>
+            <td style="width:168px;height:19px;">4F-Etomidate</td>
+        </tr>
+        <tr>
+            <td style="width:48px;height:19px;">6</td>
+            <td style="width:180px;height:19px;">甲氧羰基环丙咪酯</td>
+            <td style="width:216px;height:19px;">(1-methoxycarbonylcyclopropyl) 3-[(1R)-1-phenylethyl]imidazole-4-carboxylate</td>
+            <td style="width:108px;height:19px;"><del>3004006-31-6</del><br>1446482-29-6</td>
+            <td style="width:168px;height:19px;">ABP-700</td>
+        </tr>
+        <tr>
+            <td style="width:48px;height:19px;">7</td>
+            <td style="width:180px;height:19px;">2,6-二氯-3-氟依托咪酯</td>
+            <td style="width:216px;height:19px;">Ethyl-1-(1-(2,6-dichloro-3-fluorophenyl)ethyl)-1H-imidazole-5-carboxylate</td>
+            <td style="width:108px;height:19px;">暂无</td>
+            <td style="width:168px;height:19px;">2,6-diCl-3F-Etomidate</td>
+        </tr>
+        <tr>
+            <td style="width:48px;height:19px;">8</td>
+            <td style="width:180px;height:19px;">1-[3,4-(亚甲二氧基)苯基]-2-异丙氨基-1-丁酮</td>
+            <td style="width:216px;height:19px;">1-(1,3-benzodioxol-5-yl)-2-(propan-2-ylamino)butan-1-one</td>
+            <td style="width:108px;height:19px;">801171-25-5</td>
+            <td style="width:168px;height:19px;">N-Isopropylbutylone</td>
+        </tr>
+        <tr>
+            <td style="width:48px;height:19px;">9</td>
+            <td style="width:180px;height:19px;">噻吩丙胺</td>
+            <td style="width:216px;height:19px;">1-thiophen-2-ylpropan-2-amine</td>
+            <td style="width:108px;height:19px;">30433-93-3</td>
+            <td style="width:168px;height:19px;">Thienoamphetamine</td>
+        </tr>
+        <tr>
+            <td style="width:48px;height:19px;">10</td>
+            <td style="width:180px;height:19px;">1-[1-(3-甲氧基苯基)环己基]吡咯烷</td>
+            <td style="width:216px;height:19px;">1-[1-(3-methoxyphenyl)cyclohexyl]pyrrolidine</td>
+            <td style="width:108px;height:19px;">1364933-79-8</td>
+            <td style="width:168px;height:19px;">3-MeO-PCPy</td>
+        </tr>
+        <tr>
+            <td style="width:48px;height:19px;">11</td>
+            <td style="width:180px;height:19px;">2-苯基-2-丙氨基环己酮</td>
+            <td style="width:216px;height:19px;">2-phenyl-2-(propylamino)cyclohexan-1-one</td>
+            <td style="width:108px;height:19px;">7015-53-4</td>
+            <td style="width:168px;height:19px;">2-oxo-PCPr</td>
+        </tr>
+        <tr>
+            <td style="width:48px;height:19px;">12</td>
+            <td style="width:180px;height:19px;">六氢大麻酚</td>
+            <td style="width:216px;height:19px;">6,6,9-trimethyl-3-pentyl-6a,7,8,9,10,10a-hexahydrobenzo[c]chromen-1-ol</td>
+            <td style="width:108px;height:19px;">6692-85-9</td>
+            <td style="width:168px;height:19px;">hexahydrocannabinol(HHC)</td>
+        </tr>
+    </tbody>
+</table>
+</body>
 
 <style>
     th, td {
@@ -5765,3 +5884,9 @@ Z 代表 O 或 NH 或无任何原子。
         margin: 0 auto;
     }
 </style>
+
+<script>
+  if (window.renderSmiles) {
+    setTimeout(window.renderSmiles, 100);
+  }
+</script>
