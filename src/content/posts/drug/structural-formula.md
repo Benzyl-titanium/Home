@@ -83,7 +83,7 @@ CCOC1=CC=C(CC2=NC3=C(N2CCN(CC)CC)C=CC(N(=O)=O)=C3)C=C1
 
 ## 表格
 
-- **[我国管制毒品目录（2025 年 7 月更新，521 种+三大类）](https://benzyl-titanium.pages.dev/data/2024.07.01.xlsx)**
+- **[我国管制毒品目录（2025 年 7 月更新，521 种+三大类）](https://benzyl-titanium.pages.dev/data/2025.07.01.xlsx)**
 
 ## 结构式
 
