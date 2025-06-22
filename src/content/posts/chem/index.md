@@ -75,3 +75,7 @@ pinned: true
 ::github{repo="biantailab/MarvinJS"}
 
 ::github{repo="Benzyl-titanium/smilesDrawer"}
+
+# Gitlab repo
+
+::gitlab{repo="BianTaiLAB/NPSdose"}
