@@ -60,7 +60,12 @@ export function GithubCardComponent(properties, children) {
 		`
       fetch('https://api.github.com/repos/${repo}', { referrerPolicy: "no-referrer" }).then(response => response.json()).then(data => {
         document.getElementById('${cardUuid}-description').innerText = data.description?.replace(/:[a-zA-Z0-9_]+:/g, '') || "Description not set";
-        document.getElementById('${cardUuid}-language').innerText = data.language;
+        const langEl = document.getElementById('${cardUuid}-language');
+        if (data.language) {
+          langEl.innerText = data.language;
+        } else {
+          langEl.parentNode.removeChild(langEl);
+        }
         document.getElementById('${cardUuid}-forks').innerText = Intl.NumberFormat('en-us', { notation: "compact", maximumFractionDigits: 1 }).format(data.forks).replaceAll("\u202f", '');
         document.getElementById('${cardUuid}-stars').innerText = Intl.NumberFormat('en-us', { notation: "compact", maximumFractionDigits: 1 }).format(data.stargazers_count).replaceAll("\u202f", '');
         const avatarEl = document.getElementById('${cardUuid}-avatar');
@@ -88,7 +93,7 @@ export function GithubCardComponent(properties, children) {
 		[
 			nTitle,
 			nDescription,
-			h("div", { class: "gc-infobar" }, [nStars, nForks, nLicense, nLanguage]),
+			h("div", { class: "gc-infobar" }, [nLanguage, nStars, nForks, nLicense]),
 			nScript,
 		],
 	);

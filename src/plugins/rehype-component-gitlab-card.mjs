@@ -34,7 +34,14 @@ export function GitlabCardComponent(properties, children) {
 		"no-license",
 	);
 
+	const nLanguage = h(
+		`span#${cardUuid}-language`,
+		{ class: "gc-language" },
+		"Waiting...",
+	);
+
 	const nInfobar = h("div", { class: "gc-infobar" }, [
+		nLanguage,
 		nStars,
 		nForks,
 		nLicense,
@@ -77,6 +84,23 @@ export function GitlabCardComponent(properties, children) {
             avatarEl.style.backgroundImage = 'url(' + data.owner.avatar_url + ')';
             avatarEl.style.backgroundColor = 'transparent';
           }
+          fetch('https://gitlab.com/api/v4/projects/' + data.id + '/languages')
+            .then(function(resp) { return resp.json(); })
+            .then(function(langs) {
+              const langEl = document.getElementById('${cardUuid}-language');
+              const entries = Object.entries(langs);
+              if (entries.length > 0) {
+                // 取占比最大的语言
+                const mainLang = entries.sort((a, b) => b[1] - a[1])[0][0];
+                langEl.innerText = mainLang;
+              } else {
+                langEl.parentNode.removeChild(langEl);
+              }
+            })
+            .catch(function() {
+              const langEl = document.getElementById('${cardUuid}-language');
+              langEl.parentNode.removeChild(langEl);
+            });
           document.getElementById('${cardUuid}-card').classList.remove("fetch-waiting");
           console.log("[GITLAB-CARD] Loaded card for ${repo} | ${cardUuid}.");
         })
