@@ -54,6 +54,13 @@ export function GithubCardComponent(properties, children) {
 	const nForks = h(`div#${cardUuid}-forks`, { class: "gc-forks" }, "0K");
 	const nLicense = h(`div#${cardUuid}-license`, { class: "gc-license" }, "0K");
 
+	const nInfobar = h("div", { class: "gc-infobar" }, [
+		nLanguage,
+		nStars,
+		nForks,
+		nLicense,
+	]);
+
 	const nScript = h(
 		`script#${cardUuid}-script`,
 		{ type: "text/javascript", defer: true },
@@ -90,11 +97,6 @@ export function GithubCardComponent(properties, children) {
 			target: "_blank",
 			repo,
 		},
-		[
-			nTitle,
-			nDescription,
-			h("div", { class: "gc-infobar" }, [nLanguage, nStars, nForks, nLicense]),
-			nScript,
-		],
+		[nTitle, nDescription, nInfobar, nScript],
 	);
 }
