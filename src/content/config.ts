@@ -23,8 +23,8 @@ const postsCollection = defineCollection({
 
 const specCollection = defineCollection({
 	schema: z.object({
-		title: z.string(),
-		published: z.date(),
+		title: z.string().optional(),
+		published: z.date().optional(),
 		updated: z.date().optional(),
 		draft: z.boolean().optional().default(false),
 		description: z.string().optional().default(""),
@@ -35,10 +35,10 @@ const specCollection = defineCollection({
 		pinned: z.boolean().optional().default(false),
 
 		/* For internal use */
-		prevTitle: z.string().default(""),
-		prevSlug: z.string().default(""),
-		nextTitle: z.string().default(""),
-		nextSlug: z.string().default(""),
+		prevTitle: z.string().optional(),
+		prevSlug: z.string().optional(),
+		nextTitle: z.string().optional(),
+		nextSlug: z.string().optional(),
 	}),
 });
 
