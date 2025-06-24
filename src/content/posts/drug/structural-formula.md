@@ -3,6 +3,7 @@ title: 截至2025.07.01,中国全部的管制药品目录
 published: 2024-11-10
 updated: 2025-06-21
 description: "截至2025.07.01中国全部管制药品目录的中英文名称，cas号，结构式图片和表格，chemdraw和kingdraw的结构式文件"
+image: "imgs/nanli3.jpg"
 tags: [药学, 精神药品, 管制化合物, 化合物, SMILES, CAS, GitHubRepo]
 category: "Drug"
 draft: false

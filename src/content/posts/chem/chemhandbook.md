@@ -2,6 +2,7 @@
 title: 化学合成实验手册
 published: 2025-05-08
 description: "化学合成实验手册"
+image: "imgs/ziyun.png"
 tags: [化学, 化合物, 合成实验, GitHubRepo]
 category: "Chem"
 draft: false

@@ -2,6 +2,7 @@
 title: 700种常见化合物在水中的溶解度
 published: 2025-05-18
 description: "溶解度表以化学品中特征元素的拼音顺序排列。所有数据都为 1atm 下的数据，单位为 g/100cm3。"
+image: "imgs/nanli.jpg"
 tags: [化合物, 化学, 溶解度]
 category: "Chem"
 draft: false

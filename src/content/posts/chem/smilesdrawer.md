@@ -2,6 +2,7 @@
 title: smilesDrawer
 published: 2025-06-13
 description: "smiles to png/jpg/svg"
+image: "imgs/yaoju.png"
 tags: [化学, SMILES, smilesDrawer, GitHubRepo, markdown扩展]
 category: "Chem"
 draft: false
@@ -28,7 +29,9 @@ C(C1=CC=CC=C1)[Ti](CC1=CC=CC=C1)(CC1=CC=CC=C1)CC1=CC=CC=C1
 <div class="smiles">C(C1=CC=CC=C1)[Ti](CC1=CC=CC=C1)(CC1=CC=CC=C1)CC1=CC=CC=C1</div>
 
 ```html
-<div class="smiles">C(C1=CC=CC=C1)[Ti](CC1=CC=CC=C1)(CC1=CC=CC=C1)CC1=CC=CC=C1</div>
+<div class="smiles">
+  C(C1=CC=CC=C1)[Ti](CC1=CC=CC=C1)(CC1=CC=CC=C1)CC1=CC=CC=C1
+</div>
 ```
 
 ## 大小

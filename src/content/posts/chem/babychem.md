@@ -3,6 +3,7 @@ title: BabyChem基础有机化学手写笔记
 published: 2025-01-31
 updated: 2025-05-29
 description: "BabyChem基础有机化学讲解视频，手写笔记，Latex笔记"
+image: "imgs/sakura_trick2.png"
 tags: [有机化学, 手写笔记, Latex, 化学, SMILES, GitHubRepo]
 category: "Chem"
 draft: false

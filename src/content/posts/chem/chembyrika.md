@@ -2,6 +2,7 @@
 title: ChemByRika
 published: 2025-06-11
 description: "有机物合成路线"
+image: "imgs/nanli2.jpg"
 tags: [化合物, 有机化学, 化学, 有机合成, GitHubRepo]
 category: "Chem"
 draft: false

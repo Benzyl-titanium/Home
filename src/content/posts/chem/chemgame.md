@@ -2,6 +2,7 @@
 title: 猜无机化合物游戏
 published: 2025-05-02
 description: "一款类Wordle的猜无机化合物游戏"
+image: "imgs/sakura_trick.png"
 tags: [化合物, wordle, 无机化学, 化学, 游戏, GitHubRepo]
 category: "Chem"
 draft: false

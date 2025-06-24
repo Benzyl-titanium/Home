@@ -3,6 +3,7 @@ title: 右美沙芬的结构改造及其受体活性变化分析:从多靶点作
 published: 2025-01-16
 updated: 2025-02-27
 description: "关键词：右美沙芬，1-(2-phenylethyl)-4-[3-(trifluoromethyl)phenyl]piperidine，血清素转运体，sigma1受体，多巴胺D2受体，血清素2C受体"
+image: "imgs/nanli4.png"
 tags: [药学, 药物化学, 药理学, 计算机辅助药物设计, 3D]
 category: "Drug"
 draft: false

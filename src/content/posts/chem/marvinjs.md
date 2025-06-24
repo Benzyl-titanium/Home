@@ -3,6 +3,7 @@ title: Marvin JS
 published: 2025-05-19
 updated: 2025-06-08
 description: "化学结构编辑器：从结构式搜索化合物"
+image: "imgs/yaoju2.png"
 tags: [化学, 结构编辑器, MarvinJS, SMILES, CAS, 3D, HNMR, GitHubRepo]
 category: "Chem"
 draft: false
