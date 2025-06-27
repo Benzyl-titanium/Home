@@ -1,7 +1,7 @@
 function renderSmiles() {
 	const SmilesDrawer = window.SmilesDrawer;
 	if (!SmilesDrawer) return;
-	const options = { width: 200, height: 200 };
+	const options = { width: 150, height: 150 };
 	const drawer = new SmilesDrawer.Drawer(options);
 
 	document.querySelectorAll(".smiles").forEach((div) => {

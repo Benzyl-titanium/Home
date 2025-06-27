@@ -23,7 +23,7 @@
 
 - [截至 2024.07.01,中国全部的管制药品目录](/posts/drug/structural-formula/index.html)
 - [中国管制药品名录结构式&表格整合版](https://biantai.pages.dev/structural-formula)
-- [设计药物](https://biantai.pages.dev/designdrugs)
+- [设计药物](/posts/drug/designdrugs/index.html)
 
 ## Start
 
