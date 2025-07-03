@@ -3,6 +3,7 @@ title: 设计药物
 published: 2024-12-08
 updated: 2025-06-27
 description: "设计药物是与管制物质的结构或功能的类似物，旨在模仿母体药物的药理作用，同时规避法律监管等。但还有许多其他的新型精神活性物质 ，可被视为设计药物的一部分。设计药物亦可称为设计师药物，狡诈家药物等。"
+image: "imgs/drug.png"
 tags: [药学, 精神药品, 化合物, SMILES, smilesDrawer, CAS, GitHubRepo]
 category: "Drug"
 draft: false

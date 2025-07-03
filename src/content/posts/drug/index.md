@@ -2,6 +2,7 @@
 title: 做开源第一次收到赞赏
 published: 2025-06-02
 description: "没想到我也可以得到赞赏"
+image: "imgs/money.png"
 tags: [赞赏]
 category: "赞赏"
 draft: false
