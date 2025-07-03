@@ -36,11 +36,15 @@ pinned: true
 
 # Stats
 
-<img src="https://wakatime.com/badge/user/00f0d57a-f6e1-492d-93c6-d00e19980958.svg?style=for-the-badge" alt="Total time coded since Apr 28 2025" />
+<img align="right" width="45%" src="https://wakatime.com/badge/user/00f0d57a-f6e1-492d-93c6-d00e19980958.svg?style=for-the-badge" alt="Total time coded since Apr 28 2025" />
 
-| <img width="80%" height="auto" align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=Benzyl_titanium&theme=react&layout=compact" />   | <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Benzyl-titanium&layout=compact&theme=radical" alt="No languages data" />               |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img width="80%" src="https://github-readme-stats.vercel.app/api?username=Benzyl-titanium&theme=radical&show_icons=true" alt="Benzyl titanium's GitHub Stats" /> | <img src="https://count.getloli.com/@Benzyl-titanium?name=Benzyl-titanium&theme=booru-lewd&padding=7&offset=0&align=bottom&scale=1&pixelated=1&darkmode=auto"/> |
+<img width="45%" src="https://count.getloli.com/@Benzyl-titanium?name=Benzyl-titanium&theme=booru-lewd&padding=7&offset=0&align=bottom&scale=1&pixelated=1&darkmode=auto" />
+
+<img align="right" width="45%" height="auto" align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=Benzyl_titanium&theme=react&layout=compact" />
+
+<img width="45%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Benzyl-titanium&layout=compact&theme=radical" alt="No languages data" />
+
+<img  width="45%" src="https://github-readme-stats.vercel.app/api?username=Benzyl-titanium&theme=radical&show_icons=true" alt="Benzyl titanium's GitHub Stats" />
 
 <img width="100%" src="https://github-profile-trophy.vercel.app/?username=Benzyl-titanium">
 
@@ -52,10 +56,10 @@ pinned: true
 
 <details>
     <summary>wakatime</summary>
-    <figure><embed src="https://wakatime.com/share/@Benzyl_titanium/ebcd4fec-ec02-4451-bc4c-a18c8c7c4e3f.svg"></embed></figure>
-    <figure><embed src="https://wakatime.com/share/@Benzyl_titanium/819c55fb-1a60-471d-b9eb-836f448e718e.svg"></embed></figure>
-    <figure><embed src="https://wakatime.com/share/@Benzyl_titanium/91b112e4-f0d3-484b-988a-01b8d1cc00d5.svg"></embed></figure>
-    <figure><embed src="https://wakatime.com/share/@Benzyl_titanium/2c423c7c-37e9-4bac-ae2d-a79cda8ff7fb.svg"></embed></figure>
+    <figure><embed align="right" width="45%" src="https://wakatime.com/share/@Benzyl_titanium/819c55fb-1a60-471d-b9eb-836f448e718e.svg"></embed></figure>
+    <figure><embed width="45%" src="https://wakatime.com/share/@Benzyl_titanium/ebcd4fec-ec02-4451-bc4c-a18c8c7c4e3f.svg"></embed></figure>
+    <figure><embed align="right" width="45%" src="https://wakatime.com/share/@Benzyl_titanium/2c423c7c-37e9-4bac-ae2d-a79cda8ff7fb.svg"></embed></figure>
+    <figure><embed width="45%" src="https://wakatime.com/share/@Benzyl_titanium/91b112e4-f0d3-484b-988a-01b8d1cc00d5.svg"></embed></figure>
 </details>
 
 # Github repo
