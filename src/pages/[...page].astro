@@ -4,10 +4,10 @@ import PostPage from "../components/PostPage.astro";
 import Pagination from "../components/control/Pagination.astro";
 import { PAGE_SIZE } from "../constants/constants";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
-import { getSortedPosts } from "../utils/content-utils";
+import { getSortedPostsByUpdated } from "../utils/content-utils";
 
 export const getStaticPaths = (async ({ paginate }) => {
-	let allBlogPosts = await getSortedPosts();
+	let allBlogPosts = await getSortedPostsByUpdated();
 
 	const pinnedIndex = allBlogPosts.findIndex((post) => post.data.pinned);
 	if (pinnedIndex !== -1) {

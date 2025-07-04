@@ -2,7 +2,7 @@ import { getCollection } from "astro:content";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 
-export async function getSortedPosts() {
+export async function getSortedPostsByUpdated() {
 	const allBlogPosts = await getCollection("posts", ({ data }) => {
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
@@ -33,6 +33,29 @@ export async function getSortedPosts() {
 	}
 
 	return sorted;
+}
+
+export async function getSortedPostsByPublished() {
+	const allBlogPosts = await getCollection("posts", ({ data }) => {
+		return import.meta.env.PROD ? data.draft !== true : true;
+	});
+
+	allBlogPosts.sort((a, b) => {
+		const dateA = new Date(a.data.published);
+		const dateB = new Date(b.data.published);
+		return dateA > dateB ? -1 : 1;
+	});
+
+	for (let i = 1; i < allBlogPosts.length; i++) {
+		allBlogPosts[i].data.nextSlug = allBlogPosts[i - 1].slug;
+		allBlogPosts[i].data.nextTitle = allBlogPosts[i - 1].data.title;
+	}
+	for (let i = 0; i < allBlogPosts.length - 1; i++) {
+		allBlogPosts[i].data.prevSlug = allBlogPosts[i + 1].slug;
+		allBlogPosts[i].data.prevTitle = allBlogPosts[i + 1].data.title;
+	}
+
+	return allBlogPosts;
 }
 
 export type Tag = {

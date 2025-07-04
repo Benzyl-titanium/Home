@@ -2,7 +2,7 @@
 import { UNCATEGORIZED } from "@constants/constants";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
-import { getSortedPosts } from "../utils/content-utils";
+import { getSortedPostsByPublished } from "../utils/content-utils";
 import { getPostUrlBySlug } from "../utils/url-utils";
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
 }
 const { tags, categories } = Astro.props;
 
-let posts = await getSortedPosts();
+let posts = await getSortedPostsByPublished();
 
 if (Array.isArray(tags) && tags.length > 0) {
 	posts = posts.filter(
@@ -85,6 +85,9 @@ function formatTag(tag: string[]) {
                             <!-- date -->
                             <div class="w-[15%] md:w-[10%] transition text-sm text-right text-50">
                                 {formatDate(post.data.published)}
+                                {post.data.updated && post.data.updated !== post.data.published && (
+                                    <span class="text-xs text-gray-400">({formatDate(post.data.updated)})</span>
+                                )}
                             </div>
                             <!-- dot and line -->
                             <div class="w-[15%] md:w-[10%] relative dash-line h-full flex items-center">
