@@ -12,8 +12,6 @@ draft: false
 
 ::github{repo="Usu171/favorites"}
 
-**[Usu171's 浏览器收藏夹](https://usu171favorites.netlify.app)**
-
 <iframe src="https://usu171favorites.netlify.app" style="width: 100%; height: 600px; border: none; border-radius: 10px;margin: 10px auto"></iframe>
 
 自用的浏览器收藏夹

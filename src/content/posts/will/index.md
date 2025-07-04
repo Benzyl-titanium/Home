@@ -34,18 +34,18 @@ draft: false
 - [猜无机化合物游戏](/posts/chem/chemgame/index.html)
 - [化学合成实验手册](/posts/chem/chemhandbook/index.html)
 - [化学结构编辑器 Marvin JS](/posts/chem/marvinjs/index.html)
-- [化学结构编辑器 Marvin JS](/posts/chem/marvinjs/index.html)
 - [700 种常见化合物在水中的溶解度](/posts/chem/solubility/index.html)
-- [同位素分析](https://zeeman.pages.dev)
+- <a href="https://zeeman.pages.dev" target="_blank">同位素分析<svg xmlns="http://www.w3.org/2000/svg" style="display:inline;vertical-align:middle;margin-left:2px;color:#e3769b;" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg><a>
+- [babychem 基础有机化学手写笔记](/posts/chem/babychem/index.html)
 - [有机物合成路线 ChemByRika](/posts/chem/chembyrika/index.html)
 
 ### Drug
 
 - [截至 2024.07.01,中国全部的管制药品目录](/posts/drug/Structural-formula/index.html)
-- [中国管制药品名录结构式&表格整合版](https://biantai.pages.dev/structural-formula)
-- [设计药物](https://biantai.pages.dev/designdrugs)
+- <a href="https://biantai.pages.dev/Structural-formula" target="_blank">中国管制药品名录结构式&表格整合版<svg xmlns="http://www.w3.org/2000/svg" style="display:inline;vertical-align:middle;margin-left:2px;color:#e3769b;" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg><a>
+- [设计药物](/posts/drug/designdrugs/index.html)
 
-## 文件
+## 文件下载
 
 - [试剂清单](https://github.com/Benzyl-titanium/Benzyl-titanium-will/releases/download/app-2025.06.08/BianTai_LAB.xlsx)
 - [babychem 基础有机化学手写笔记](https://github.com/Benzyl-titanium/BabyChem/releases/download/organic-chemistry/BabyChem.pdf)
