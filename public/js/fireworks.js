@@ -1,4 +1,11 @@
 function clickEffect() {
+	if (window.__fireworks_inited) {
+		return;
+	}
+	window.__fireworks_inited = true;
+	const canvasId = "__fireworks_canvas";
+	const pointerId = "__fireworks_pointer";
+	if (document.getElementById(canvasId)) return;
 	const balls = [];
 	let longPressed = false;
 	let longPress;
@@ -8,14 +15,17 @@ function clickEffect() {
 	let origin;
 	let normal;
 	let ctx;
+	const MAX_BALLS = 100;
 
 	const canvas = document.createElement("canvas");
+	canvas.id = canvasId;
 	document.body.appendChild(canvas);
 	canvas.setAttribute(
 		"style",
 		"width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;",
 	);
 	const pointer = document.createElement("span");
+	pointer.id = pointerId;
 	pointer.classList.add("pointer");
 	document.body.appendChild(pointer);
 
@@ -149,7 +159,9 @@ function clickEffect() {
 	}
 
 	function pushBalls(count = 1, x = origin.x, y = origin.y) {
-		for (let i = 0; i < count; i++) {
+		const canAdd = Math.max(0, MAX_BALLS - balls.length);
+		const addCount = Math.min(count, canAdd);
+		for (let i = 0; i < addCount; i++) {
 			balls.push(new Ball(x, y));
 		}
 	}

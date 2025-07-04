@@ -7,11 +7,21 @@ export async function getSortedPosts() {
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
 
-	const sorted = allBlogPosts.sort((a, b) => {
+	const pinnedPosts = allBlogPosts.filter((post) => post.data.pinned);
+	const normalPosts = allBlogPosts.filter((post) => !post.data.pinned);
+
+	pinnedPosts.sort((a, b) => {
 		const dateA = new Date(a.data.updated || a.data.published);
 		const dateB = new Date(b.data.updated || b.data.published);
 		return dateA > dateB ? -1 : 1;
 	});
+	normalPosts.sort((a, b) => {
+		const dateA = new Date(a.data.updated || a.data.published);
+		const dateB = new Date(b.data.updated || b.data.published);
+		return dateA > dateB ? -1 : 1;
+	});
+
+	const sorted = [...pinnedPosts, ...normalPosts];
 
 	for (let i = 1; i < sorted.length; i++) {
 		sorted[i].data.nextSlug = sorted[i - 1].slug;
